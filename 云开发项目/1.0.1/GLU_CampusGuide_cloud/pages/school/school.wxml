@@ -1,0 +1,145 @@
+<!--pages/school/school.wxml-->
+<view style="height: auto;">
+    <view>
+        <view class="list-landscape-title">
+            校园风光
+        </view>
+        <view class="list-landscape-container">
+            <swiper class="list-landscape-container-swiper" next-margin="20px" indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{activeColor}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}">
+                <block wx:for="{{background}}" wx:key="*this">
+                    <swiper-item>
+                        <view class="list-landscape-container-swiper-item">
+                            <image class="list-landscape-container-swiper-item-img" mode="widthFix" bindload="imgHeight" src="{{item}}"></image>
+                        </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+
+            <view class="list-landscape-container-icon" style="margin-left:306rpx">
+                <image class="list-landscape-container-icon-img" src="{{school_logo}}" />
+            </view>
+
+            <view class="list-landscape-container-text">
+                {{school_name_full}}
+            </view>
+        </view>
+    </view>
+
+    <view class="list-info">
+        <view class="list-info-container">
+            <view class="list-info-container-titletext1">
+                {{school_information.motto}}
+            </view>
+
+            <view class="list-info-container-text">
+                建校时间：{{school_information.build_time}}年
+            </view>
+
+            <view class="list-info-container-text">
+                院校类型：{{school_information.institution_type}}
+            </view>
+        </view>
+
+        <view class="list-info-container">
+            <view class="list-info-container-titletext2">
+                {{school_information.honor}}
+            </view>
+
+            <view class="list-info-container-text">
+                办校类型：{{school_information.school_type}}院校
+            </view>
+
+            <view class="list-info-container-text">
+                所在地：{{school_information.location}}
+            </view>
+        </view>
+    </view>
+
+    <view class="list-laba">
+        <image class="list-laba-image" src="{{laba}}" />
+        <view class="list-laba-text">
+            欢迎使用{{miniprogram_name}}小程序
+        </view>
+    </view>
+
+    <view class="list-row">
+        <view class="list-row-container" bindtap="toinformation">
+            <image class="list-row-container-img" src="{{new}}" />
+            <view class="list-row-container-text">
+                学校信息
+            </view>
+        </view>
+
+        <view class="list-row-container" bindtap="totraffic">
+            <image class="list-row-container-img" src="{{bus}}" />
+            <view class="list-row-container-text">
+                交通出行
+            </view>
+        </view>
+
+        <view class="list-row-container" bindtap="tointroduction">
+            <image class="list-row-container-img" src="{{school_logo}}" />
+            <view class="list-row-container-text">
+                学校简介
+            </view>
+        </view>
+
+        <view class="list-row-container" bindtap="towechat">
+            <image class="list-row-container-img" src="{{wechat}}" />
+            <view class="list-row-container-text">
+                {{school_name_short}}官微
+            </view>
+        </view>
+
+        <view class="list-row-container" bindtap="toMiniProgram">
+            <image class="list-row-container-img" src="{{magazine}}" />
+            <view class="list-row-container-text">
+                招生官微
+            </view>
+        </view>
+    </view>
+
+    <view class="list-laba">
+        <image class="list-laba-image" src="{{weather}}" />
+        <view class="list-laba-text weather_text">
+            校园天气
+        </view>
+    </view>
+
+    <view class="card-container">
+        <view class="card-container-weather">
+            <view class="card-container-weather-city">
+                {{school_information.location}}
+            </view>
+
+            <view class="card-container-weather-tmp">
+                <view>{{now.temp}}°</view>
+                <image class="card-container-weather-tmp-icon" src="https://codermoyv.gitee.io/coder-moyv/assets/images/wechat/weather_custom/{{now.icon}}.png"></image>
+            </view>
+
+            <view class="card-container-weather-info">
+                <view>{{now.windDir}} {{now.windScale}}级</view>
+                <view>湿度 {{now.humidity}}%</view>
+                <view>气压 {{now.pressure}}Pa</view>
+            </view>
+
+            <image class="card-container-wave" src="https://codermoyv.gitee.io/coder-moyv/assets/images/wechat/bg_wave.gif"></image>
+        </view>
+    </view>
+
+    <view class="list-laba">
+        <image class="list-laba-image" src="{{laba}}" />
+        <view class="list-laba-text small_text">
+            如果你觉得小程序不错,不妨推荐给你的朋友们吧!
+        </view>
+    </view>
+
+    <button class="forward-button" type="primary" open-type="share">
+        推 荐 给 好 友
+    </button>
+
+    <view class="bottom-font">
+        {{miniprogram_name}}小程序 | 版权归开发者所有
+    </view>
+
+</view>

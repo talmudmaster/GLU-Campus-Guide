@@ -1,0 +1,155 @@
+<!--pages/instruction/instruction.wxml-->
+<!-- <text>pages/instruction/instruction.wxml</text> -->
+<view>
+    <!-- style="height: {{windowHeight-40}}px;" -->
+    <view class="card">
+        <view class="card-top">
+            <view class="card-top-left {{sid == 1?'choose':''}}" bindtap="click1">
+                地图使用说明
+            </view>
+
+            <view class="card-top-right {{sid == 2?'choose':''}}" bindtap="click2">
+                校园信息说明
+            </view>
+        </view>
+
+        <view wx:if="{{sid == 1}}" class="card-container">
+            <view class="card-container-title">
+                <image class="card-container-title-img" src="{{map}}" />
+                <view class="card-container-title-font">
+                    地图使用说明
+                </view>
+            </view>
+
+            <view class="card-container-container">
+                <text decode="true">&ensp;&ensp;&ensp;&ensp;“地点总汇”页展示了各类别的地点，可切换类别查看。点击可以查看地点介绍，设置为地图终点并跳转到地图。</text>
+
+                <text decode="true">\n\n&ensp;&ensp;&ensp;&ensp;“地图”页展示了校园地图，可以在地图上选择地点或者搜索栏搜索地点进行导航。</text>
+
+                <!-- <text decode="true">\n\n&ensp;&ensp;&ensp;&ensp;底部导航条“地图”页，展示了学校的地点信息，可以在地图上选择地点或者搜索栏搜索地点进行导航。\n（见如下说明）。</text> -->
+
+                <view class="card-container-container-instr top">
+                    <view class="card-container-container-instr-left">
+                        定位
+                    </view>
+
+                    <view class="card-container-container-instr-right">
+                        <text decode="true">进入地图页面会进行定位\n显示定位并设置为起点\n若不在学校，设置位置为东门并为起点\n点击定位图标可以进行重新定位</text>
+                    </view>
+
+                </view>
+
+                <view class="card-container-container-instr">
+                    <view class="card-container-container-instr-left">
+                        点击
+                    </view>
+
+                    <view class="card-container-container-instr-right">
+                        <text decode="true">点击底部半透明按钮可收起/打开地点栏\n点击地图地点显示该地点\n类别栏可以滑动点击\n点击地点可设置为起点/终点</text>
+                    </view>
+                </view>
+
+                <!-- <view class="card-container-container-instr">
+                    <view class="card-container-container-instr-left">
+                        搜索
+                    </view>
+
+                    <view class="card-container-container-instr-right">
+                        <text decode="true">点击搜索栏的起点/终点输入框搜索相关地点即可设置起点/终点。</text>
+                    </view>
+                </view> -->
+
+                <view class="card-container-container-instr">
+                    <view class="card-container-container-instr-left">
+                        导航
+                    </view>
+
+                    <view class="card-container-container-instr-right">
+                        <text decode="true">点击路线按钮即可进行导航\n注意起点和终点不要空着或一样</text>
+                    </view>
+                </view>
+
+                <view class="bottom">
+                    <text decode="true">&ensp;&ensp;&ensp;&ensp;你学会了吗，快去试试吧！</text>
+                </view>
+            </view>
+        </view>
+
+        <view wx:if="{{sid == 2}}" class="card-container">
+            <view class="card-container-title">
+                <image class="card-container-title-img" src="{{school_icon}}" />
+                <view class="card-container-title-font">
+                    校园信息说明
+                </view>
+            </view>
+
+            <view class="card-container-container">
+                <text decode="true">&ensp;&ensp;&ensp;&ensp;“校园信息”页展示了学校的风景、各类信息。图标和列表栏可以点击查看详情。</text>
+
+                <view class="card-container-container-list">
+                    <image class="card-container-container-list-img" src="{{new}}" />
+                    <text decode="true">学校信息\n这有院系信息、部门电话和校园天气</text>
+                </view>
+
+                <view class="card-container-container-list">
+                    <image class="card-container-container-list-img" src="{{bus}}" />
+                    <text decode="true">交通出行\n这有详细的交通出行攻略</text>
+                </view>
+
+                <view class="card-container-container-list">
+                    <image class="card-container-container-list-img" src="{{school_logo}}" />
+                    <text decode="true">学校官网\n点击跳转到外部小程序打开学校官网</text>
+                </view>
+
+                <view class="card-container-container-list">
+                    <image class="card-container-container-list-img" src="{{school_icon}}" />
+                    <text decode="true">桂院官微\n长按图片前往桂院官方公众号</text>
+                </view>
+
+                <view class="card-container-container-list">
+                    <image class="card-container-container-list-img" src="{{magazine}}" />
+                    <text decode="true">招生官微\n点击跳转到桂院招生小程序</text>
+                </view>
+
+                <view class="card-container-container-list">
+                    <image class="card-container-container-list-img-small" src="{{school}}" />
+                    <text decode="true">学校简介\n这有学校简介和宣传视频</text>
+                </view>
+
+                <view class="card-container-container-list">
+                    <image class="card-container-container-list-img-small" src="{{home}}" />
+                    <text decode="true">返回主页\n点击可以返回主页哦</text>
+                </view>
+
+                <!-- <view class="card-container-container-list">
+                    <image class="card-container-container-list-img-small" src="{{rank}}"/>
+                    <text decode="true">地点浏览排名\n这有各地点的搜索浏览记录排名</text>
+                </view> -->
+
+                <view class="card-container-container-list">
+                    <image class="card-container-container-list-img-small" src="{{message}}" />
+                    <text decode="true">软件声明与致谢\n这声明了软件信息与致谢信息</text>
+                </view>
+
+                <view class="card-container-container-list">
+                    <image class="card-container-container-list-img-small" src="{{notes}}" />
+                    <text decode="true">开源代码\n想了解开源代码或者思路的可以看看</text>
+                </view>
+
+                <view class="card-container-container-list">
+                    <image class="card-container-container-list-img-small" src="{{users}}" />
+                    <text decode="true">联系作者\n有什么疑问可以联系我哦</text>
+                </view>
+
+                <view class="card-container-container-list">
+                    <image class="card-container-container-list-img-small" src="{{chat}}" />
+                    <text decode="true">提点意见\n如果你有什么建议看法，不妨反馈一下</text>
+                </view>
+
+                <text decode="true">&ensp;&ensp;&ensp;&ensp;如果你觉得小程序不错，不妨点击校园信息页底部按钮分享给你的小伙伴吧！</text>
+            </view>
+
+
+        </view>
+    </view>
+</view>

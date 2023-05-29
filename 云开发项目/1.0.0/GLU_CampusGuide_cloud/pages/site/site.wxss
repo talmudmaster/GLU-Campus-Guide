@@ -1,0 +1,177 @@
+/* pages/site/site.wxss */
+page {
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    height: 100%;
+    /* width: 100%; */
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    /* justify-content: space-around; */
+}
+
+.card-left {
+    /* height: 100%; */
+    width: 75px;
+    background-color: #f0f0f0;
+    /* background-color: aquamarine; */
+}
+
+.card-left-scorll-view {
+    height: 100%;
+    background-color: #f0f0f0;
+    /* color: white; */
+    /* background-color: #2dabf3; */
+    /* border-radius: 10px; */
+    /* height: 45px; */
+    width: 75px;
+    text-align: center;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around; */
+    
+}
+
+.card-left-scorll-view-label {
+    width: 75px;
+    height: 45px;
+    /* margin-left: 5px;
+    margin-right: 5px; */
+    display: flex; 
+    /* text-align: center; */
+    align-items: center;
+    justify-content: center;
+}
+
+.choose {
+    /* margin-right: 5px; */
+    border-left: 6px solid #404481;
+    /* border-right: 1px solid white; */
+    /* background-color: white; */
+    /* background-color: blanchedalmond; */
+    background-color: white;
+}
+
+.card-right {
+    height: 100%;
+    /* width: max-content; */
+    /* width: auto; */
+    /* width: 295px; */
+    /* margin-left: 10px; */
+    /* background-color: blanchedalmond; */
+    background-color: white;
+}
+
+.card-right-title {
+    margin: 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.card-right-title-icon {
+    height: 30px;
+    width: 30px;
+    /* margin-left: 10px; */
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.card-right-content {
+    /* margin-left: 6px;
+    margin-right: 4px; */
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content: center; */
+}
+
+.card-right-content-card {
+    /* margin: 10px 0 10px 15px; */
+    /* border: 1px solid grey; */
+    margin-top: 5px;
+    margin-left: 4px;
+    font-size: 14px;
+    height: 150px;
+    width: 95px;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    /* justify-content: center; */
+}
+
+.card-right-content-card-img {
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+    /* margin: 0 auto; */
+    /* border: 1px solid aquamarine; */
+}
+
+.card-right-content-card-context {
+    display: flex;
+    width: 100%;
+    /* align-items: center; */
+    /* justify-content: center; */
+    /* text-align: center; */
+    /* white-space:pre-wrap */
+    /* white-space: pre-line; */
+}
+
+.card-right-content-card-context-icon {
+    height: 20px;
+    width: 20px;
+}
+
+
+/* 1 */
+
+.card-container {
+    height: 100%;
+}
+
+.card-container-scorll {
+    height: 100%;
+    margin: 10px;
+    border-radius: 10px;
+    /* border: 1px solid grey; */
+    background-color: honeydew;
+    /* background-color: #16c4af; */
+}
+
+.card-container-scorll-view {
+    height: 100%;
+    background-color: #2dabf3;
+    /* border-radius: 10px; */
+    /* height: 45px; */
+    width: 100px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.card-container-scorll-view-label {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/* .choose {
+    border-bottom: solid white;
+} */
+
+.card-container-scorll-view-desc {
+    /* height: auto; */
+    height: 210px;
+    width: auto;
+    padding: 10px;
+    font-size: 18px;
+}

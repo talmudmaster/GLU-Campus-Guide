@@ -1,0 +1,74 @@
+<!--pages/school/school.wxml-->
+<view class="card">
+    <view class="card-title">
+        <image class="card-title-img" src="{{school_icon}}" />
+        <view class="card-title-font">
+            学校信息
+        </view>
+    </view>
+
+    <view class="card-container">
+        <view class="card-container-title">
+            <image class="card-container-title-img" src="{{message_icon}}" />
+            <view class="card-container-title-font">
+                院系信息
+            </view>
+        </view>
+
+        <view class="card-container-scorll">
+            <scroll-view scroll-x="true" scroll-left="40px">
+                <view class="card-container-scorll-view" style="width: {{schooldata.length*120}}px;">
+                    <view class="card-container-scorll-view-label  {{item.id == desc1 ? 'choose' : ''}}" wx:for="{{schooldata}}" wx:key="id" id="{{item.id}}" bindtap="changeSchool">
+                        {{item.name}}
+                    </view>
+                </view>
+            </scroll-view>
+
+            <scroll-view scroll-y="true" class="card-container-scorll-view-desc">
+                <text user-select="true" decode="true">&emsp;&emsp;{{schooldata[desc1-1].desc}}</text>
+            </scroll-view>
+        </view>
+    </view>
+
+    <view class="card-container">
+        <view class="card-container-title">
+            <image class="card-container-title-img" src="{{tel}}" />
+            <view class="card-container-title-font">
+                部门联络电话
+            </view>
+        </view>
+
+        <view class="card-container-scorll">
+            <scroll-view scroll-x="true" scroll-left="5px">
+                <view class="card-container-scorll-view" style="width: {{teldata.length*100}}px;">
+                    <label class="card-container-scorll-view-label  {{item.id == desc2 ? 'choose' : ''}}" wx:for="{{teldata}}" wx:key="id" id="{{item.id}}" bindtap="changeDept">
+                        {{item.name}}
+                    </label>
+                </view>
+            </scroll-view>
+
+            <scroll-view scroll-y="true" class="card-container-scorll-view-desc">
+                <view wx:for="{{teldata[desc2-1].list}}" wx:key="id">
+                    <view class="card-container-scorll-view-desc-call">
+                        <view class="card-container-scorll-view-desc-call-name">
+                            {{item.name}}
+                        </view>
+
+                        <view>{{item.tel}}</view>
+
+                        <view class="card-container-scorll-view-desc-call-button" data-name="{{item.name}}" data-tel="{{item.tel}}" bindtap="call">
+                            添加联系人
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+
+    <view class="bottom-font">
+        <view>
+            非实时校园信息 | 请注意校方最新信息
+        </view>
+    </view>
+
+</view>

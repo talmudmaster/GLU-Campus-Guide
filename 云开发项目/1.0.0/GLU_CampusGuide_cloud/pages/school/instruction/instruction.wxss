@@ -1,0 +1,142 @@
+/* pages/instruction/instruction.wxss */
+page {
+    height: 100%;
+    width: 100%;
+    background: #f3f3f3;
+}
+
+.card {
+    /* height: 100%; */
+    /* width: 100%; */
+    /* margin: 20px; */
+    margin: 10px 15px;
+
+    border-radius: 10px;
+    /* background-color: bisque; */
+    background-color: white;
+}
+
+.card-top {
+    height: 60px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.card-top-left {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-right: 1px solid grey; */
+    background-color: #f3f3f3;
+    border-radius: 10px 0 0 0;
+}
+
+.card-top-right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    /* background-color: thistle; */
+    border-radius: 0 10px 0 0;
+}
+
+.choose {
+    background-color: white;
+    border-top: 10px solid #404481;
+}
+
+.card-container {
+    margin-bottom: 30px;
+    margin: 10px;
+}
+
+.card-container-title {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+    
+}
+
+.card-container-title-img {
+    height: 25px;
+    width: 25px;
+}
+
+.card-container-title-font {
+    color: #73a5d6;
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+.card-container-container {
+    /* height: auto; */
+    /* border-radius: 10px; */
+    border-bottom: 10px solid white;
+    /* background-color: #73a5d6; */
+    /* border: 1px solid grey; */
+}
+
+.card-container-container-instr {
+    margin: 0 2px 0 2px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+.card-container-container-instr-left {
+    width: 30px;
+}
+
+.card-container-container-instr-right {
+    /* width: fit-content; */
+    width: 305px;
+    line-height: 25px;
+    border-left: 1px solid grey;
+}
+
+.top {
+    border-top: 1px solid grey;
+    margin-top: 10px;
+}
+
+.bottom {
+    border-top: 10px solid white;
+}
+
+.card-container-container-list {
+    margin: 5px;
+    /* border-bottom: 1px solid gainsboro; */
+    border-bottom: 2px solid white;
+    display: flex;
+    align-items: center;
+}
+
+.card-container-container-list-img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.card-container-container-list-img-small {
+    width: 30px;
+    height: 30px;
+    margin-left: 2px;
+    margin-right: 10px;
+}
+
+.button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,65 @@
+{
+    "pages": [
+        "pages/home/home",
+        "pages/map/map",
+        "pages/site/site",
+        "pages/school/introduction/introduction",
+        "pages/instruction/instruction",
+        "pages/school/school",
+        "pages/school/information/information",
+        "pages/school/traffic/traffic",
+        "pages/school/statement/statement",
+        "pages/school/open/open"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#73a5d6",
+        "navigationBarTitleText": "桂院导航",
+        "navigationBarTextStyle": "black"
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json",
+    "tabBar": {
+        "list": [
+            {
+                "selectedIconPath": "/images/tabbar/icon_map_HL.png",
+                "iconPath": "/images/tabbar/icon_map.png",
+                "pagePath": "pages/map/map",
+                "text": "地图"
+            },
+            {
+                "selectedIconPath": "/images/tabbar/icon_schoolbuilding_HL.png",
+                "iconPath": "/images/tabbar/icon_schoolbuilding.png",
+                "pagePath": "pages/site/site",
+                "text": "地点总汇"
+            },
+            {
+                "selectedIconPath": "/images/tabbar/icon_instruction_HL.png",
+                "iconPath": "/images/tabbar/icon_instruction.png",
+                "pagePath": "pages/instruction/instruction",
+                "text": "使用说明"
+            },
+            {
+                "selectedIconPath": "/images/tabbar/icon_school_HL.png",
+                "iconPath": "/images/tabbar/icon_school.png",
+                "pagePath": "pages/school/school",
+                "text": "校园信息"
+            }
+        ]
+    },
+    "permission": {
+        "scope.userLocation": {
+            "desc": "需要获取你当前位置信息"
+        }
+    },
+    "lazyCodeLoading": "requiredComponents",
+    "plugins": {
+        "routePlan": {
+            "version": "1.0.19",
+            "provider": "wx50b5593e81dd937a"
+        }
+    },
+    "requiredPrivateInfos": [
+        "getLocation"
+    ]
+}

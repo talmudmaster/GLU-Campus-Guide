@@ -1,0 +1,209 @@
+<!--pages/school/school.wxml-->
+<!-- <text>pages/school/school.wxml</text> -->
+<!-- <navigator open-type="navigateBack">后退</navigator> -->
+<view style="height: auto;">
+    <view class="list-landscape">
+        <view class="list-landscape-title">
+            校园风光
+        </view>
+        <view class="list-landscape-container">
+            <swiper class="list-landscape-container-swiper" next-margin="20px" indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{activeColor}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}">
+                <block wx:for="{{background}}" wx:key="*this">
+                    <swiper-item>
+                        <view class="list-landscape-container-swiper-item">
+                            <image class="list-landscape-container-swiper-item-img" mode="widthFix" bindload="imgHeight" src="{{item}}"></image>
+                        </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+
+            <view class="list-landscape-container-icon" style="margin-left:306rpx">
+                <image class="list-landscape-container-icon-img" src="{{school_logo}}" />
+            </view>
+
+            <view class="list-landscape-container-text">
+                桂林学院
+            </view>
+        </view>
+    </view>
+
+    <view class="list-info">
+        <view class="list-info-container">
+            <view class="list-info-container-titletext1">
+                向学·向善·自律·自强
+            </view>
+
+            <view class="list-info-container-text">
+                建校时间：2001年
+            </view>
+
+            <view class="list-info-container-text">
+                院校类型：综合类
+            </view>
+        </view>
+
+        <view class="list-info-container">
+            <view class="list-info-container-titletext2">
+                广西优秀民办高等学校
+            </view>
+
+            <view class="list-info-container-text">
+                办校类型：民办院校
+            </view>
+
+            <view class="list-info-container-text">
+                所在地：广西桂林·雁山
+            </view>
+        </view>
+    </view>
+
+    <view class="list-laba">
+        <image class="list-laba-image" src="{{laba}}" />
+        <view class="list-laba-text">
+            欢迎使用桂院导航小程序
+        </view>
+    </view>
+
+    <view class="list-row">
+        <view class="list-row-container" bindtap="tapmenu1">
+            <image class="list-row-container-img" src="{{new}}" />
+            <view class="list-row-container-text">
+                学校信息
+            </view>
+        </view>
+
+        <view class="list-row-container" bindtap="tapmenu2">
+            <image class="list-row-container-img" src="{{bus}}" />
+            <view class="list-row-container-text">
+                交通出行
+            </view>
+        </view>
+
+        <view class="list-row-container" bindtap="tapmenu3">
+            <image class="list-row-container-img" src="{{school_logo}}" />
+            <view class="list-row-container-text">
+                学校官网
+            </view>
+        </view>
+
+        <view class="list-row-container" bindtap="tapmenu4">
+            <image class="list-row-container-img" src="{{school_icon}}" />
+            <view class="list-row-container-text">
+                桂院官微
+            </view>
+        </view>
+
+        <view class="list-row-container" bindtap="tapmenu5">
+            <image class="list-row-container-img" src="{{magazine}}" />
+            <view class="list-row-container-text">
+                招生官微
+            </view>
+        </view>
+    </view>
+
+    <view class="list-l">
+        <view class="list-list" bindtap="taptojianjie">
+            <view class="list-list-left">
+                <image class="list-list-left-icon" src="{{school}}" />
+                <view class="list-list-left-text">学校简介</view>
+            </view>
+            <image class="list-list-right" src="{{right_arrow}}" />
+        </view>
+
+        <view class="list-list" bindtap="taptohome">
+            <view class="list-list-left">
+                <image class="list-list-left-icon" src="{{home}}" />
+                <view class="list-list-left-text">返回主页</view>
+            </view>
+            <image class="list-list-right" src="{{right_arrow}}" />
+        </view>
+
+        <!-- <view class="list-list" bindtap="taptoquanjing">
+            <view class="list-list-left">
+                <image class="list-list-left-icon" src="{{instruction}}" />
+                <view class="list-list-left-text">全景地图</view>
+            </view>
+            <image class="list-list-right" src="{{right_arrow}}" />
+        </view> -->
+
+        <view class="list-list" bindtap="taptoinstruction">
+            <view class="list-list-left">
+                <image class="list-list-left-icon" src="{{instruction}}" />
+                <view class="list-list-left-text">使用说明</view>
+            </view>
+            <image class="list-list-right" src="{{right_arrow}}" />
+        </view>
+
+        <view class="list-list" bindtap="taplist3">
+            <view class="list-list-left">
+                <image class="list-list-left-icon" src="{{message}}" />
+                <view class="list-list-left-text">软件声明与致谢</view>
+            </view>
+            <image class="list-list-right" src="{{right_arrow}}" />
+        </view>
+
+        <view class="list-list" bindtap="taptoopen">
+            <view class="list-list-left">
+                <image class="list-list-left-icon" src="{{notes}}" />
+                <view class="list-list-left-text">开源代码</view>
+            </view>
+            <image class="list-list-right" src="{{right_arrow}}" />
+        </view>
+
+        <view class="list-list" bindtap="tapcontact">
+            <view class="list-list-left">
+                <image class="list-list-left-icon" src="{{users}}" />
+                <view class="list-list-left-text">联系作者</view>
+            </view>
+            <image class="list-list-right" src="{{right_arrow}}" />
+        </view>
+
+        <button class="list-list" style="width: 100%;" open-type="feedback">
+            <view class="list-list-left">
+                <image class="list-list-left-icon" src="{{chat}}" />
+                <view class="list-list-left-text normal">提点意见</view>
+            </view>
+            <image class="list-list-right" src="{{right_arrow}}" />
+        </button>
+
+        <view class="list-list" bindtap="tapadmin">
+            <view class="list-list-left">
+                <image class="list-list-left-icon" src="{{admin}}" />
+                <view class="list-list-left-text">管理界面</view>
+            </view>
+            <image class="list-list-right" src="{{right_arrow}}" />
+        </view>
+
+        <view class="list-list" bindtap="tapopenid">
+            <view class="list-list-left">
+                <image class="list-list-left-icon" src="{{admin}}" />
+                <view class="list-list-left-text">获取openid</view>
+            </view>
+            <image class="list-list-right" src="{{right_arrow}}" />
+        </view>
+
+        <!-- <button class="list-list" style="width: 100%;" open-type="openshare">
+            <view class="list-list-left">
+                <image class="list-list-left-icon" src="{{share}}" />
+                <view class="list-list-left-text-key">推荐给好友</view>
+            </view>
+            <image class="list-list-right" src="{{right_arrow}}" />
+        </button> -->
+    </view>
+
+    <view class="list-laba">
+        <image class="list-laba-image" src="{{laba}}" />
+        <view class="list-laba-smalltext">
+            如果你觉得小程序不错,不妨推荐给你的朋友们吧!
+        </view>
+    </view>
+
+    <button class="forward-button" type="primary" open-type="share">
+        推 荐 给 好 友
+    </button>
+
+    <view class="bottom-font">
+        桂院导航小程序 | 版权归个人所有
+    </view>
+
+</view>

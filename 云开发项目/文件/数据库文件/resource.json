@@ -1,0 +1,24 @@
+{
+    "_id": "1",
+    "img": "https://676c-gluguide-0g65cvsv649006da-1316857255.tcb.qcloud.la/%E5%AD%A6%E6%A0%A1/%E7%B4%A0%E6%9D%90/map_bottom.png",
+    "name": "地图"
+}
+{
+    "_id": "2",
+    "name": "封面",
+    "img": "cloud://gluguide-0g65cvsv649006da.676c-gluguide-0g65cvsv649006da-1316857255/学校/素材/schoolgate.jpg"
+}
+{
+    "_id": "3",
+    "name": "轮播图",
+    "img": [
+        "cloud://gluguide-0g65cvsv649006da.676c-gluguide-0g65cvsv649006da-1316857255/学校/素材/swiper_1.jpg",
+        "cloud://gluguide-0g65cvsv649006da.676c-gluguide-0g65cvsv649006da-1316857255/学校/素材/swiper_2.jpg",
+        "cloud://gluguide-0g65cvsv649006da.676c-gluguide-0g65cvsv649006da-1316857255/学校/素材/swiper_3.jpg"
+    ]
+}
+{
+    "_id": "4",
+    "name": "视频",
+    "img": "cloud://gluguide-0g65cvsv649006da.676c-gluguide-0g65cvsv649006da-1316857255/学校/素材/GLUlandscape.mp4"
+}

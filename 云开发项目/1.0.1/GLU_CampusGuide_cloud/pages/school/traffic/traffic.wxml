@@ -1,0 +1,73 @@
+<!--pages/school/bus/bus.wxml-->
+<view class="card">
+    <view class="card-title">
+        <image class="card-title-img" src="{{grey_bus}}" />
+        <view class="card-title-font">
+            交通信息
+        </view>
+    </view>
+
+    <view class="card-container">
+        <view class="card-container-title">
+            <image class="card-container-title-img" src="{{bus}}" />
+            <view class="card-container-title-font">
+                公交信息
+            </view>
+        </view>
+        <view class="card-container-text">
+            <text decode="true">&emsp;&emsp;东校门口附近有<text class="card-container-text-red">K96路公交车</text>，可以坐车前往<text class="card-container-text-blue">市区（万福广场、南溪山医院、高新万达城等地）</text>，非常便利，就是双休日、节假日、早晚高峰、开学和放假时车上比较拥挤。支持微信、支付宝、桂林出行网（<text class="card-container-text-blue">使用通付码9折优惠</text>）等一系列支付方式，票价2元。</text>
+        </view>
+    </view>
+
+    <view class="card-container">
+        <view class="card-container-title">
+            <image class="card-container-title-img" src="{{message_icon}}" />
+            <view class="card-container-title-font">
+                其他出行方式
+            </view>
+        </view>
+        <view class="card-container-text">
+            <text decode="true">&emsp;&emsp;北校门口附近有<text class="card-container-text-red">会仙班车</text>，可以坐车前往<text class="card-container-text-blue">桂林汽车南站等地（不能进城）</text>，然后转乘公交车进城。班车是运行多年的小巴车，比较老旧，算不上舒适。班车是满人或者没人上车就走。支持现金、微信和支付宝支付，票价4元左右。</text>
+
+            <text decode="true">\n&emsp;&emsp;校门口附近有时会有<text class="card-container-text-red">电动三轮车</text>（能坐4-6人），只可以坐车前往<text class="card-container-text-blue">大学城附近</text>（大学城不远，不急可以走过去）。电动三轮车是满人或者没人上车就走。支持现金、微信和支付宝支付，票价4元左右。</text>
+
+            <text decode="true">\n&emsp;&emsp;还可以<text class="card-container-text-red">打车或者租用电动车</text>,东校门口有<text class="card-container-text-red">共享电动车</text>可以使用，费用不定。</text>
+
+            <text decode="true">\n&emsp;&emsp;开学和放假时有<text class="card-container-text-red">定制公交</text>，去往<text class="card-container-text-blue">桂林站或桂林北站</text>，可以前往桂林出行网了解详情。</text>
+
+            <view style="text-align: center;">
+                <text decode="true">\n<text class="card-container-text">{{miniprogram_name}}小程序郑重提醒您：\n</text></text>
+
+                <text decode="true">\n<text class="card-container-text-red">道路千万条,安全第一条。</text></text>
+
+                <text decode="true">\n<text class="card-container-text-red">行车不规范,亲人两行泪。</text></text>
+            </view>
+
+        </view>
+    </view>
+
+    <view class="card-container">
+        <view class="card-container-title">
+            <image class="card-container-title-img" src="{{guilinchuxingwang}}" />
+            <view class="card-container-title-font">
+                xx出行网注册使用流程
+            </view>
+        </view>
+        <view class="card-container-text">
+            <text decode="true">&emsp;&emsp;第一步：搜索公众号桂林出行网或者下载桂林出行网APP。</text>
+
+            <text decode="true">\n&emsp;&emsp;第二步，根据要求注册账号，注册完成后进行账号登录</text>
+
+            <text decode="true">\n&emsp;&emsp;第三步，登录成功后充值一定的金额，便可以点击<text class="card-container-text-blue">通付码（9折优惠）</text>进行支付（乘车码无优惠）。下次使用时，用相同方法登录==>>使用通付码支付。</text>
+
+            <text decode="true">\n&emsp;&emsp;<text class="card-container-text-blue">桂林出行网APP</text>可以查询所有公交线路和<text class="card-container-text-red">实时公交位置</text>，强烈推荐哦！！！</text>
+        </view>
+    </view>
+
+    <view class="bottom-font">
+        <view>
+            非实时交通数据 | 请注意官方最新交通信息
+        </view>
+    </view>
+
+</view>

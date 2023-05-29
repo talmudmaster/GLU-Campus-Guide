@@ -1,0 +1,71 @@
+/* pages/jianjie/jianjie.wxss */
+@import "../../../utils/utils.wxss";
+
+page {
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-item {
+    height: 420rpx;
+}
+
+.swiper-item .wx-swiper-dot.wx-swiper-dot-active {
+    width: 33rpx;
+    background: #888888;
+    border-radius: 15rpx;
+}
+
+.swiper-item-image {
+    width: 100%;
+}
+
+.daohang {
+    height: 70px;
+    width: 70px;
+    background-color: #73a5d6;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-top: -35px;
+    margin-left: 290px;
+}
+
+.title-font {
+    color: #73a5d6;
+    margin-left: 20px;
+}
+
+.title-font-1 {
+    font-size: 35px;
+}
+
+.title-font-2 {
+    margin-top: 10px;
+    font-size: 25px;
+}
+
+.text-font {
+    margin: 20px 20px 0 20px;
+    font-size: 15px;
+    line-height: 25px;
+    /* 文本保留空格和回车 */
+    white-space: pre-wrap;
+}
+
+.video-font {
+    color: #73a5d6;
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

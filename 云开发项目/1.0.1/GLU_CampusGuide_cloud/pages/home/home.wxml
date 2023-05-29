@@ -1,0 +1,32 @@
+<!--pages/home/home.wxml-->
+<view class="all">
+    <image class="img" src="{{cover}}" />
+    <view class="list">
+        <view class="list-container" bindtap="taplist1">
+            <image src='{{school_icon}}' class='list-container-icon1'></image>
+            <view>
+                <view class='list-container-font1'>学校简介</view>
+                <view class='list-container-font2'>About {{school_name_English_short}}</view>
+            </view>
+            <image src='{{right_arrow}}' class='list-container-icon2'></image>
+        </view>
+
+        <view class="list-container" bindtap="taplist2">
+            <image src='{{map}}' class='list-container-icon1'></image>
+            <view>
+                <view class='list-container-font1'>逛逛{{school_name_short}}</view>
+                <view class='list-container-font2'>Campus Tour</view>
+            </view>
+            <image src='{{right_arrow}}' class='list-container-icon2'></image>
+        </view>
+
+        <view class="list-container" bindtap="taplist3">
+            <image src='{{school_life}}' class='list-container-icon1'></image>
+            <view>
+                <view class='list-container-font1'>校园信息</view>
+                <view class='list-container-font2'>Campus Info</view>
+            </view>
+            <image src='{{right_arrow}}' class='list-container-icon2'></image>
+        </view>
+    </view>
+</view>
