@@ -41,7 +41,7 @@ module.exports = {
     // 学校简介
     text: "桂林学院（Guilin University 代码：13641）是一所经教育部批准设置的国有民办普通本科高校，由广西壮族自治区教育厅主管、桂林新城投资开发集团有限公司举办。学校前身系广西师范大学与社会投资方于2001年5月合作创办的广西师范大学漓江学院；2004年1月，经教育部确认取得“独立学院”办学资格；2021年5月，教育部致函广西壮族自治区人民政府，同意广西师范大学漓江学院转设并更名为桂林学院。",
     // 视频
-    videourl: "https://talmudmaster.gitee.io/video/GLUlandscape.avi",
+    videourl: "https://talmudmaster.gitee.io/glu-campus-guide/GLUlandscape.avi",
 
     // 图片
     // 公共
