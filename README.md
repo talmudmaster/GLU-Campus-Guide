@@ -67,7 +67,7 @@
 - ✅ 管理媒体文件（校园地图、封面、轮播图及视频）
 
 ---
-# 📝 使用说明
+# 🔍 使用说明
 
 ![使用说明](https://s1.ax1x.com/2023/04/16/p99GGQA.png)
 
@@ -87,6 +87,28 @@
 4. CSDN：[开发指引 与 注意事项](https://blog.csdn.net/weixin_45940369/article/details/130918773)
 
 5. CSDN：[小程序 发行 / 发布 教程](https://blog.csdn.net/weixin_45940369/article/details/130693653)
+---
+
+# 📝 写作指南
+
+相关文档如下，可以进行参考。
+
+1. 毕业设计
+
+- [开题报告](写作指南/开题报告.md)
+
+- [中期报告](写作指南/中期报告.md)
+
+- [毕业设计论文目录](https://s1.ax1x.com/2023/06/16/pCMiO39.png)
+
+2. 大计赛参赛项目 “云上高校导航”  
+由此项目修改而来的，作品描述 和 开发文档 更加规范
+
+- [作品信息](https://gitee.com/talmudmaster/Cloud-based_University_Navigation)
+
+- [设计和开发文档](https://gitee.com/talmudmaster/Cloud-based_University_Navigation/blob/master/2023042719-%E5%8F%82%E8%B5%9B%E6%80%BB%E6%96%87%E4%BB%B6%E5%A4%B9/2023042719-03%20%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/%E4%B8%AD%E5%9B%BD%E5%A4%A7%E5%AD%A6%E7%94%9F%E8%AE%A1%E7%AE%97%E6%9C%BA%E8%AE%BE%E8%AE%A1%E5%A4%A7%E8%B5%9B%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E7%B1%BB%E4%BD%9C%E5%93%81%E8%AE%BE%E8%AE%A1%E5%92%8C%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3.pdf)
+
+- [演示PPT](https://gitee.com/talmudmaster/Cloud-based_University_Navigation/blob/master/2023042719-%E5%8F%82%E8%B5%9B%E6%80%BB%E6%96%87%E4%BB%B6%E5%A4%B9/2023042719-01%20%E4%BD%9C%E5%93%81%E4%B8%8E%E7%AD%94%E8%BE%A9%E6%9D%90%E6%96%99/%E4%BA%91%E4%B8%8A%E9%AB%98%E6%A0%A1%E5%AF%BC%E8%88%AA.pptx)
 
 ---
 # 🧾 参考资料
