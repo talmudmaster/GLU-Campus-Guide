@@ -76,17 +76,21 @@
 
 &emsp;实在太长了就放CSDN了，见谅
 
+&emsp;&ensp;汇总：[配置-安装-部署 教程](https://blog.csdn.net/weixin_45940369/article/details/129279263)
+
 1. [导入与配置教程](https://blog.csdn.net/weixin_45940369/article/details/130938418)
 2. 修改项目/二次开发：
-- CSDN：[静态项目二次开发教程](https://blog.csdn.net/weixin_45940369/article/details/130691976)
-- CSDN：[云开发项目复刻教程](https://blog.csdn.net/weixin_45940369/article/details/130693234) **不感兴趣或没时间可以不看，直接看下面的**
-- CSDN：[云开发项目二次开发教程](https://blog.csdn.net/weixin_45940369/article/details/130692247)
+- [静态项目二次开发教程](https://blog.csdn.net/weixin_45940369/article/details/130691976)
+- [云开发项目复刻教程](https://blog.csdn.net/weixin_45940369/article/details/130693234)   
+**不感兴趣或没时间可以不看，直接看下面的**
+- [云开发项目二次开发教程](https://blog.csdn.net/weixin_45940369/article/details/130692247)
 
 3. **刷新或重启** 项目
 
-4. CSDN：[开发指引 与 注意事项](https://blog.csdn.net/weixin_45940369/article/details/130918773)
+4. [开发指引 与 注意事项](https://blog.csdn.net/weixin_45940369/article/details/130918773)
 
-5. CSDN：[小程序 发行 / 发布 教程](https://blog.csdn.net/weixin_45940369/article/details/130693653)
+5. [小程序 发行 / 发布 教程](https://blog.csdn.net/weixin_45940369/article/details/130693653)
+
 ---
 
 # 📝 写作指南
