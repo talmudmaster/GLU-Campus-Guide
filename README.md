@@ -4,7 +4,7 @@
     <h1> 桂院校园导航小程序 </h1>
 
 [![test](https://gitee.com/talmudmaster/GLU-Campus-Guide/badge/star.svg?theme=dark)](https://gitee.com/talmudmaster/GLU-Campus-Guide)
-[![](https://img.shields.io/github/stars/talmudmaster/GLU-Guide)](https://github.com/talmudmaster/GLU-Guide)
+[![](https://img.shields.io/github/stars/talmudmaster/GLU-Campus-Guide)](https://github.com/talmudmaster/GLU-Campus-Guide)
 [![test](https://img.shields.io/badge/license-MulanPSL-green)](LICENSE)
 [![test](https://img.shields.io/badge/platform-微信小程序-green)](https://developers.weixin.qq.com/miniprogram/dev/component/)
 
