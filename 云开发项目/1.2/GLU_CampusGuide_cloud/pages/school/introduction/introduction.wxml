@@ -1,0 +1,39 @@
+<!--pages/introduction/introduction.wxml-->
+<swiper class="swiper-item" indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{activeColor}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+            <view>
+                <image class="swiper-item-image" mode="widthFix" bindload="imgHeight" src="{{item}}"></image>
+            </view>
+        </swiper-item>
+    </block>
+</swiper>
+
+<view class="daohang" bindtap="taptomap" style="margin-left: {{windowWidth-80}}px;">
+    <text>地图\n导航</text>
+</view>
+
+<view class="title-font">
+    <view class="title-font-1">
+        {{school_name_full}}
+    </view>
+    <view class="title-font-2">
+        {{school_name_English_full}}
+    </view>
+</view>
+
+<view class="text-font">
+    <text user-select="true" decode="true">&emsp;&emsp;{{text}}</text>
+</view>
+
+<view class="video-font">
+    {{school_name_short}}风光
+</view>
+
+<view class="video">
+    <video class="video-v" src="{{video}}" />
+</view>
+
+<view class="bottom-font">
+    信息来源：学校官网
+</view>

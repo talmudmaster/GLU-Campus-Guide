@@ -1,0 +1,35 @@
+/* pages/admin/admin.wxss */
+page {
+    height: 100%;
+    width: 100%;
+    background-color: #f3f3f3;
+}
+
+.card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-container {
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+
+.card-container-list {
+    border: 1px solid grey;
+    border-radius: 10px;
+    font-size: 24px;
+    margin: 15px;
+    width: 160px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
