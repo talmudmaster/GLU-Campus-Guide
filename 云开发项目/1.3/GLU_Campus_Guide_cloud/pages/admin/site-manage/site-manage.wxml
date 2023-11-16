@@ -1,0 +1,100 @@
+<!--pages/site-manage/site-manage.wxml-->
+<view>
+    <view class="card">
+        <view class="card-top">
+            地点管理
+        </view>
+
+        <view class="card-container">
+            <view wx:if="{{sid == 1}}" class="card-container-title">
+                <view class="card-container-title-font">
+                    新增地点
+                </view>
+            </view>
+
+            <view wx:if="{{sid == 2}}" class="card-container-title">
+                <view class="card-container-title-font">
+                    地点管理
+                </view>
+            </view>
+
+
+
+            <view class="card-container-form">
+                <view class="card-container-form-list">
+                    <view class="card-container-form-list-list">
+                        <view class="card-container-form-list-list-text">
+                            地点名称：
+                        </view>
+
+                        <input class="card-container-form-list-list-input" type="text" bindinput="getName" value="{{name}}" />
+                    </view>
+
+                    <view class="card-container-form-list-list">
+                        <view class="card-container-form-list-list-text">
+                            地点别名：
+                        </view>
+
+                        <input class="card-container-form-list-list-input" type="text" bindinput="getAliases" value="{{aliases}}" />
+                    </view>
+
+                    <view class="card-container-form-list-list">
+                        <view class="card-container-form-list-list-text">
+                            地点简介：
+                        </view>
+
+                        <input class="card-container-form-list-list-input" type="text" bindinput="getDesc" value="{{desc}}" />
+                    </view>
+
+                    <view class="card-container-form-list-list">
+                        <view class="card-container-form-list-list-text">
+                            所属类别：
+                        </view>
+
+                        <picker class="card-container-form-list-list-picker" range="{{category_name_list}}" mode="selector" bindchange="bindchange" value="{{0}}">
+                            选择类别
+                        </picker>
+                        {{category_name_list[choose]}}
+                    </view>
+
+                    <view class="card-container-form-list-list">
+                        <view class="card-container-form-list-list-text">
+                            经纬度：
+                        </view>
+
+                        <view class="card-container-form-list-list-picker" bindtap="getPoint">
+                            地图选点
+                        </view>
+
+                        <view style="width: 90px;">
+                            <text>{{la}}\n{{lo}}</text>
+                        </view>
+                    </view>
+
+                    <view class="card-container-form-list-list">
+                        <view class="card-container-form-list-list-text">
+                            地点图片：
+                        </view>
+
+                        <view class="card-container-form-list-list-picker" bindtap="getImg">
+                            上传图片
+                        </view>
+
+                    </view>
+
+                    <view class="card-container-form-list-img">
+                        <image style="width: 240px;height: auto;" src="{{img}}" mode="widthFix" />
+                    </view>
+
+                </view>
+                <button wx:if="{{sid == 1}}" type="primary" bindtap="addsite">确认添加</button>
+
+                <button wx:if="{{sid == 2}}" type="primary" bindtap="updatesite">确认修改</button>
+
+                <button wx:if="{{sid == 2}}" type="warn" bindtap="removesite" style="margin-top: 20px;">确认删除</button>
+            </view>
+        </view>
+
+
+    </view>
+</view>

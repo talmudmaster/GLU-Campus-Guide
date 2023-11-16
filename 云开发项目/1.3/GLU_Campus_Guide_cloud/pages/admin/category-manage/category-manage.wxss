@@ -1,0 +1,84 @@
+/* pages/category-manage/manage.wxss */
+page {
+    height: 100%;
+    width: 100%;
+    background: #f3f3f3;
+}
+
+.card {
+    margin: 10px 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.card-top {
+    height: 60px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.card-top-left {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    border-radius: 10px 0 0 0;
+}
+
+.card-top-right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    border-radius: 0 10px 0 0;
+}
+
+.choose {
+    background-color: white;
+}
+
+.card-container {
+    margin-bottom: 30px;
+    margin: 10px;
+}
+
+.card-container-title {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+    
+}
+
+.card-container-title-img {
+    height: 25px;
+    width: 25px;
+}
+
+.card-container-title-font {
+    color: #73a5d6;
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+.card-container-form {
+    border-bottom: 10px solid white;
+}
+
+.card-container-form-list {
+    display: flex;
+    margin: 10px;
+}
+
+.card-container-form-list-input {
+    border: 1px solid grey;
+    width: 190px;
+    padding-left: 10px;
+}

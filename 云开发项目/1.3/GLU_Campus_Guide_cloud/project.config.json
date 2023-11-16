@@ -1,0 +1,54 @@
+{
+    "cloudfunctionRoot": "cloudfunctions/",
+    "description": "项目配置文件",
+    "packOptions": {
+        "ignore": [],
+        "include": []
+    },
+    "setting": {
+        "bundle": false,
+        "userConfirmedBundleSwitch": false,
+        "urlCheck": true,
+        "scopeDataCheck": false,
+        "coverView": true,
+        "es6": false,
+        "postcss": true,
+        "compileHotReLoad": false,
+        "lazyloadPlaceholderEnable": false,
+        "preloadBackgroundData": false,
+        "minified": true,
+        "autoAudits": false,
+        "newFeature": false,
+        "uglifyFileName": false,
+        "uploadWithSourceMap": true,
+        "useIsolateContext": true,
+        "nodeModules": false,
+        "enhance": false,
+        "useMultiFrameRuntime": true,
+        "useApiHook": true,
+        "useApiHostProcess": true,
+        "showShadowRootInWxmlPanel": true,
+        "packNpmManually": false,
+        "enableEngineNative": false,
+        "packNpmRelationList": [],
+        "minifyWXSS": true,
+        "showES6CompileOption": false,
+        "minifyWXML": true,
+        "babelSetting": {
+            "ignore": [],
+            "disablePlugins": [],
+            "outputPath": ""
+        },
+        "condition": false
+    },
+    "compileType": "miniprogram",
+    "libVersion": "2.20.3",
+    "appid": "wxa67dbc9511ee06a6",
+    "condition": {},
+    "editorSetting": {
+        "tabIndent": "insertSpaces",
+        "tabSize": 4
+    },
+    "cloudfunctionTemplateRoot": "cloudfunctionTemplate/",
+    "projectname": "%E6%A1%82%E9%99%A2%E5%AF%BC%E8%88%AA%E4%BA%91%E5%BC%80%E5%8F%91%E7%89%88%E6%9C%AC"
+}

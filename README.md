@@ -82,10 +82,8 @@
 
 1. [导入与配置教程](https://blog.csdn.net/weixin_45940369/article/details/130938418)
 2. 修改项目/二次开发：
-- [静态项目二次开发教程](https://blog.csdn.net/weixin_45940369/article/details/133462311)
-- [云开发项目复刻教程](https://blog.csdn.net/weixin_45940369/article/details/130693234)   
-**不感兴趣或没时间可以不看，直接看下面的**
-- [云开发项目二次开发教程](https://blog.csdn.net/weixin_45940369/article/details/133463410)
+- [静态项目二次开发教程 1.3](https://blog.csdn.net/weixin_45940369/article/details/134191166)
+- [云开发项目二次开发教程 1.3](https://blog.csdn.net/weixin_45940369/article/details/134180416)
 
 3. **刷新或重启** 项目
 
