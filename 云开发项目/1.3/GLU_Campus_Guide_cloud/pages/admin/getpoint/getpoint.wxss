@@ -4,8 +4,8 @@ page{
 }
 
 .img {
-    height: 10px;
-    width: 10px;
+    height: 24px;
+    width: 24px;
     position: absolute;
 	top: 50%;
 	left: 50%;

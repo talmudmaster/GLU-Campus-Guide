@@ -11,53 +11,44 @@ Page({
         map_bottom: null,
 
         subKey: utils.mapKey,
-        scale: 16,
-        enable_poi: false,
+        scale: utils.scale,
+        enable_poi: utils.enablepoi,
         location: {
             latitude: utils.latitude,
             longitude: utils.longitude,
         },
-        markers: [{
-            id: 0,
-            iconPath: `https://3gimg.qq.com/lightmap/xcx/demoCenter/images/Marker3_Activated@3x.png`,
-            latitude: '25.093968',
-            longitude: '110.277715',
-            width: 30,
-            height: 30,
-        }],
-
-        lo: '110.277715',
-        la: '25.093968',
         groundoverlay: utils.groundoverlay,
+        markers: [],
     },
 
     /**
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
-        if (options.lo != null && options.la != null) {
+        console.log(options)
+        if (options.lo != "" && options.la != "") {
             this.setData({
                 location: {
                     longitude: options.lo,
                     latitude: options.la
                 },
-                markers: [{
-                    id: 0,
-                    iconPath: `https://3gimg.qq.com/lightmap/xcx/demoCenter/images/Marker3_Activated@3x.png`,
-                    latitude: options.la,
-                    longitude: options.lo,
-                    width: 30,
-                    height: 30,
-                    callout: {
-                        content: " " + options.la + " " + options.lo + " ",
-                        display: 'ALWAYS',
-                        padding: 1
-                    }
-                }],
-                lo: options.lo,
-                la: options.la
             })
         }
+        this.setData({
+            markers: [{
+                id: 0,
+                iconPath: `https://3gimg.qq.com/lightmap/xcx/demoCenter/images/Marker3_Activated@3x.png`,
+                latitude: this.data.location.latitude,
+                longitude: this.data.location.longitude,
+                width: 30,
+                height: 30,
+                callout: {
+                    content: " " + this.data.location.latitude + " " + this.data.location.longitude + " ",
+                    display: 'ALWAYS',
+                    padding: 1
+                }
+            }],
+        })
         this.get()
     },
 
@@ -125,29 +116,31 @@ Page({
         var that = this
         this.mapCtx.getCenterLocation({
             success: function (res) {
-                console.log(res.longitude)
-                console.log(res.latitude)
+                console.log("longitude:" + res.longitude + ", latitude:" + res.latitude)
                 that.setData({
-                    lo: res.longitude.toFixed(6),
-                    la: res.latitude.toFixed(6),
+                    location: {
+                        longitude: res.longitude.toFixed(6),
+                        latitude: res.latitude.toFixed(6),
+                    },
                 })
                 that.addMarkers()
             }
         })
     },
-
+    // 添加标记点
     addMarkers: function () {
         this.mapCtx.addMarkers({
             markers: [{
                 id: 0,
-                latitude: this.data.la,
-                longitude: this.data.lo,
                 iconPath: `https://3gimg.qq.com/lightmap/xcx/demoCenter/images/Marker3_Activated@3x.png`,
+                latitude: this.data.location.latitude,
+                longitude: this.data.location.longitude,
                 width: 30,
                 height: 30,
                 callout: {
-                    content: " " + this.data.la + "  " + this.data.lo + " ",
+                    content: " " + this.data.location.latitude + "  " + this.data.location.longitude + " ",
                     display: 'ALWAYS',
+                    padding: 1
                 }
             }],
             clear: true,
@@ -156,15 +149,13 @@ Page({
     },
     // 获取地点经纬度
     getPoint() {
-        console.log(this.data.la)
-        console.log(this.data.lo)
-
+        console.log(this.data.location)
         var pages = getCurrentPages();
         var prevPage = pages[pages.length - 2]; // 上一个页面
         // 直接调用上一个页面对象的setData()方法，把数据存到上一个页面中去
         prevPage.setData({
-            la: this.data.la,
-            lo: this.data.lo
+            la: this.data.location.latitude,
+            lo: this.data.location.longitude
         });
         wx.navigateBack({})
     }
