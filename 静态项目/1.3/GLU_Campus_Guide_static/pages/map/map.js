@@ -77,7 +77,7 @@ Page({
             success: function (res) {
                 var nowlatitude = res.latitude
                 var nowlongitude = res.longitude
-                if ((nowlatitude > 25.089701) && (nowlatitude < 25.09839) && (nowlongitude > 110.2733) && (nowlongitude < 110.280699)) {
+                if (nowlatitude > school_boundary.south && nowlatitude < school_boundary.north && nowlongitude > school_boundary.west && nowlongitude < school_boundary.east) {
                     that.setData({
                         mylocationmarkers: {
                             id: 0,
