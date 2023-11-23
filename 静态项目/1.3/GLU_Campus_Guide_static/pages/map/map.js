@@ -71,6 +71,7 @@ Page({
         }
 
         var that = this
+        var school_boundary = this.data.school_boundary
         //判断所在位置是否在校区内
         wx.getLocation({
             type: 'gcj02',
