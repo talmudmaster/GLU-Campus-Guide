@@ -3,7 +3,7 @@
     <block wx:for="{{background}}" wx:key="*this">
         <swiper-item>
             <view>
-                <image class="swiper-item-image" mode="widthFix" bindload="imgHeight" src="{{item}}"></image>
+                <image class="swiper-item-image" mode="widthFix" bindload="imgHeight" src="{{item}}" bindtap="lookPhoto" data-src="{{item}}" ></image>
             </view>
         </swiper-item>
     </block>

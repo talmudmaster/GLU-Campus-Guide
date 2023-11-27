@@ -6,7 +6,7 @@
                 <block wx:for="{{background}}" wx:key="*this">
                     <swiper-item>
                         <view class="list-landscape-container-swiper-item">
-                            <image class="list-landscape-container-swiper-item-img" mode="widthFix" bindload="imgHeight" src="{{item}}"></image>
+                            <image class="list-landscape-container-swiper-item-img" mode="widthFix" bindload="imgHeight" src="{{item}}" bindtap="lookPhoto" data-src="{{item}}"></image>
                         </view>
                     </swiper-item>
                 </block>

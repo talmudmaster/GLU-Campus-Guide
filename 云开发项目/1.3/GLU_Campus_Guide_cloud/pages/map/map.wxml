@@ -66,7 +66,7 @@
 
     <mp-dialog title="{{card.name}}" show="{{dialogShow}}" bindbuttontap="mapmarker" buttons="{{buttons}}">
         <view>
-            <image bindtap="lookPhoto" mode="" style="width:480rpx;height:270rpx;" src="{{card.img}}" data-src="{{card.img}}"></image>
+            <image bindtap="lookPhoto" mode="heightFix" style="height:270rpx;" src="{{card.img}}" data-src="{{card.img}}"></image>
 
             <view style="font-size:90%">{{card.aliases}}</view>
 

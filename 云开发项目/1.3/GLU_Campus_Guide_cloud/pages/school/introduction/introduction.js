@@ -114,5 +114,14 @@ Page({
         wx.switchTab({
             url: '../../../pages/map/map',
         })
-    }
+    },
+    //点击图片可查看
+    lookPhoto(e) {
+        console.log("点击了图片", e.target.dataset.src)
+        var url = e.target.dataset.src
+        wx.previewImage({
+            current: url, // 当前显示图片的http链接
+            urls: this.data.background // 需要预览的图片http链接列表
+        })
+    },
 })
