@@ -89,6 +89,12 @@ module.exports = {
         // 北（学校最东端的 纬度）
         north: 25.09839,
     },
+    // 默认地点
+    default_point: {
+        name: "东门",
+        latitude: '25.095321',
+        longitude: '110.280392',
+    },
 
     // 图片
 

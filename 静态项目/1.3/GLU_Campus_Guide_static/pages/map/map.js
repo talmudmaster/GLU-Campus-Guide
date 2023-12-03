@@ -48,6 +48,9 @@ Page({
         boundary: utils.boundary,
         school_boundary: utils.school_boundary,
 
+        // 默认地点
+        default_point: utils.default_point,
+
         id: null,
         card: null,
         dialogShow: false,
@@ -103,12 +106,12 @@ Page({
                         mylocationmarkers: {
                             id: 0,
                             iconPath: that.data.red_location,
-                            latitude: '25.095321',
-                            longitude: '110.280392',
+                            latitude: that.data.default_point.latitude,
+                            longitude: that.data.default_point.longitude,
                             width: 30,
                             height: 30,
                             callout: {
-                                content: " 东门 ",
+                                content: " " + that.data.default_point.name + " ",
                                 display: 'ALWAYS',
                                 padding: 1
                             }
@@ -118,7 +121,7 @@ Page({
                     })
                     that.changeCategory(begin)
                     wx.showToast({
-                        title: '当前位置不在校区内\n默认位置设为东门',
+                        title: '当前位置不在校区内\n默认位置设为' + that.data.default_point.name,
                         icon: 'none',
                         duration: 2000
                     })
