@@ -1,0 +1,155 @@
+<!--pages/home/home.wxml-->
+<!--pages/school/school.wxml-->
+<view style="height: auto;">
+  <view class="list-landscape-container">
+    <swiper class="list-landscape-container-swiper" next-margin="20px" indicator-dots="{{indicatorDots}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{activeColor}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{activeColor}}">
+      <block wx:for="{{background}}" wx:key="*this">
+        <swiper-item>
+          <view class="list-landscape-container-swiper-item">
+            <image class="list-landscape-container-swiper-item-img" mode="widthFix" bindload="imgHeight" src="{{item}}" bindtap="lookPhoto" data-src="{{item}}"></image>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+
+    <view class="list-landscape-container-icon" style="margin-left:306rpx">
+      <image class="list-landscape-container-icon-img" src="{{school_logo}}" />
+    </view>
+
+    <view class="list-landscape-container-icon" style="margin-left:556rpx;margin-top: -66rpx;">
+      <image class="list-landscape-container-icon-school" src="{{label}}" bindtap="tointroduction"></image>
+    </view>
+
+    <view class="list-landscape-container-text">
+      {{school_information.school_name_full}}
+    </view>
+  </view>
+
+  <view class="list-info">
+    <view class="list-info-container">
+      <view class="list-info-container-titletext red">
+        {{school_information.motto}}
+      </view>
+
+      <view class="list-info-container-text">
+        建校时间：{{school_information.build_time}}年
+      </view>
+
+      <view class="list-info-container-text">
+        院校类型：{{school_information.institution_type}}
+      </view>
+    </view>
+
+    <view class="list-info-container">
+      <view class="list-info-container-titletext green">
+        {{school_information.honor}}
+      </view>
+
+      <view class="list-info-container-text">
+        办校类型：{{school_information.school_type}}院校
+      </view>
+
+      <view class="list-info-container-text">
+        所在地：{{school_information.location}}
+      </view>
+    </view>
+  </view>
+
+  <view class="list-laba">
+    <image class="list-laba-image" src="{{laba}}" />
+    <view class="list-laba-text">
+      欢迎使用{{miniprogram_name}}小程序
+    </view>
+  </view>
+
+  <view class="card-container">
+    <view class="card-container-card">
+      <view class="card-container-card-title">
+        🚩 常用功能
+      </view>
+
+      <view class="two">
+
+        <image class="card-container-card-button" src="{{function_buttons[0]}}" mode="" bindtap="map" />
+
+        <image class="card-container-card-button" src="{{function_buttons[1]}}" mode="" bindtap="school" />
+
+      </view>
+
+      <view class="two">
+
+        <image class="card-container-card-button" src="{{function_buttons[4]}}" mode="" bindtap="rank" />
+
+        <image class="card-container-card-button" src="{{function_buttons[3]}}" mode="" bindtap="link" />
+
+      </view>
+
+    </view>
+  </view>
+
+  <view class="list-laba">
+    <image class="list-laba-image" src="{{weather}}" />
+    <view class="list-laba-text weather_text">
+      校园天气
+    </view>
+  </view>
+
+  <view class="card-container">
+    <view class="card-container-weather">
+      <view class="card-container-weather-city">
+        {{school_information.location}}
+      </view>
+
+      <view class="card-container-weather-tmp">
+        <view>{{now.temp}}°</view>
+        <image class="card-container-weather-tmp-icon" src="https://icons.qweather.com/assets/icons/{{now.icon}}.svg"></image>
+      </view>
+
+      <view class="card-container-weather-info">
+        <view>{{now.windDir}} {{now.windScale}}级</view>
+        <view>湿度 {{now.humidity}}%</view>
+        <view>气压 {{now.pressure}}Pa</view>
+      </view>
+
+      <image class="card-container-wave" src="{{wave}}"></image>
+    </view>
+  </view>
+
+  <view class="bottom-font">
+    {{miniprogram_name}}小程序 | 版权归开发者所有
+  </view>
+
+</view>
+
+<mp-dialog title="友情链接" show="{{dialogShow}}" bindbuttontap="mapmarker" buttons="{{buttons}}">
+  <view class="list-row">
+
+    <view class="list-row-container" bindtap="toschool">
+      <image class="list-row-container-img" src="{{school_icon}}" />
+      <view class="list-row-container-text">
+        学校
+      </view>
+    </view>
+
+    <view class="list-row-container" bindtap="tolibrary">
+      <image class="list-row-container-img" src="{{book}}" />
+      <view class="list-row-container-text">
+        图书馆
+      </view>
+    </view>
+
+    <view class="list-row-container" bindtap="tofinance">
+      <image class="list-row-container-img" src="{{money}}" />
+      <view class="list-row-container-text">
+        财务处
+      </view>
+    </view>
+
+    <view class="list-row-container" bindtap="toMiniProgram">
+      <image class="list-row-container-img" src="{{magazine}}" />
+      <view class="list-row-container-text">
+        招生
+      </view>
+    </view>
+  </view>
+</mp-dialog>

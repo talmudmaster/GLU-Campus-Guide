@@ -1,0 +1,103 @@
+/* pages/mypage/mypage */
+page {
+  height: 100%;
+  background: #80fcdd;
+}
+
+.my {
+  height: 100%;
+  background: linear-gradient(to bottom, #003cff9c, #80fcdd);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.center {
+  width: 95%;
+  /* height: 360rpx; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+}
+
+.center_top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 260rpx;
+  margin: 0 auto;
+  background: white;
+  border-radius: 5px;
+}
+
+.center_top_card {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  height: 180rpx;
+  border-bottom: 1px solid #2f80ed;
+}
+
+.center_img {
+  width: 122rpx;
+  height: 122rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.user_head {
+  width: 100%;
+  height: 100%;
+}
+
+.center_info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.center_name {
+  font-size: 44rpx;
+}
+
+.center_welcome {
+  font-size: 30rpx;
+  margin-top: 2px;
+  color: grey;
+}
+
+.menu {
+  width: 95%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 16rpx;
+  padding-bottom: 20rpx;
+  border-radius: 5px;
+  font-size: 36rpx;
+  color: #444444;
+}
+
+.menu_row {
+  display: flex;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  margin-left: 4px;
+  margin-right: 4px;
+  border-bottom: 1px solid #56ccf2;
+  width: 95%;
+  background-color: white;
+}
+
+.open_type {
+  padding: 0;
+  font-size: 36rpx;
+  font-weight: normal;
+  color: #444444;
+  border-radius: 0;
+}

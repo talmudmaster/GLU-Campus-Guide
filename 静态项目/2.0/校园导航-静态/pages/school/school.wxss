@@ -1,0 +1,63 @@
+/* pages/school/school.wxss */
+page {
+  background-color: #56CCF2;
+}
+
+.cu-list {
+  overflow: hidden;
+  margin-right: 30rpx;
+  margin-left: 30rpx;
+  border-radius: 20rpx;
+  /* display: block; */
+  margin-top: 50rpx;
+  margin-bottom: 50rpx;
+  /* padding-top: 50rpx; */
+  /* padding-bottom: 50rpx; */
+  /* --ShadowSize: 0rpx 40rpx 100rpx 0rpx; */
+}
+
+.cu-item {
+  padding-right: 90rpx;
+  position: relative;
+  display: flex;
+  padding: 0 30rpx;
+  min-height: 100rpx;
+  background-color: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+
+  /* transition: all .6s ease-in-out 0s; */
+  /* transform: translateX(0rpx); */
+  border-bottom: 1px solid gray;
+}
+
+.cu-item:last-child {
+  border-bottom: 0;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* font-size: 30rpx; */
+  /* line-height: 1.6em; */
+  /* flex: 1; */
+}
+
+.cuIcon-link {
+  display: inline-block;
+  margin-right: 10rpx;
+  width: 1.6em;
+  text-align: center;
+
+  /* color: #0081ff; */
+
+  /* font-family: "cuIcon"; */
+  /* font-size: inherit; */
+  /* font-style: normal; */
+}
+
+.text-grey {
+  /* color: #8799a3; */
+  color: grey;
+}

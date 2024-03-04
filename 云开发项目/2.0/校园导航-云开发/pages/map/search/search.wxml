@@ -1,0 +1,27 @@
+<!--pages/search/search.wxml-->
+<view class="root">
+    <input class="input" placeholder="请输入要搜索的地点" bindinput="getContent" type="text" />
+    <view class="input_search" type="primary" bindtap="goSearch">
+        搜索
+    </view>
+</view>
+
+<view class="result">
+    <view wx:if="{{result&&result.length>0}}">
+        <view class="middle">
+            搜索结果如下
+        </view>
+
+        <view class="result-list" wx:for="{{result}}" wx:key="*this" data-name="{{item.name}}" data-latitude="{{item.latitude}}" data-longitude="{{item.longitude}}" bindtap="tapback">
+            <view class="item">
+                <view>{{item.name}}</view>
+                <view style="color: grey;font-size: small;">{{item.aliases}}</view>
+            </view>
+            浏览次数：{{item.browse}}
+        </view>
+    </view>
+
+    <view wx:if="{{result&&result.length==0}}" class="middle">
+        抱歉，没有找到您想找的地点
+    </view>
+</view>

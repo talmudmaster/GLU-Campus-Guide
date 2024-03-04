@@ -1,0 +1,123 @@
+/* pages/statement/statement.wxss */
+@import "../../../utils/utils.wxss";
+
+page {
+    height: 100%;
+    width: 100%;
+}
+
+.small-size {
+    font-size: 22px;
+}
+
+.card {
+    margin: 20px;
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-bottom: 1px solid #b6b6b6;
+    margin-bottom: 20px;
+}
+
+.card-title-img {
+    height: 30px;
+    width: 30px;
+}
+
+.card-title-font {
+    color: #73a5d6;
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+.card-container {
+    /* margin-bottom: 35px; */
+    margin-bottom: 20px;
+}
+
+.card-container-title {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.card-container-title-img {
+    height: 25px;
+    width: 25px;
+}
+
+.card-container-title-font {
+    color: #73a5d6;
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+.card-container-title-left {
+    width: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.card-container-all {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-container-text {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card-container-img {
+    width: 280px;
+    margin: 10px;
+}
+
+.card-container-card {
+    margin: 5px;
+    padding-top: 15px;
+    border-radius: 10px;
+    height: 190px;
+    background-color: #64C8FA;
+    background: linear-gradient(to bottom, #56CCF2, #2F80ED);
+}
+
+.card-container-card-writer {
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    margin-left: 20px;
+    margin-bottom: 8px;
+    color: white;
+}
+
+.card-container-card-codebase {
+    margin-left: 20px;
+    margin-right: 15px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.card-container-card-codebase-icon {
+    border-radius: 50%;
+    height: 90px;
+    width: 90px;
+}
+
+.card-container-card-info {
+    margin-left: 15px;
+    margin-right: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

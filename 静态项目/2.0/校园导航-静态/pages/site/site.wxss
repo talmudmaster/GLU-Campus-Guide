@@ -1,0 +1,127 @@
+/* pages/place/place.wxss */
+
+page {
+    height: 100%;
+    width: 100%;
+}
+
+.card {
+    height: 100%;
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+}
+
+.card-left {
+    width: 75px;
+    background-color: #f0f0f0;
+}
+
+.card-left-scorll-view {
+    height: 100%;
+    background-color: #f0f0f0;
+    width: 75px;
+    text-align: center;
+
+}
+
+.card-left-scorll-view-label {
+    width: 75px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choose {
+    border-left: 6px solid #404481;
+    background-color: white;
+}
+
+.card-right {
+    height: 100%;
+    background-color: white;
+}
+
+.card-right-title {
+    margin: 10px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.card-right-title-icon {
+    height: 30px;
+    width: 30px;
+    margin-left: 5px;
+    margin-right: 10px;
+}
+
+.card-right-content {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.card-right-content-card {
+    margin-top: 5px;
+    margin-left: 4px;
+    font-size: 14px;
+    /* height: 150px; */
+    width: 95px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-right-content-card-img {
+    height: 90px;
+    width: 90px;
+    border-radius: 10px;
+}
+
+.card-right-content-card-context {
+    display: flex;
+    width: 100%;
+}
+
+.card-right-content-card-context-icon {
+    height: 20px;
+    width: 20px;
+}
+
+
+.card-container {
+    height: 100%;
+}
+
+.card-container-scorll {
+    height: 100%;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: honeydew;
+}
+
+.card-container-scorll-view {
+    height: 100%;
+    background-color: #2dabf3;
+    width: 100px;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.card-container-scorll-view-label {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.card-container-scorll-view-desc {
+    height: 210px;
+    width: auto;
+    padding: 10px;
+    font-size: 18px;
+}

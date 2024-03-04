@@ -1,0 +1,207 @@
+/* pages/manage-site/manage-site.wxss */
+page {
+    height: 100%;
+    width: 100%;
+    background: #f3f3f3;
+}
+
+.card {
+    margin: 10px 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.card-top {
+    height: 60px;
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+
+.card-top-column {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+}
+
+.left {
+    border-radius: 10px 0 0 0;
+}
+
+.right {
+    border-radius: 0 10px 0 0;
+}
+
+.choose {
+    background-color: white;
+}
+
+.card-container {
+    margin-bottom: 30px;
+    margin: 10px;
+}
+
+.card-container-title {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.card-container-title-font {
+    color: #73a5d6;
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+.card-container-container {
+    border-bottom: 10px solid white;
+}
+
+.card-container-container-title {
+    margin: 10px 0 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: larger;
+}
+
+.card-container-container-title-title {
+    width: 80px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    border-bottom: 1px solid grey;
+}
+
+.card-container-container-site-title {
+    width: 160px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    text-align: center;
+    flex-direction: column;
+}
+
+.card-container-container-site-title-desc {
+    font-size: medium;
+    color: grey;
+}
+
+.root {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px;
+}
+
+.input {
+    width: 70%;
+    height: 30px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    padding-left: 15px;
+}
+
+.input_search {
+    width: 20%;
+    height: 30px;
+    text-align: center;
+    border: 1px solid grey;
+    border-radius: 15px;
+    background-color: #07c160;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-bottom-category {
+    height: 100%;
+    background-color: #f0f0f0;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-bottom-category-label {
+    width: 71px;
+    height: 35px;
+    margin-left: 2px;
+    margin-right: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.choose {
+    border-top: 10px solid #404481;
+    background-color: white;
+}
+
+.card-container-form-list-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* .card-container-form {
+    border-bottom: 10px solid white;
+}
+
+.card-container-form-list {
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+}
+
+.card-container-form-list-list {
+    display: flex;
+    margin: 10px;
+    align-items: center;
+}
+
+.card-container-form-list-list-text {
+    width: 80px;
+}
+
+.card-container-form-list-list-input {
+    border: 1px solid grey;
+    width: 190px;
+    padding-left: 10px;
+}
+
+.card-container-form-list-list-picker {
+    width: 100px;
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 2px;
+    text-align: center;
+    color: white;
+    background-color: #07c160;
+    margin-right: 10px;
+}
+
+.card-container-form-list-img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */

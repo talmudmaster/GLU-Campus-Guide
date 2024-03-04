@@ -1,0 +1,155 @@
+<!--pages/manage-site/manage-site.wxml-->
+<view>
+  <view class="card">
+    <view class="card-top">
+      <view class="card-top-column left {{sid == 1?'choose':''}}" bindtap="click1">
+        类别
+      </view>
+
+      <view class="card-top-column {{sid == 2?'choose':''}}" bindtap="click2">
+        地点
+      </view>
+
+      <view class="card-top-column right {{sid == 3?'choose':''}}" bindtap="click3">
+        默认地点
+      </view>
+    </view>
+
+    <view wx:if="{{sid == 1}}" class="card-container">
+      <view class="card-container-title">
+        <view class="card-container-title-font">
+          类别管理
+        </view>
+      </view>
+
+      <view class="card-container-container">
+        <button type="primary" size="mini" bindtap="addcategory">
+          新增类别
+        </button>
+        <view class="card-container-container-title title">
+          <view class="card-container-container-title-title">序号</view>
+          <view class="card-container-container-title-title">类别</view>
+          <view class="card-container-container-title-title">操作</view>
+        </view>
+
+        <view class="card-container-container-title" wx:for="{{category_list}}" wx:key="*this">
+          <view class="card-container-container-title-title">{{index+1}}</view>
+          <view class="card-container-container-title-title">{{item.name}}</view>
+          <view class="card-container-container-title-title">
+            <button type="primary" size="mini" bindtap="managecategory" data-_id="{{item._id}}" data-id="{{index}}" data-name="{{item.name}}">
+              管理
+            </button>
+          </view>
+        </view>
+
+      </view>
+    </view>
+
+    <view wx:if="{{sid == 2}}" class="card-container">
+      <view class="card-container-title">
+        <view class="card-container-title-font">
+          地点管理
+        </view>
+      </view>
+
+      <view class="card-container-container">
+        <button type="primary" size="mini" bindtap="addsite">
+          新增地点
+        </button>
+
+        <!-- 搜索栏 -->
+        <view class="root">
+          <input class="input" placeholder="请输入要搜索的地点" bindinput="getKey" type="text" />
+          <view class="input_search" type="primary" bindtap="goSearch">
+            搜索
+          </view>
+        </view>
+        <!-- 类别栏 -->
+        <scroll-view scroll-x="true" scroll-left="10px">
+          <view class="card-bottom-category" style="width: {{site_data.length*75}}px;">
+            <view class="card-bottom-category-label {{index == category ? 'choose' : ''}}" wx:for="{{site_data}}" wx:key="id" id="{{index}}" bindtap="changeCategory">
+              {{item.name}}
+            </view>
+          </view>
+        </scroll-view>
+
+        <view class="card-container-container-title title">
+          <view class="card-container-container-title-title">序号</view>
+          <view class="card-container-container-title-title">地点</view>
+          <view class="card-container-container-title-title">操作</view>
+        </view>
+
+        <view class="card-container-container-title" wx:for="{{result_list}}" wx:key="*this">
+          <view class="card-container-container-title-title">{{index+1}}</view>
+          <view class="card-container-container-site-title">
+            <view>{{item.name}} </view>
+
+            <view class="card-container-container-site-title-desc">
+              {{item.aliases}}
+            </view>
+          </view>
+          <view class="card-container-container-title-title">
+            <button type="primary" size="mini" bindtap="managesite" data-_id="{{item._id}}" data-id="{{index}}" data-c_id="{{item.c_id}}">
+              管理
+            </button>
+          </view>
+        </view>
+
+      </view>
+
+    </view>
+
+    <view wx:if="{{sid == 3}}" class="card-container">
+
+      <view class="card-container-title">
+        <view class="card-container-title-font">
+          默认地点
+        </view>
+
+      </view>
+      <view class="card-container-container-title" style="margin-left: 10px;font-size: large;">定位不在学校时，地图显示的地点</view>
+
+      <view class="card-container-container-title" style="margin-left: 10px;font-size: large;">当前默认地点：{{default_site_name}}</view>
+
+      <!-- 搜索栏 -->
+      <view class="root">
+        <input class="input" placeholder="请输入要搜索的地点" bindinput="getKey" type="text" />
+        <view class="input_search" type="primary" bindtap="goSearch">
+          搜索
+        </view>
+      </view>
+      <!-- 类别栏 -->
+      <scroll-view scroll-x="true" scroll-left="10px">
+        <view class="card-bottom-category" style="width: {{site_data.length*75}}px;">
+          <view class="card-bottom-category-label {{index == category ? 'choose' : ''}}" wx:for="{{site_data}}" wx:key="id" id="{{index}}" bindtap="changeCategory">
+            {{item.name}}
+          </view>
+        </view>
+      </scroll-view>
+
+      <view class="card-container-container-title title">
+        <view class="card-container-container-title-title">序号</view>
+        <view class="card-container-container-title-title">地点</view>
+        <view class="card-container-container-title-title">操作</view>
+      </view>
+
+      <view class="card-container-container-title" wx:for="{{result_list}}" wx:key="*this">
+        <view class="card-container-container-title-title">{{index+1}}</view>
+        <view class="card-container-container-site-title">
+          <view>{{item.name}} </view>
+
+          <view class="card-container-container-site-title-desc">
+            {{item.aliases}}
+          </view>
+        </view>
+        <view class="card-container-container-title-title">
+          <button type="primary" size="mini" bindtap="setdefaultsite" data-_id="{{item._id}}">
+            设定
+          </button>
+        </view>
+      </view>
+
+    </view>
+
+  </view>
+</view>

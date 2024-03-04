@@ -1,0 +1,76 @@
+/* pages/map/instruction/instruction.wxss */
+page {
+    height: 100%;
+    width: 100%;
+    background: #f3f3f3;
+}
+
+.card {
+    margin: 10px 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.card-container {
+    margin-bottom: 30px;
+    margin: 10px;
+    padding-top: 20px;
+}
+
+.card-container-title {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 10px;
+
+}
+
+.card-container-title-img {
+    height: 25px;
+    width: 25px;
+}
+
+.card-container-title-font {
+    color: #73a5d6;
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+.card-container-container {
+    border-bottom: 10px solid white;
+}
+
+.card-container-container-instr {
+    margin: 0 2px 0 2px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+}
+
+.card-container-container-instr-left {
+    width: 30px;
+}
+
+.card-container-container-instr-right {
+    width: 305px;
+    line-height: 30px;
+    border-left: 1px solid grey;
+}
+
+.top {
+    border-top: 1px solid grey;
+    margin-top: 10px;
+}
+
+.bottom {
+    border-top: 10px solid white;
+}
+
+.button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}

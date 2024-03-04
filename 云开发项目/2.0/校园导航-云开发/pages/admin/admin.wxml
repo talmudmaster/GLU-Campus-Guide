@@ -1,0 +1,12 @@
+<!--pages/admin/admin.wxml-->
+<view class="card">
+    <view class="card-container">
+        <view class="card-container-list" bindtap="taptosite">
+            地点管理
+        </view>
+
+        <view class="card-container-list" bindtap="taptomedia">
+            媒体管理
+        </view>
+    </view>
+</view>

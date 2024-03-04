@@ -1,0 +1,220 @@
+<!--pages/media/media.wxml-->
+<view>
+    <view class="card">
+        <view class="card-top">
+            <view class="card-top-title left {{sid == 1?'choose':''}}" bindtap="click1">
+                地图
+            </view>
+
+            <view class="card-top-title {{sid == 2?'choose':''}}" bindtap="click2">
+                轮播图
+            </view>
+
+            <view class="card-top-title {{sid == 3?'choose':''}}" bindtap="click3">
+                视频
+            </view>
+
+            <view class="card-top-title right {{sid == 4?'choose':''}}" bindtap="click4">
+                默认图
+            </view>
+        </view>
+
+        <view wx:if="{{sid == 1}}" class="card-container">
+            <view class="card-container-title">
+                <view class="card-container-title-font">
+                    地图管理
+                </view>
+            </view>
+
+            <view class="card-container-container">
+                <button type="primary" size="mini" bindtap="getMap">
+                    选择图片
+                </button>
+
+                <view class="card-container-container-title no">
+                    为确保地图观感，请上传<text class="red">原图</text>
+                </view>
+
+                <view class="card-container-container-title title">
+                    预览效果
+                </view>
+
+                <view class="yulan" wx:if="{{mapurl==null}}" bindtap="getMap">
+                    选择图片后可以查看预览效果
+                </view>
+
+                <view class="card-container-form-list-img">
+                    <image style="width: 240px;height: auto;" src="{{mapurl}}" mode="widthFix" />
+                </view>
+
+                <view class="tip">
+                    提示：上传新图片会覆盖旧图片
+                </view>
+
+                <button type="primary" size="mini" bindtap="updateMap">
+                    确认上传
+                </button>
+
+                <view class="card-container-container-title title">
+                    实际效果
+                </view>
+
+                <view class="card-container-form-list-img">
+                    <image style="width: 240px;height: auto;" src="{{map}}" mode="widthFix" />
+                </view>
+            </view>
+        </view>
+
+        <view wx:if="{{sid == 2}}" class="card-container">
+            <view class="card-container-title">
+                <view class="card-container-title-font">
+                    轮播图管理
+                </view>
+            </view>
+
+            <view class="card-container-container">
+                <button type="primary" size="mini" bindtap="getImg">
+                    选择图片
+                </button>
+
+                <view class="card-container-container-title title">
+                    预览效果
+                </view>
+
+                <view class="yulan" wx:if="{{backgroundurl.length==0}}" bindtap="getImg">
+                    选择图片后可以查看预览效果
+                </view>
+
+                <swiper class="list-landscape-container-swiper" next-margin="20px" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{activeColor}}" wx:if="{{backgroundurl.length>0}}">
+                    <block wx:for="{{backgroundurl}}" wx:key="*this">
+                        <swiper-item>
+                            <view class="list-landscape-container-swiper-item">
+                                <image class="list-landscape-container-swiper-item-img" mode="widthFix" src="{{item}}"></image>
+                            </view>
+                        </swiper-item>
+                    </block>
+                </swiper>
+
+                <view class="tip">
+                    提示：上传新图片会覆盖所有旧图片
+                </view>
+
+                <view class="tip">
+                    为确保观感，上传图片不得少于3张、多于6张
+                </view>
+
+                <button type="primary" size="mini" bindtap="updateImg">
+                    确认上传
+                </button>
+
+                <view class="card-container-container-title title">
+                    实际效果
+                </view>
+
+                <swiper class="list-landscape-container-swiper" next-margin="20px" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{activeColor}}">
+                    <block wx:for="{{background}}" wx:key="*this">
+                        <swiper-item>
+                            <view class="list-landscape-container-swiper-item">
+                                <image class="list-landscape-container-swiper-item-img" mode="widthFix" src="{{item}}"></image>
+                            </view>
+                        </swiper-item>
+                    </block>
+                </swiper>
+            </view>
+        </view>
+
+        <view wx:if="{{sid == 3}}" class="card-container">
+            <view class="card-container-title">
+                <view class="card-container-title-font">
+                    视频管理
+                </view>
+            </view>
+
+            <view class="card-container-container">
+                <button type="primary" size="mini" bindtap="getVideo">
+                    选择视频
+                </button>
+
+                <view class="card-container-container-title title">
+                    预览效果
+                </view>
+
+                <view class="yulan" wx:if="{{!videourl}}" bindtap="getVideo">
+                    选择视频后可以查看预览效果
+                </view>
+
+                <view wx:if="{{videourl}}" class="video">
+                    <video initial-time="1" src="{{videourl}}" />
+                </view>
+
+                <view class="tip">
+                    提示：上传新视频会覆盖旧视频
+                </view>
+
+                <view class="tip">
+                    请不要上传过大的视频
+                </view>
+
+                <button type="primary" size="mini" bindtap="updateVideo">
+                    确认上传
+                </button>
+
+                <view class="card-container-container-title title">
+                    实际效果
+                </view>
+
+                <view class="video">
+                    <video initial-time="1" src="{{video}}" />
+                </view>
+            </view>
+        </view>
+
+        <view wx:if="{{sid == 4}}" class="card-container">
+            <view class="card-container-title">
+                <view class="card-container-title-font">
+                    地点默认图片管理
+                </view>
+            </view>
+
+            <view class="card-container-container">
+                <button type="primary" size="mini" bindtap="getDefault">
+                    选择图片
+                </button>
+
+                <view class="card-container-container-title no">
+                    为确保图片观感，建议上传<text class="red">原图</text>
+                </view>
+
+                <view class="card-container-container-title title">
+                    预览效果
+                </view>
+
+                <view class="yulan" wx:if="{{defaulturl==null}}" bindtap="getDefault">
+                    选择图片后可以查看预览效果
+                </view>
+
+                <view class="card-container-form-list-img">
+                    <image style="width: 100%;height: auto;" src="{{defaulturl}}" mode="widthFix" />
+                </view>
+
+                <view class="tip">
+                    提示：上传新图片会覆盖旧图片
+                </view>
+
+                <button type="primary" size="mini" bindtap="updateDefault">
+                    确认上传
+                </button>
+
+                <view class="card-container-container-title title">
+                    实际效果
+                </view>
+
+                <view class="card-container-form-list-img">
+                    <image style="width: 240px;height: auto;" src="{{default}}" mode="widthFix" />
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view style="height: 10px;"></view>
+</view>

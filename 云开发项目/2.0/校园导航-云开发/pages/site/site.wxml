@@ -1,0 +1,49 @@
+<!--pages/place/place.wxml-->
+<view>
+    <view class="card">
+        <view class="card-left">
+            <scroll-view scroll-y="true" style="height:{{windowHeight}}px;">
+                <view class="card-left-scorll-view">
+                    <view class="card-left-scorll-view-label  {{index == category ? 'choose' : ''}}" wx:for="{{site_data}}" wx:key="id" id="{{index}}" bindtap="changeCategory">
+                        {{item.name}}
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+
+        <view class="card-right">
+            <view class="card-right-title">
+                <image class="card-right-title-icon" src="{{tag}}" mode="" />
+                {{site_data[category].name}}
+            </view>
+
+            <scroll-view scroll-y="true" style="height: {{windowHeight-50}}px;width: {{windowWidth-75}}px;">
+                <view class="card-right-content">
+                    <view class="card-right-content-card" wx:for="{{site_data[category].list}}" wx:key="id" bindtap="click" data-name="{{item.name}}" data-desc="{{item.desc}}" data-aliases="{{item.aliases}}" data-img="{{item.img}}" id="{{index}}">
+                        <view>
+                            <image class="card-right-content-card-img" src="{{item.img}}" mode="aspectFill" />
+                        </view>
+
+                        <view class="card-right-content-card-context">
+                            <view>
+                                <image class="card-right-content-card-context-icon" src="{{little_location}}" mode="" />
+                            </view>
+
+                            <text>{{item.name}}\n<text style="color:dimgray">{{item.aliases}}</text></text>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+</view>
+
+<mp-dialog title="{{card.name}}" show="{{dialogShow}}" bindbuttontap="mapmarker" buttons="{{buttons}}">
+    <view>
+        <image bindtap="lookPhoto" mode="heightFix" style="height:270rpx;" src="{{card.img}}" data-src="{{card.img}}"></image>
+
+        <view style="font-size:90%">{{card.aliases}}</view>
+
+        <view>{{card.desc}}</view>
+    </view>
+</mp-dialog>

@@ -1,0 +1,13 @@
+/* utils/utils.wxss */
+page {
+  height: 100%;
+  width: 100%;
+}
+
+.bottom-font {
+  padding: 10px 20px 0 0;
+  height: 20px;
+  text-align: center;
+  font-size: small;
+  color: gray;
+}

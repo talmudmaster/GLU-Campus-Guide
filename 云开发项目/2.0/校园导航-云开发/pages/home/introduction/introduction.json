@@ -1,0 +1,6 @@
+{
+    "usingComponents": {},
+    "component": true,
+    "navigationBarTitleText": "学校简介",
+    "enablePullDownRefresh": true
+}

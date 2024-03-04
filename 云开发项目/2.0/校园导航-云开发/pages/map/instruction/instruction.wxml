@@ -1,0 +1,73 @@
+<!--pages/map/instruction/instruction.wxml-->
+<view>
+    <view class="card">
+        <view class="card-container">
+            <view class="card-container-title">
+                <image class="card-container-title-img" src="{{map}}" />
+                <view class="card-container-title-font">
+                    使用说明
+                </view>
+            </view>
+
+            <view class="card-container-container">
+                <text decode="true">&emsp;&emsp;“地点汇总”页展示了各类别的地点，可切换类别查看。点击可以查看地点介绍，设置为起点或终点并跳转到地图。</text>
+
+                <button class="button" type="primary" bindtap="tosite">
+                    去“地点汇总”页
+                </button>
+
+                <text decode="true">&emsp;&emsp;“地图”页展示了校园地图，可以在地图上选择地点或者搜索地点进行导航。</text>
+
+                <view class="card-container-container-instr top">
+                    <view class="card-container-container-instr-left">
+                        定位
+                    </view>
+
+                    <view class="card-container-container-instr-right">
+                        <text decode="true">点击定位图标可以重新定位\n若不在学校，设置东门为起点</text>
+                    </view>
+
+                </view>
+
+                <view class="card-container-container-instr">
+                    <view class="card-container-container-instr-left">
+                        搜索
+                    </view>
+
+                    <view class="card-container-container-instr-right">
+                        <text decode="true">点击搜索栏起点 / 终点输入框\n即可跳转到对应搜索页</text>
+                    </view>
+                </view>
+
+                <view class="card-container-container-instr">
+                    <view class="card-container-container-instr-left">
+                        点击
+                    </view>
+
+                    <view class="card-container-container-instr-right">
+                        <text decode="true">类别栏可以滑动点击\n点击地点可查看信息，并设为起点/终点\n点击底部可查看当前类别地点或路线信息</text>
+                    </view>
+                </view>
+
+                <view class="card-container-container-instr">
+                    <view class="card-container-container-instr-left">
+                        导航
+                    </view>
+
+                    <view class="card-container-container-instr-right">
+                        <text decode="true">点击路线按钮即可进行导航\n点击切换图标即可对调起点和终点</text>
+                    </view>
+                </view>
+
+                <view class="bottom">
+                    <text decode="true">&emsp;&emsp;你学会了吗，快去试试吧！</text>
+
+                    <button class="button" type="primary" bindtap="tomap">
+                        去“地图”页
+                    </button>
+                </view>
+
+            </view>
+        </view>
+    </view>
+</view>
