@@ -7,8 +7,8 @@ module.exports = {
   mapKey: "",
 
   // 学校精确坐标（用于地图定位和获取天气数据）
-  longitude: '110.277685',
-  latitude: '25.093668',
+  longitude: "110.277685",
+  latitude: "25.093668",
 
   // 是否展示 POI 点
   enablepoi: false,
@@ -24,8 +24,8 @@ module.exports = {
     // 图层透明度 0-1
     opacity: 0.8,
     // 西南角
-    southwest_latitude: 25.088910,
-    southwest_longitude: 110.273850,
+    southwest_latitude: 25.08891,
+    southwest_longitude: 110.27385,
     // 东北角
     northeast_latitude: 25.098995,
     northeast_longitude: 110.281229,
@@ -37,7 +37,7 @@ module.exports = {
     southwest_latitude: 25.088083,
     southwest_longitude: 110.272618,
     // 东北角
-    northeast_latitude: 25.099580,
+    northeast_latitude: 25.09958,
     northeast_longitude: 110.281911,
   },
 
@@ -54,15 +54,4 @@ module.exports = {
     north: 25.09839,
     // north: 32.38475,
   },
-
-  // 默认地点
-  default_point: {
-    name: "东门",
-    aliases: "学校正大门",
-    img: "https://cdnjson.com/images/2023/02/26/schoolgate_dongmen.jpg",
-    desc: "学校正大门\n可以通行行人和车辆",
-    latitude: '25.095321',
-    longitude: '110.280392',
-  },
-
-}
+};
