@@ -12,7 +12,7 @@
             搜索结果如下
         </view>
 
-        <view class="result-list" wx:for="{{result}}" wx:key="*this" data-name="{{item.name}}" data-latitude="{{item.latitude}}" data-longitude="{{item.longitude}}" bindtap="tapback">
+        <view class="result-list" wx:for="{{result}}" wx:key="*this" id="{{index}}" data-name="{{item.name}}" data-latitude="{{item.latitude}}" data-longitude="{{item.longitude}}" bindtap="tapback">
             <view class="item">
                 <view>{{item.name}}</view>
                 <view style="color: grey;font-size: small;">{{item.aliases}}</view>
