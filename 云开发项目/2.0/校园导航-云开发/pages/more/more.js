@@ -110,17 +110,11 @@ Page({
     wx.cloud.callFunction({
       name: "login",
       complete: (res) => {
-<<<<<<< HEAD
-        // console.log(res.result.data[0].name)
-        // console.log(res.result.data.length)
-        var name = res.result.data[0].name;
-        if (res.result.data.length != 0) {
-=======
         // console.log(res.result.data.length)
         if (res.result.data.length != 0) {
           // console.log(res.result.data[0].name)
           var name = res.result.data[0].name;
->>>>>>> aeaea4d01fc21336b8e8a74f0e3de85ec22e136e
+
           wx.showToast({
             title: "欢迎回来\n管理员：" + name,
             icon: "none",
