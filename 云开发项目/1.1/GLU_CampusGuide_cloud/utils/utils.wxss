@@ -1,8 +1,0 @@
-/* assets/common/common.wxss */
-.bottom-font {
-    margin-top: 20px;
-    height: 40px;
-    text-align: center;
-    font-size: small;
-    color: gray;
-}

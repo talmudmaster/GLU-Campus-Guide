@@ -1,7 +1,0 @@
-{
-    "usingComponents": {
-        "mp-dialog": "weui-miniprogram/dialog/dialog"
-    },
-    "enablePullDownRefresh": true,
-    "navigationBarTitleText": "地图"
-}
