@@ -1,0 +1,44 @@
+/* pages/map/map.wxss */
+map {
+  width: 100%;
+  height: calc(100% - 180px);
+}
+
+.control-btn {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  z-index: 99;
+  background: #FFF;
+  line-height: 35px;
+  font-size: 30px;
+  text-align: center;
+  border-radius: 4px;
+  right: 10px;
+}
+
+.control-btn-increase {
+  bottom: 140px;
+}
+
+.control-btn-decrease {
+  bottom: 80px;
+}
+
+.buttons {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.title {
+  /* display: flex; */
+  text-align: left;
+  margin-top: 15px;
+}
+
+.title_text {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+}

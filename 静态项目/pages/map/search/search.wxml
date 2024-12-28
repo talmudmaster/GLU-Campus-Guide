@@ -1,0 +1,51 @@
+<!--pages/map/search/search.wxml-->
+<view class="root">
+  <input class="input" placeholder="请输入要搜索的地点" bindinput="getContent" type="text" />
+  <view class="input_search" type="primary" bindtap="goSearch">
+    搜索
+  </view>
+</view>
+
+<view class="read-in">
+  <view class="headline">
+    <view class="head-headline">
+      <image class="icon-right" src="{{history}}"></image>
+
+      <view class="headline-size">搜索历史</view>
+
+      <image class="icon-right" src="{{delete}}" catchtap="remove"></image>
+    </view>
+
+    <view class="lately-main" wx:if="{{historyStorage.length!=0}}" hidden="{{historyStorageShow?false:true}}">
+      <view class="chunk" wx:for="{{historyStorage}}" wx:key="index" bindtap='goHistorySearch' data-index='{{index}}' data-postname="{{item}}">
+        <text>{{item}}</text>
+      </view>
+    </view>
+
+    <view wx:else style="height: 40px;margin-top: 10px;display: flex;justify-content: center;align-items: center;color: grey;">搜索历史为空</view>
+  </view>
+</view>
+
+<view class="result">
+  <view>
+    <view class="head-headline">
+      <image class="icon-right" src="{{searchIcon}}"></image>
+
+      <view class="headline-size">搜索结果</view>
+
+      <image class="icon-right" src="{{}}"></image>
+    </view>
+
+    <view wx:if="{{result&&result.length>0}}" class="result-list" wx:for="{{result}}" wx:key="*this" data-name="{{item.name}}" data-latitude="{{item.latitude}}" data-longitude="{{item.longitude}}" bindtap="tapback">
+      <view class="item">
+        <view>{{item.name}}</view>
+        <view style="color: grey;font-size: small;">{{item.aliases}}</view>
+      </view>
+    </view>
+
+  </view>
+
+  <view wx:if="{{result&&result.length==0}}" class="middle">
+    抱歉，没有找到您想找的地点
+  </view>
+</view>

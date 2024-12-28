@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "mp-dialog": "weui-miniprogram/dialog/dialog"
+    },
+    "navigationBarTitleText": "地点汇总"
+}

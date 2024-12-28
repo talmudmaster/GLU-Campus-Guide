@@ -1,0 +1,19 @@
+<!--pages/location/location.wxml-->
+<!--地图容器-->
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" markers="{{markers}}" include-points="" polyline="{{polyline}}" show-location="true">
+</map>
+<form bindsubmit="formSubmit">
+  <!--输入起点和目的地经纬度坐标-->
+  <!--起点输入框,同终点，不填默认当前位置-->
+  <view class="cont">
+    起点坐标：
+    <input class="inp" name="start" value="25.097448,110.277449"></input>
+  </view>
+  <!--终点输入框-->
+  <view class="cont">
+    终点坐标：
+    <input class="inp" name="dest" value="25.093044,110.278562"></input>
+  </view>
+  <!--提交表单数据-->
+  <button type="primary" form-type="submit" style="height: 45px;margin-top: 8px;">路线规划</button>
+</form>

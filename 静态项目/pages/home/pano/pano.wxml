@@ -1,0 +1,29 @@
+<!--pages/home/pano/pano.wxml-->
+<pano panolist="{{panolist}}" entryid="{{entrypanoid}}" entryname="{{entrypanoname}}" width="320" height="240" key="{{key}}" autoinit="{{false}}">
+  <cover-view style="position: fixed;height: 100px;width:100%;top: calc(100% - 100px);color: white;">
+
+    <cover-view style="position: fixed;height: 100px;width:100%;text-align:center;display: flex;justify-content: space-around;font-weight: bold;">
+      <cover-view style="height: 90px;width: 80px;display: flex;justify-content: center;align-items: center;flex-direction: column;" bindtap="covertap">
+        <cover-image src="{{more}}" style="height: 70px;width: 70px;"></cover-image>
+        <cover-view>
+          切换全景图
+        </cover-view>
+      </cover-view>
+
+      <cover-view style="height: 90px;width: 80px;display: flex;justify-content: center;align-items: center;flex-direction: column;" bindtap="setCameraLookAt">
+        <cover-image src="{{judge}}" style="height: 70px;width: 70px;"></cover-image>
+        <cover-view>
+          切换视角
+        </cover-view>
+      </cover-view>
+
+      <cover-view style="height: 90px;width: 80px;display: flex;justify-content: center;align-items: center;flex-direction: column;" bindtap="getPanoInfo">
+        <cover-image src="{{text}}" style="height: 70px;width: 70px;"></cover-image>
+        <cover-view>
+          简介
+        </cover-view>
+      </cover-view>
+
+    </cover-view>
+  </cover-view>
+</pano>

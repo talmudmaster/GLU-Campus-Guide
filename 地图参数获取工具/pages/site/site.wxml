@@ -1,0 +1,73 @@
+<!--pages/site/site.wxml-->
+<view class="page">
+  <view type="list" class="page-scroll-view page-height">
+    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+
+    <mp-form-page title="静态项目地点数据生成" subtitle="仅用于静态项目">
+      <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+        <mp-cells title="" footer="">
+          <label>
+            <mp-cell prop="id" title="id" ext-class="">
+              <input bindinput="formInputChange" data-field="id" class="weui-input" placeholder="序列号(1、2、3、4...)" />
+            </mp-cell>
+          </label>
+
+          <label>
+            <mp-cell prop="name" title="地点名称" ext-class="">
+              <input bindinput="formInputChange" data-field="name" class="weui-input" placeholder="地点名称" />
+            </mp-cell>
+          </label>
+
+          <label>
+            <mp-cell prop="aliases" title="地点别名" ext-class="">
+              <input bindinput="formInputChange" data-field="aliases" class="weui-input" placeholder="地点别名，可为空" />
+            </mp-cell>
+          </label>
+
+          <label>
+            <mp-cell prop="desc" title="地点简介" ext-class="">
+              <textarea bindinput="formInputChange" class="weui-textarea" data-field="desc" placeholder="地点简介，可为空" style="height: 3.3em" />
+              <view class="weui-textarea-counter">0/100</view>
+            </mp-cell>
+          </label>
+
+          <label>
+            <mp-cell prop="img" title="地点图片" ext-class="">
+              <input bindinput="formInputChange" data-field="img" class="weui-input" placeholder="图片的网络链接，可为空" />
+            </mp-cell>
+
+            <!-- <mp-cell prop="" title="{{formData.img ? \" 图片预览\" : \" \"}}" ext-class="" wx:if="{{formData.img}}">
+              <image style="width: 100%;height: auto;" src="{{formData.img}}" mode="widthFix" />
+            </mp-cell> -->
+
+            <view wx:if="{{formData.img}}" style="display: flex;align-items: center;justify-content: center;">
+              <image style="width: 60%;height: auto;" src="{{formData.img}}" mode="widthFix" />
+            </view>
+          </label>
+
+          <label>
+            <mp-cell prop="location" title="地点坐标" ext-class=" weui-cell_vcode">
+              <input disabled="false" bindinput="formInputChange" data-field="location" class="weui-input" placeholder="请选择地点" value="{{formData.la}}" />
+              <input disabled="false" bindinput="formInputChange" data-field="" class="weui-input" placeholder="" value="{{formData.lo}}" />
+              <button wx:if="true" slot="footer" type="default" class="weui-vcode-btn" bind:tap="getPoint">地图选点</button>
+              <view wx:else style="display:none">
+                <slot />
+              </view>
+            </mp-cell>
+          </label>
+        </mp-cells>
+      </mp-form>
+
+      <button bindtap="generate" type="primary" style="width: 60%;height: 45px;">生成数据</button>
+    </mp-form-page>
+  </view>
+</view>
+
+
+<mp-dialog title="生成的数据" show="{{dialogShow}}" bindbuttontap="dialogButton" buttons="{{button}}">
+  <view class="title">
+    <view class="title_text">当前地点的相关数据</view>
+    <textarea style="width: 100%;height: 13em" value="{{result}}" />
+    <!-- <button type="default" bind:tap="getInfo" data-id="1">复制</button> -->
+  </view>
+</mp-dialog>

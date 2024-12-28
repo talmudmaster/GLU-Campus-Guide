@@ -1,0 +1,36 @@
+/* pages/index/index.wxss */
+.page-body {
+  padding-top: 30px;
+  height: 80%;
+}
+
+.button-index {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: larger;
+}
+
+.button-sp-area{
+  margin: 0 auto;
+  width: 60%;
+}
+
+.title {
+  /* display: flex; */
+  text-align: left;
+  margin-top: 15px;
+}
+
+.title_text {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.button-dialog {
+  margin: 10px 0 10px 0;
+}

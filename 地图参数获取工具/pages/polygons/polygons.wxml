@@ -1,0 +1,18 @@
+<!--pages/polygons/polygons.wxml-->
+<map latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" markers='{{markers}}' bindtap="bindMap" polygons="{{polygons}}" />
+
+<view style="display: flex; margin: 10px 0;">
+  <button type="default" bindtap="clearPrevious">清除上一个点</button>
+  <button type="warn" bindtap="clearGon">清除全部点面</button>
+</view>
+
+<button style="height: 45px;" type="primary" bindtap="generate">生成数据</button>
+
+<mp-dialog title="经纬度数组" show="{{dialogShow}}" bindbuttontap="dialogButton" buttons="{{button}}">
+  <view class="title">
+    <scroll-view scroll-y="true" class="scroll">
+      <text user-select="true">{{points_data}}</text>
+      </scroll-view>
+      <!-- <button type="primary" bind:tap="copy">复制</button> -->
+  </view>
+</mp-dialog>

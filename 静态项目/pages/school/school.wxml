@@ -1,0 +1,15 @@
+<!--pages/school/school.wxml-->
+<scroll-view scroll-y>
+  <view class="cu-list">
+    <view class="cu-item" wx:for="{{allWords}}" wx:key="index" bindtap="jump" data-id="{{index}}">
+      <view class="content">
+        <view>
+          <text class="cuIcon-link">📖</text>
+          <text class="text-grey">{{item.title}}</text>
+        </view>
+
+        <image style="height:40rpx;width:40rpx;" src="{{green_arrow}}"></image>
+      </view>
+    </view>
+  </view>
+</scroll-view>

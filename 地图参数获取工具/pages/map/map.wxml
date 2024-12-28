@@ -1,0 +1,38 @@
+<!--pages/map/map.wxml-->
+<map id="map" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" min-scale="{{minscale}}" show-location="{{showLocation}}" enable-poi="{{enablepoi}}" polyline="{{polyline}}" polygons="{{polygons}}" bindtap="onTapMap" bindregionchange="bindregionchange">
+  <image src="{{plus}}" class="control-btn control-btn-increase" bindtap="onIncreaseScale"></image>
+  <image src="{{minus}}" class="control-btn control-btn-decrease" bindtap="onDecreaseScale"></image>
+</map>
+
+<view class="buttons">
+  <button bindtap="start">设为起点</button>
+  <button bindtap="end">设为终点</button>
+</view>
+
+<view class="buttons">
+  <button bindtap="route" type="primary">路线规划</button>
+  <button bindtap="clean" type="warn">清空路线</button>
+</view>
+
+<button bindtap="generate" type="primary" style="width: 60%;height: 45px;">生成当前地图全部参数</button>
+
+<mp-dialog title="地图参数" show="{{dialogShow}}" bindbuttontap="dialogButton" buttons="{{button}}">
+  <view class="title">
+    <view class="title_text">当前地图的缩放级别</view>
+    <textarea style="width: 100%;height: 1.5em" value="{{scale_data}}"/>
+    <button type="primary" bind:tap="getInfo" data-id="1">复制</button>
+  </view>
+
+  <view class="title">
+    <view class="title_text">当前地图的边界</view>
+    <textarea style="width: 105%;height: 8.5em" value="{{boundary_data}}"/>
+    <button type="primary" bind:tap="getInfo" data-id="2">复制</button>
+  </view>
+
+  <view class="title">
+    <view class="title_text">当前地图的中心点坐标</view>
+    <textarea style="width: 100%;height: 3em" value="{{centerLocation_data}}"/>
+    <button type="primary" bind:tap="getInfo" data-id="3">复制</button>
+  </view>
+
+</mp-dialog>

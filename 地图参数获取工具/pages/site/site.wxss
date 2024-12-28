@@ -1,0 +1,29 @@
+/* pages/site/site.wxss */
+.weui-agree .weui-agree__text {
+  display: inline;
+}
+
+.weui-form {
+  padding: 40px 0 0 0;
+}
+
+.weui-form__control-area {
+  margin-bottom: 0;
+}
+
+.title {
+  /* display: flex; */
+  text-align: left;
+  margin-top: 15px;
+}
+
+.title_text {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.weui-dialog__btn {
+  background-color: #07c160;
+  color: #fff;
+}

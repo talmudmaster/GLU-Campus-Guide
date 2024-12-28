@@ -1,0 +1,13 @@
+/* pages/admin/getpoint/getpoint.wxss */
+.img {
+    height: 24px;
+    width: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button {
+    margin-top: 10px;
+}

@@ -1,0 +1,21 @@
+/* pages/location/location.wxss */
+page {
+  height: 100%;
+}
+map {
+  width: 100%;
+  height: calc(100% - 150px);
+}
+
+.cont {
+  display: flex;
+  margin: 15px 0 15px 0;
+  justify-content: center;
+}
+
+.inp {
+  border: 1px solid darkgray;
+  border-radius: 8px;
+  width: 240px;
+  padding-left: 10px;
+}

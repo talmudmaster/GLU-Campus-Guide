@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/map/map",
+    "pages/site/site",
+    "pages/site/getpoint/getpoint",
+    "pages/polygons/polygons",
+    "pages/location/location"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "地图参数",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [{
+        "selectedIconPath": "/images/tabbar/icon_home_HL.png",
+        "iconPath": "/images/tabbar/icon_home.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "/images/tabbar/icon_map_HL.png",
+        "iconPath": "/images/tabbar/icon_map.png",
+        "pagePath": "pages/map/map",
+        "text": "地图参数"
+      },
+      {
+        "selectedIconPath": "/images/tabbar/icon_more_HL.png",
+        "iconPath": "/images/tabbar/icon_more.png",
+        "pagePath": "pages/polygons/polygons",
+        "text": "地图多边形"
+      },
+      {
+        "selectedIconPath": "/images/tabbar/icon_collection_HL.png",
+        "iconPath": "/images/tabbar/icon_collection.png",
+        "pagePath": "pages/location/location",
+        "text": "定位接口"
+      },
+      {
+        "selectedIconPath": "/images/tabbar/icon_school_HL.png",
+        "iconPath": "/images/tabbar/icon_school.png",
+        "pagePath": "pages/site/site",
+        "text": "静态地点"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "useExtendedLib": {
+    "weui": true
+  }
+}

@@ -1,0 +1,5 @@
+<!--pages/admin/getpoint/getpoint.wxml-->
+<map style="width: 100%;height: 100%;" id="map" subKey="{{subKey}}" latitude="{{location.latitude}}" longitude="{{location.longitude}}" scale="{{scale}}" enable-poi="{{enable_poi}}" bindregionchange="bindregionchange">
+    <image class="img" src="{{circle}}" mode="" />
+    <button class="button" type="primary" bindtap="getPoint">获取坐标</button>
+</map>

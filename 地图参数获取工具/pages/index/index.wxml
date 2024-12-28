@@ -1,0 +1,48 @@
+<!--pages/index/index.wxml-->
+<view class="page-body">
+  <view class="btn-area" id="buttonContainer">
+    <button class="button-index" type="primary" style="width: 70%;" bind:tap="map">地图参数获取与设置</button>
+    <button class="button-index" type="default" style="width: 70%;" bind:tap="polygons">地图多边形绘制</button>
+    <button class="button-index" type="default" style="width: 70%;" bind:tap="location">定位接口申请极速版</button>
+    <button class="button-index" type="default" style="width: 70%;" bind:tap="site">静态项目地点数据生成 </button>
+    <button class="button-index" type="warn" style="width: 70%;" bind:tap="study">学习、交流 与 讨论</button>
+  </view>
+</view>
+
+<mp-dialog title="相关信息" show="{{dialogShow}}" bindbuttontap="dialogButton" buttons="{{button}}">
+  <view class="title">
+    <view class="title_text">QQ交流群</view>
+    <textarea style="width: 100%;height: 1.5em" value="{{info[0]}}" />
+    <button class="button-dialog" type="primary" bind:tap="getInfo" data-id="0">复制</button>
+  </view>
+
+  <view class="title">
+    <view class="title_text">相关资料</view>
+    <textarea style="width: 100%;height: 3em" value="{{info[1]}}" />
+    <button class="button-dialog" type="primary" bind:tap="getInfo" data-id="1">复制</button>
+  </view>
+
+  <view class="title">
+    <view class="title_text">CSDN</view>
+    <textarea style="width: 105%;height: 3em" value="{{info[2]}}" />
+    <button class="button-dialog" type="primary" bind:tap="getInfo" data-id="2">复制</button>
+  </view>
+
+  <view class="title">
+    <view class="title_text">Gitee</view>
+    <textarea style="width: 100%;height: 3em" value="{{info[3]}}" />
+    <button class="button-dialog" class="button-dialog" type="primary" bind:tap="getInfo" data-id="3">复制</button>
+  </view>
+
+  <view class="title">
+    <view class="title_text">GitHub</view>
+    <textarea style="width: 100%;height: 3em" value="{{info[4]}}" />
+    <button class="button-dialog" type="primary" bind:tap="getInfo" data-id="4">复制</button>
+  </view>
+
+  <view class="title">
+    <view class="title_text">bilibili</view>
+    <textarea style="width: 100%;height: 4.5em" value="{{info[5]}}" />
+    <button class="button-dialog" type="primary" bind:tap="getInfo" data-id="5">复制</button>
+  </view>
+</mp-dialog>

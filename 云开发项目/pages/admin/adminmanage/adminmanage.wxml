@@ -1,0 +1,32 @@
+<view>
+  <view class="card">
+    <view class="card-container">
+      <view class="card-container-title">
+        <view class="card-container-title-font">
+          管理员管理
+        </view>
+      </view>
+
+      <view class="card-container-container">
+        <button type="primary" size="mini" bindtap="addAdmin">
+          新增管理员
+        </button>
+        <view class="card-container-container-title title">
+          <view class="card-container-container-title-title">序号</view>
+          <view class="card-container-container-title-title">名字</view>
+          <view class="card-container-container-title-title">操作</view>
+        </view>
+
+        <view class="card-container-container-title" wx:for="{{admin_list}}" wx:key="*this">
+          <view class="card-container-container-title-title">{{index+1}}</view>
+          <view class="card-container-container-title-title">{{item.name}}</view>
+          <view class="card-container-container-title-title">
+            <button type="primary" size="mini" bindtap="manageAdmin" data-_id="{{item._id}}" data-id="{{index}}" data-name="{{item.name}}">
+              管理
+            </button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
