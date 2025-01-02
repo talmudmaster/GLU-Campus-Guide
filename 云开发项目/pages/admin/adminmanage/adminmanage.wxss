@@ -48,6 +48,7 @@ page {
   align-items: center;
   flex-direction: row;
   margin-bottom: 10px;
+  padding-top: 10px;
 }
 
 .card-container-title-font {

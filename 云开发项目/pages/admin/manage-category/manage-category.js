@@ -80,7 +80,7 @@ Page({
                         duration: 2000
                     })
                     setTimeout(() => {
-                        wx.navigateBack()
+                        this.back()
                     }, 1500)
                 })
                 .catch(err => {
@@ -114,7 +114,7 @@ Page({
                         duration: 2000
                     })
                     setTimeout(() => {
-                        wx.navigateBack()
+                        this.back()
                     }, 1000)
                 })
                 .catch(err => {
@@ -159,7 +159,7 @@ Page({
                                             duration: 2000
                                         })
                                         setTimeout(() => {
-                                            wx.navigateBack()
+                                            this.back()
                                         }, 1000)
                                     })
                                     .catch(err => {
@@ -179,5 +179,13 @@ Page({
                 }
             }
         })
+    },
+
+    back() {
+      var pages = getCurrentPages();
+      var prevPage = pages[pages.length - 2]; // 上一个页面
+      // 调用上一个页面对象的方法，重新获取数据
+      prevPage.get();
+      wx.navigateBack()
     }
 })

@@ -19,9 +19,9 @@
 
         <view class="card-container-container-title" wx:for="{{admin_list}}" wx:key="*this">
           <view class="card-container-container-title-title">{{index+1}}</view>
-          <view class="card-container-container-title-title">{{item.name}}</view>
+          <view class="card-container-container-site-title">{{item.name}}</view>
           <view class="card-container-container-title-title">
-            <button type="primary" size="mini" bindtap="manageAdmin" data-_id="{{item._id}}" data-id="{{index}}" data-name="{{item.name}}">
+            <button type="primary" size="mini" bindtap="manageAdmin" data-_id="{{item._id}}" data-id="{{index}}" data-name="{{item.name}}" data-openid="{{item.openid}}">
               管理
             </button>
           </view>

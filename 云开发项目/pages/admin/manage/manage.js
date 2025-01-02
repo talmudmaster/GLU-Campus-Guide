@@ -227,6 +227,7 @@ Page({
                     icon: 'success',
                     duration: 2000
                 })
+                this.getDefaultSite()
             })
             .catch(err => {
                 console.log('fail', err)

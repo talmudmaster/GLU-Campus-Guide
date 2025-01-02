@@ -81,7 +81,7 @@ Page({
 
   addAdmin() {
     wx.navigateTo({
-      url: '../../admin/manage-admin/manage-admin',
+      url: '../../admin/manage-admin/manage-admin?sid=1',
     })
   },
 
@@ -89,7 +89,7 @@ Page({
     console.log(e.target.dataset._id)
     console.log(e.target.dataset.name)
     wx.navigateTo({
-      url: '../../admin/manage-admin/manage-admin?_id=' + e.target.dataset._id + '&name=' + e.target.dataset.name + '&openid=' + e.target.dataset.openid,
+      url: '../../admin/manage-admin/manage-admin?sid=2&_id=' + e.target.dataset._id + '&name=' + e.target.dataset.name + '&openid=' + e.target.dataset.openid,
     })
   },
 })

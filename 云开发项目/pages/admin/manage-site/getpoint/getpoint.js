@@ -168,6 +168,6 @@ Page({
             la: this.data.location.latitude,
             lo: this.data.location.longitude
         });
-        wx.navigateBack({})
+        wx.navigateBack()
     }
 })
