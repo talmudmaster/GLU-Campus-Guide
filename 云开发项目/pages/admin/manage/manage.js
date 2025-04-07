@@ -1,6 +1,8 @@
 // pages/admin/manage/manage.js
+const app = getApp()
 let db = wx.cloud.database()
 let _ = db.command
+
 Page({
 
     /**
@@ -55,7 +57,7 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh() {
-        this.get()
+        
     },
 
     get() {
@@ -88,7 +90,6 @@ Page({
                 this.setData({
                     category_list: res.data
                 })
-                wx.stopPullDownRefresh()
             })
             .catch(err => {
                 console.log('fail', err)
@@ -160,7 +161,6 @@ Page({
                         result_list: res.data,
                         category: 0
                     })
-                    wx.stopPullDownRefresh()
                 })
                 .catch(err => {
                     console.log('fail', err)
@@ -227,6 +227,9 @@ Page({
                     icon: 'success',
                     duration: 2000
                 })
+                app.globalData.mapRefresh = true; // 标记 tab地图页 需刷新
+                app.globalData.siteRefresh = true; // 标记 tab地点页 需刷新
+                this.lianbiaoquery()
                 this.getDefaultSite()
             })
             .catch(err => {

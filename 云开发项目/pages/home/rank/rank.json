@@ -1,6 +1,5 @@
 {
     "usingComponents": {},
     "navigationBarTitleText": "地点热度",
-    "enablePullDownRefresh": true,
     "backgroundTextStyle": "dark"
 }

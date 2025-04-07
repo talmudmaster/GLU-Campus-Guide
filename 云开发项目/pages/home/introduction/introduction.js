@@ -1,7 +1,9 @@
 // pages/home/introduction/introduction.js
 var school = require('../../../data/school')
 var media = require('../../../data/media')
+const app = getApp()
 var db = wx.cloud.database()
+
 Page({
 
     /**
@@ -42,7 +44,10 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-
+        if (app.globalData.introductionRefresh) {
+            this.lianbiaoquery();
+            app.globalData.introductionRefresh = false; // 重置标记
+        }
     },
 
     /**
@@ -56,8 +61,7 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh() {
-        console.log("PullDownRefresh")
-        this.get()
+        
     },
 
     /**
@@ -86,7 +90,6 @@ Page({
             })
             .get()
             .then(res => {
-                wx.stopPullDownRefresh()
                 console.log('success', res.data[0].img)
                 this.setData({
                     background: res.data[0].img,
@@ -102,7 +105,6 @@ Page({
             })
             .get()
             .then(res => {
-                wx.stopPullDownRefresh()
                 console.log('success', res.data[0].img)
                 this.setData({
                     videourl: res.data[0].img,

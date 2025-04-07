@@ -97,7 +97,8 @@ Page({
             currentTarget: {
                 id: 0,
             }
-        }
+        },
+        isAtSchool: false,
     },
 
     /**
@@ -239,6 +240,7 @@ Page({
         var that = this
         var school_boundary = this.data.school_boundary
         var default_point = that.data.default_point
+        var static_category = this.data.static
         wx.getLocation({
             type: 'gcj02',
             success: function (res) {
@@ -247,58 +249,67 @@ Page({
                 console.log("当前位置坐标", nowlatitude, nowlongitude)
                 if (nowlatitude > school_boundary.south && nowlatitude < school_boundary.north && nowlongitude > school_boundary.west && nowlongitude < school_boundary.east) {
                     that.setData({
-                        mylocationmarker: {
-                            id: 0,
-                            // iconPath: "",
-                            latitude: nowlatitude,
-                            longitude: nowlongitude,
-                            width: 25,
-                            height: 37,
-                            callout: {
-                                content: " 当前位置 ",
-                                display: 'ALWAYS',
-                                padding: 5,
-                                borderRadius: 10
-                            },
-                            joinCluster: true,
-                        },
-                        start: {
-                            name: "当前位置",
-                            latitude: nowlatitude,
-                            longitude: nowlongitude,
-                        }
-                    })
-                } else {
-                    that.setData({
-                        mylocationmarker: {
-                            id: 0,
-                            // iconPath: "",
-                            latitude: default_point.latitude,
-                            longitude: default_point.longitude,
-                            width: 25,
-                            height: 37,
-                            callout: {
-                                content: " " + default_point.name + " ",
-                                display: 'ALWAYS',
-                                padding: 5,
-                                borderRadius: 10
-                            },
-                            joinCluster: true,
-                        },
-                        start: {
-                            name: default_point.name,
-                            latitude: default_point.latitude,
-                            longitude: default_point.longitude,
-                        }
+                        isAtSchool: true
                     })
 
+                    let point = {
+                        name: "当前位置",
+                        latitude: nowlatitude,
+                        longitude: nowlongitude,
+                    }
+                    that.set_default_point(point)
+                } else {
+                    that.setData({
+                        isAtSchool: false
+                    })
+
+                    that.set_default_point(default_point)
                     wx.showToast({
                         title: '当前位置不在校区内\n默认位置设为' + that.data.default_point.name,
                         icon: 'none',
                         duration: 2000
                     })
                 }
-                that.changeCategory(that.data.static)
+            },
+            fail: function (err) {
+                that.setData({
+                    isAtSchool: false
+                })
+                
+                that.set_default_point(default_point)
+                wx.showToast({
+                    title: '请不要频繁定位\n5秒后再试试吧',
+                    icon: 'none',
+                    duration: 2000
+                })
+            },
+            complete: function (err) {
+                that.changeCategory(static_category)
+            }
+        })
+    },
+
+    set_default_point(default_point) {
+        this.setData({
+            mylocationmarker: {
+                id: 0,
+                // iconPath: "",
+                latitude: default_point.latitude,
+                longitude: default_point.longitude,
+                width: 25,
+                height: 37,
+                callout: {
+                content: " " + default_point.name + " ",
+                display: 'ALWAYS',
+                padding: 5,
+                borderRadius: 10
+                },
+                joinCluster: true,
+            },
+            start: {
+                name: default_point.name,
+                latitude: default_point.latitude,
+                longitude: default_point.longitude,
             }
         })
     },
@@ -414,6 +425,11 @@ Page({
         let site_list = this.data.site_data[this.data.category].list
         console.log("当前类别", site_list)
         let markers = []
+        // 不在学校且当前类别下存在默认地点
+        let judege = site_list.some((item) => item._id == this.data.default_point._id)
+        if (!this.data.isAtSchool && !judege) {
+            markers.push(this.data.mylocationmarker)
+        }
         for (let i = 0; i < site_list.length; i++) {
             let la = site_list[i].latitude
             let lo = site_list[i].longitude
@@ -435,26 +451,19 @@ Page({
             }
             markers.push(m)
         }
-        markers.push(this.data.mylocationmarker)
         console.log("当前marker点", markers)
         this.setData({
             markers: markers
         })
-
-        var mapCtx = wx.createMapContext("map");
-        mapCtx.includePoints({
-            padding: [60, 20, 40, 40],
-            points: markers
-        })
+        this.includePoints(markers)
     },
 
     // 缩放视野以包含所有给定的坐标点
-    includePoints() {
-        var points = Array.from(this.data.polyline[0].points)
+    includePoints(markers) {
         this.mapCtx = wx.createMapContext('map')
         this.mapCtx.includePoints({
             padding: [100, 60, 60, 60],
-            points: points,
+            points: markers,
         })
     },
 
@@ -544,7 +553,7 @@ Page({
                             distance: distance,
                             duration: duration
                         })
-                        _this.includePoints()
+                        _this.includePoints(pl)
                         _this.moveAlong()
 
                     },

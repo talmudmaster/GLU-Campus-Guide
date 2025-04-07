@@ -1,5 +1,7 @@
 // pages/admin/media/media.js
+const app = getApp()
 let db = wx.cloud.database()
+
 Page({
 
     /**
@@ -170,6 +172,7 @@ Page({
                         icon: 'success',
                         duration: 2000
                     })
+                    app.globalData.mapRefresh = true; // 标记 tab地图页 需刷新
                     this.get()
                 })
                 .catch(err => {
@@ -249,6 +252,8 @@ Page({
                         icon: 'success',
                         duration: 2000
                     })
+                    app.globalData.schoolRefresh = true; // 标记 tab首页 需刷新
+                    app.globalData.introductionRefresh = true; // 标记 page介绍页 需刷新
                     this.get()
                 })
                 .catch(err => {
@@ -285,6 +290,7 @@ Page({
                         icon: 'success',
                         duration: 2000
                     })
+                    app.globalData.introductionRefresh = true; // 标记 page介绍页 需刷新
                     this.get()
                 })
                 .catch(err => {

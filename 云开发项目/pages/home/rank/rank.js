@@ -38,15 +38,14 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-
+        this.getList()
     },
 
     /**
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh() {
-        console.log("PullDownRefresh")
-        this.getList()
+        
     },
 
     /**
@@ -74,7 +73,6 @@ Page({
             .then(res => {
                 console.log('success', res.result.data.data)
                 console.log('success', res.result.pagination)
-                wx.stopPullDownRefresh()
                 that.setData({
                     list: res.result.data.data,
                     pagination: res.result.pagination

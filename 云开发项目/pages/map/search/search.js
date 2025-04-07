@@ -151,7 +151,6 @@ Page({
                 console.log('success', res.result.pagination)
                 let data = res.result.data.data
                 data.splice(10, 10) // 删除后10个元素s
-                wx.stopPullDownRefresh()
                 that.setData({
                     hotSearch: data
 

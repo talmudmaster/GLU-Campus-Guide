@@ -47,7 +47,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh() {
-    this.getAdmin()
+    
   },
 
   /**
@@ -72,7 +72,6 @@ Page({
         this.setData({
           admin_list: res.data
         })
-        wx.stopPullDownRefresh()
       })
       .catch(err => {
         console.log('fail', err)

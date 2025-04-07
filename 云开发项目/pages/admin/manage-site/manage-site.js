@@ -1,6 +1,8 @@
 // pages/admin/manage-site/manage-site.js
 let db = wx.cloud.database()
 let _ = db.command
+const app = getApp()
+
 Page({
 
     /**
@@ -78,7 +80,6 @@ Page({
                 this.setData({
                     category_list: category_list,
                     category_name_list: category_name_list,
-                    c_id: category_list[0]._id
                 })
             })
             .catch(err => {
@@ -321,6 +322,8 @@ Page({
     },
 
     back() {
+      app.globalData.mapRefresh = true; // 标记 tab地图页 需刷新
+      app.globalData.siteRefresh = true; // 标记 tab地点页 需刷新
       var pages = getCurrentPages();
       var prevPage = pages[pages.length - 2]; // 上一个页面
       // 调用上一个页面对象的方法，重新获取数据

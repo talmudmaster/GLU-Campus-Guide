@@ -1,7 +1,9 @@
 // pages/site/site.js
 var map = require('../../data/map')
 var media = require('../../data/media')
+const app = getApp()
 var db = wx.cloud.database()
+
 Page({
 
     /**
@@ -42,7 +44,10 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow() {
-
+        if (app.globalData.siteRefresh) {
+            this.lianbiaoquery();
+            app.globalData.siteRefresh = false; // 重置标记
+        }
     },
 
     /**
@@ -56,8 +61,7 @@ Page({
      * 页面相关事件处理函数--监听用户下拉动作
      */
     onPullDownRefresh() {
-        console.log("PullDownRefresh")
-        this.lianbiaoquery()
+
     },
 
     /**
@@ -73,7 +77,6 @@ Page({
                 name: 'lianbiao_query',
             })
             .then(res => {
-                wx.stopPullDownRefresh()
                 console.log(res.result.list)
                 this.setData({
                     site_data: res.result.list
