@@ -1,9 +1,9 @@
 <!--pages/admin/manage/manage.wxml-->
 <view>
   <view class="card">
-    <view class="card-top">
+    <!-- <view class="card-top">
       <view class="card-top-column left {{sid == 1?'choose':''}}" bindtap="click1">
-        类别
+        地点类型
       </view>
 
       <view class="card-top-column {{sid == 2?'choose':''}}" bindtap="click2">
@@ -13,22 +13,22 @@
       <view class="card-top-column right {{sid == 3?'choose':''}}" bindtap="click3">
         默认地点
       </view>
-    </view>
+    </view> -->
 
     <view wx:if="{{sid == 1}}" class="card-container">
       <view class="card-container-title">
         <view class="card-container-title-font">
-          类别管理
+          地点类型管理
         </view>
       </view>
 
       <view class="card-container-container">
         <button type="primary" size="mini" bindtap="addcategory">
-          新增类别
+          新增地点类型
         </button>
         <view class="card-container-container-title title">
           <view class="card-container-container-title-title">序号</view>
-          <view class="card-container-container-title-title">类别</view>
+          <view class="card-container-container-title-title">地点类型</view>
           <view class="card-container-container-title-title">操作</view>
         </view>
 
@@ -64,7 +64,7 @@
             搜索
           </view>
         </view>
-        <!-- 类别栏 -->
+        <!-- 地点类型栏 -->
         <scroll-view scroll-x="true" scroll-left="10px">
           <view class="card-bottom-category" style="width: {{site_data.length*75}}px;">
             <view class="card-bottom-category-label {{index == category ? 'choose' : ''}}" wx:for="{{site_data}}" wx:key="id" id="{{index}}" bindtap="changeCategory">
@@ -118,7 +118,7 @@
           搜索
         </view>
       </view>
-      <!-- 类别栏 -->
+      <!-- 地点类型栏 -->
       <scroll-view scroll-x="true" scroll-left="10px">
         <view class="card-bottom-category" style="width: {{site_data.length*75}}px;">
           <view class="card-bottom-category-label {{index == category ? 'choose' : ''}}" wx:for="{{site_data}}" wx:key="id" id="{{index}}" bindtap="changeCategory">

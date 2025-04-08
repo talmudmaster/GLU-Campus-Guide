@@ -27,7 +27,7 @@ module.exports = {
   },
 
   // 校园指南
-  shool_guide: [{
+  school_guide: [{
       title: '桂院校园导航',
       content: '因桂林学院二期工程仍在建设中，现有导航软件暂无该地区地图，故开发此小程序为同学们提供基础地图显示服务。\n\n因现有资料较少等原因，本小程序可能会存在许多问题，请以实际情况为准。',
       imageList: ['https://cdnjson.com/images/2024/02/19/erqi3dbb1a5741ffb0a2.png'],

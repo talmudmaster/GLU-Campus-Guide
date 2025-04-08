@@ -4,7 +4,7 @@
 
 <h3 align="center">桂院校园导航小程序</h3>
 
-<p align="center">
+<p align="center" style="display: flex; justify-content: center; align-items: center; gap: 10px">
   <img src="https://gitee.com/talmudmaster/GLU-Campus-Guide/badge/star.svg?theme=dark" />
   <img src="https://img.shields.io/github/stars/talmudmaster/GLU-Campus-Guide" />
   <img src="https://img.shields.io/badge/platform-微信小程序-teal?style=for-the-badge" />
@@ -101,7 +101,7 @@
 
 **`请严格按照其中的步骤，一步一步来。若缺失步骤，可能会导致意想不到的问题。`**
 
-> ① 电脑的定位源自于网络节点，故不一定准确，以手机端预览为准  
+> ① 电脑的定位源自于网络IP节点，故不一定准确，建议使用手机，定位会更准  
 > ② 若上传了校园地图，则需要在手机端预览，因为电脑端无法预览自定义图层  
 > ③ 若设置了标记点图标，电脑端可能无法预览点聚合效果，在手机端预览  
 > ④ 若想发行小程序，需先进行备案和认证（付费），而且大概率不能取学校名和用校徽。如无紧迫需求，不建议发行
@@ -177,6 +177,7 @@
 - 使用 自定义组件，减少代码冗余
 - 优化 界面设计、后端设计
 - 使用 async/await 优化云函数接口调用后页面的 js 逻辑
+- 实现 精准的地理位置判断，检测当前位置是否处于学校区域内
 - 实现 多校区切换
 - 实现 校车路线、浏览路线展示
 - 引入 AI大语言模型对话

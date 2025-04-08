@@ -357,7 +357,7 @@ Page({
 		}
     },
 
-    // 底部按钮（路线详情和类别地点）
+    // 底部按钮（路线详情和地点类型）
     clickButton() {
         if (this.data.polyline.length == 0) {
             this.setData({
@@ -411,9 +411,9 @@ Page({
         }
     },
 
-    // 切换类别
+    // 切换地点类型
     changeCategory(e) {
-        console.log("类别", e.currentTarget.id)
+        console.log("地点类型", e.currentTarget.id)
         var category = e.currentTarget.id
         let scrollLeft = (category - 1) * 60
         this.setData({
@@ -423,9 +423,9 @@ Page({
         })
 
         let site_list = this.data.site_data[this.data.category].list
-        console.log("当前类别", site_list)
+        console.log("当前地点类型", site_list)
         let markers = []
-        // 不在学校且当前类别下存在默认地点
+        // 不在学校且当前地点类型下存在默认地点
         let judege = site_list.some((item) => item._id == this.data.default_point._id)
         if (!this.data.isAtSchool && !judege) {
             markers.push(this.data.mylocationmarker)

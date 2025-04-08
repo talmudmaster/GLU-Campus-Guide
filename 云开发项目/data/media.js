@@ -48,7 +48,7 @@ module.exports = {
   weather: "../../images/weather.png",
   wave: "https://cdnjson.com/images/2024/02/19/wave1c95582ec21c3965.gif",
   // 常用功能 按钮
-  function_buttons: ["https://cdnjson.com/images/2024/02/19/map_guidec371b976f8a8ccfd.png", "https://cdnjson.com/images/2024/02/19/school_guide62ff63461eb4a3ff.png", "https://cdnjson.com/images/2024/02/19/site_summary577df1180980be2f.png", "https://cdnjson.com/images/2024/02/19/friendly_link1f1f62f21021ed5e.png", "https://cdnjson.com/images/2024/02/19/site_popularity3b3b4602cf736db0.png"],
+  function_buttons: ["../../images/button/map_navigation.png", "../../images/button/school_guide.png", "../../images/button/site_summary.png", "../../images/button/friendly_link.png", "../../images/button/site_popularity.png"],
   // 学校公众号
   guanwei: ["https://cdnjson.com/images/2023/04/30/guanwei.png", "https://s1.imagehub.cc/images/2024/02/07/a9e42b78adace1b3f93484530613c84c.png", "https://s1.imagehub.cc/images/2024/02/07/8e8dae8b402c4c4ed236d7fbe4a9d913.png"],
 

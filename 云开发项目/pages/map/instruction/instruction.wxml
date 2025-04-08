@@ -10,7 +10,7 @@
             </view>
 
             <view class="card-container-container">
-                <text decode="true">&emsp;&emsp;“地点汇总”页展示了各类别的地点，可切换类别查看。点击可以查看地点介绍，设置为起点或终点并跳转到地图。</text>
+                <text decode="true">&emsp;&emsp;“地点汇总”页展示了各地点类型的地点，可切换地点类型查看。点击可以查看地点介绍，设置为起点或终点并跳转到地图。</text>
 
                 <button class="button" type="primary" bindtap="tosite">
                     去“地点汇总”页
@@ -45,7 +45,7 @@
                     </view>
 
                     <view class="card-container-container-instr-right">
-                        <text decode="true">类别栏可以滑动点击\n点击地点可查看信息，并设为起点/终点\n点击底部可查看当前类别地点或路线信息</text>
+                        <text decode="true">地点类型栏可以滑动点击\n点击地点可查看信息，并设为起点/终点\n点击底部可查看当前地点类型地点或路线信息</text>
                     </view>
                 </view>
 

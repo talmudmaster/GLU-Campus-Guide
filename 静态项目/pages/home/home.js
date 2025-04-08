@@ -144,11 +144,14 @@ Page({
     getWeather() {
         var that = this
         wx.request({
-            url: 'https://devapi.qweather.com/v7/weather/now?key=' + that.data.APIKEY + "&location=" + that.data.school_location,
-            success(result) {
-                var res = result.data
+            url: 'https://devapi.qweather.com/v7/weather/now',
+            data: {
+                location: this.data.school_location,
+                key: this.data.APIKEY
+            },
+            success(res) {
                 that.setData({
-                    now: res.now
+                    now: res.data.now
                 })
             }
         })

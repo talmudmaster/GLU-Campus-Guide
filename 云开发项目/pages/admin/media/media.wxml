@@ -1,7 +1,7 @@
 <!--pages/admin/media/media.wxml-->
 <view>
     <view class="card">
-        <view class="card-top">
+        <!-- <view class="card-top">
             <view class="card-top-title left {{sid == 1?'choose':''}}" bindtap="click1">
                 地图
             </view>
@@ -17,7 +17,7 @@
             <view class="card-top-title right {{sid == 4?'choose':''}}" bindtap="click4">
                 默认图
             </view>
-        </view>
+        </view> -->
 
         <view wx:if="{{sid == 1}}" class="card-container">
             <view class="card-container-title">

@@ -48,11 +48,11 @@
 
                     <view class="card-container-form-list-list">
                         <view class="card-container-form-list-list-text">
-                            所属类别：
+                            所属地点类型：
                         </view>
 
                         <picker class="card-container-form-list-list-picker" range="{{category_name_list}}" mode="selector" bindchange="bindchange" value="{{0}}">
-                            选择类别
+                            选择地点类型
                         </picker>
                         {{category_name_list[choose]}}
                     </view>

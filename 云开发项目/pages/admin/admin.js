@@ -29,15 +29,15 @@ Page({
 
     },
 
-    taptosite() {
+      taptosite(e) {
         wx.navigateTo({
-            url: '../../pages/admin/manage/manage',
+            url: '../../pages/admin/manage/manage?sid=' + e.target.dataset.id,
         })
     },
 
-    taptomedia() {
+    taptomedia(e) {
         wx.navigateTo({
-            url: '../../pages/admin/media/media',
+            url: '../../pages/admin/media/media?sid=' + e.target.dataset.id,
         })
     },
 

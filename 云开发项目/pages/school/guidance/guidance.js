@@ -2,8 +2,8 @@
 var school = require('../../../data/school')
 Page({
   data: {
-    allWords: school.shool_guide,
-    curWords: school.shool_guide,
+    allWords: school.school_guide,
+    curWords: school.school_guide,
 
     height: 0,
     detail: 'id0'

@@ -88,7 +88,7 @@ Page({
                 })
         } else if (this.data.name == null || this.data.name == "") {
             wx.showToast({
-                title: '请输入类别名称！',
+                title: '请输入地点类型名称！',
                 icon: 'none',
                 duration: 2000
             })
@@ -122,7 +122,7 @@ Page({
                 })
         } else if (this.data.name == null || this.data.name == "") {
             wx.showToast({
-                title: '请输入类别名称！',
+                title: '请输入地点类型名称！',
                 icon: 'none',
                 duration: 2000
             })
@@ -167,7 +167,7 @@ Page({
                                     })
                             } else {
                                 wx.showToast({
-                                    title: '该类别下存在地点，无法删除！\n请确保该类别下没有地点',
+                                    title: '该地点类型下存在地点，无法删除！\n请确保该地点类型下没有地点',
                                     icon: 'none',
                                     duration: 3000
                                 })

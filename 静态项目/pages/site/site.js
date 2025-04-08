@@ -60,7 +60,7 @@ Page({
     },
 
     changeCategory: function (e) {
-        console.log("类别", e.currentTarget.id)
+        console.log("地点类型", e.currentTarget.id)
         this.setData({
             category: e.currentTarget.id,
         })
