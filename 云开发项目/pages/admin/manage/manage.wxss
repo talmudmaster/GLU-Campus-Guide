@@ -147,11 +147,16 @@ page {
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
 }
 
 .choose {
-    border-top: 10px solid #404481;
-    background-color: white;
+    /* border-top: 10px solid #404481;
+    background-color: white; */
+    background-color: #39a096;
+    color: white;
+    border-radius: 20px;
+    font-weight: bold;
 }
 
 .card-container-form-list-img {

@@ -4,7 +4,7 @@
     "setting": {
         "compileHotReLoad": true
     },
-    "libVersion": "3.7.10",
+    "libVersion": "3.8.0",
     "condition": {
         "miniprogram": {
             "list": [

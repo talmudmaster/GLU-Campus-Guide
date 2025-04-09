@@ -24,7 +24,8 @@ Page({
             sid: options.sid,
             _id: options._id,
             category: options.id,
-            showname: options.name
+            showname: options.name,
+            name: options.name
         })
         db.collection('category')
             .get()
@@ -159,7 +160,7 @@ Page({
                                             duration: 2000
                                         })
                                         setTimeout(() => {
-                                            this.back()
+                                            that.back()
                                         }, 1000)
                                     })
                                     .catch(err => {

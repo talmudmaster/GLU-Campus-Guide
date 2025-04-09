@@ -79,6 +79,7 @@ page {
   border: 1px solid grey;
   width: 190px;
   padding-left: 10px;
+  border-radius: 8px;
 }
 
 .card-container-form-list-list-text {

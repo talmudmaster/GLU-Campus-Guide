@@ -53,12 +53,13 @@ Page({
         polyline: [],
         // 闭合多边形
         // polygons: [{
-        //   points: map.points??[],
+        //   points: [],
         //   fillColor: "#d5dff233",
         //   strokeColor: "#789cff",
         //   strokeWidth: 2,
         //   zIndex: 1
         // }],
+        points: map.points??[],
 
         mylocationmarker: "",
 
@@ -105,6 +106,20 @@ Page({
      * 生命周期函数--监听页面加载
      */
     onLoad(options) {
+        let map_bottom = this.data.map_bottom
+        if (map_bottom == null || map_bottom == '') {
+            let polygons = [{
+                points: this.data.points,
+                fillColor: "#d5dff233",
+                strokeColor: "#789cff",
+                strokeWidth: 2,
+                zIndex: 1
+            }]
+            this.setData({
+                polygons: polygons,
+            })
+        }
+        
         this.map()
         this.location()
     },

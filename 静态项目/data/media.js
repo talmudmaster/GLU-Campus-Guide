@@ -86,8 +86,8 @@ module.exports = {
 
   message: "../../images/message.png",
   zhixie: "../../images/zhixie.png",
-  zhixie_kaifazhe: "https://cdnjson.com/images/2023/10/24/zhixie_kaifazhe.jpg",
-  zhixie_up: "https://cdnjson.com/images/2023/02/26/zhixie_up.jpg",
+  zhixie_kaifazhe: "../../../images/zhixie_kaifazhe.jpg",
+  zhixie_up: "../../../images/zhixie_up.jpg",
   zhixie_honghui: "https://cdnjson.com/images/2023/02/26/zhixie_honghui.jpg",
   notes: "../../images/notes.png"
 }

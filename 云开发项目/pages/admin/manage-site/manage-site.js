@@ -66,17 +66,20 @@ Page({
             .get()
             .then(res => {
                 let category_list = res.data
-                let category_name_list = []
-                for (let i = 0; i < category_list.length; i++) {
-                    let m = category_list[i].name
-                    category_name_list.push(m)
+                let category_name_list = category_list.map(item => item.name);
 
-                    if (_id != null && c_id == category_list[i]._id) {
-                        this.setData({
-                            choose: i
-                        })
-                    }
+                let targetIndex = category_list.findIndex(item => _id != null && c_id === item._id);
+                if (targetIndex !== -1) {
+                    this.setData({
+                      choose: targetIndex
+                    });
+                } else {
+                  this.setData({
+                    choose: 0,
+                    c_id: category_list[0]._id
+                  });
                 }
+                
                 this.setData({
                     category_list: category_list,
                     category_name_list: category_name_list,
@@ -136,8 +139,8 @@ Page({
                         aliases: this.data.aliases,
                         desc: this.data.desc,
                         c_id: this.data.c_id,
-                        la: this.data.la,
-                        lo: this.data.lo,
+                        la: Number(this.data.la),
+                        lo: Number(this.data.lo),
                         img: this.data.img,
                     }
                 })
@@ -182,8 +185,8 @@ Page({
                         aliases: this.data.aliases,
                         desc: this.data.desc,
                         c_id: this.data.c_id,
-                        la: this.data.la,
-                        lo: this.data.lo,
+                        la: Number(this.data.la),
+                        lo: Number(this.data.lo),
                         img: this.data.img,
                     }
                 })
@@ -212,6 +215,7 @@ Page({
 
     removesite() {
         var _id = this.data._id
+        var that = this
         wx.showModal({
             title: '提示',
             content: '删除操作不可逆\n请谨慎操作！',
@@ -240,7 +244,7 @@ Page({
                                             duration: 2000
                                         })
                                         setTimeout(() => {
-                                            this.back()
+                                            that.back()
                                         }, 1000)
                                     })
                                     .catch(err => {

@@ -65,7 +65,7 @@
           </view>
         </view>
         <!-- 地点类型栏 -->
-        <scroll-view scroll-x="true" scroll-left="10px">
+        <scroll-view scroll-x="true" scroll-left="10px" scroll-left="{{scrollLeft}}">
           <view class="card-bottom-category" style="width: {{site_data.length*75}}px;">
             <view class="card-bottom-category-label {{index == category ? 'choose' : ''}}" wx:for="{{site_data}}" wx:key="id" id="{{index}}" bindtap="changeCategory">
               {{item.name}}

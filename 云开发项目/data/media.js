@@ -48,9 +48,19 @@ module.exports = {
   weather: "../../images/weather.png",
   wave: "https://cdnjson.com/images/2024/02/19/wave1c95582ec21c3965.gif",
   // 常用功能 按钮
-  function_buttons: ["../../images/button/map_navigation.png", "../../images/button/school_guide.png", "../../images/button/site_summary.png", "../../images/button/friendly_link.png", "../../images/button/site_popularity.png"],
+  function_buttons: [
+    "../../images/button/map_navigation.png",
+    "../../images/button/school_guide.png",
+    "../../images/button/site_summary.png",
+    "../../images/button/friendly_link.png",
+    "../../images/button/site_popularity.png"
+  ],
   // 学校公众号
-  guanwei: ["https://cdnjson.com/images/2023/04/30/guanwei.png", "https://s1.imagehub.cc/images/2024/02/07/a9e42b78adace1b3f93484530613c84c.png", "https://s1.imagehub.cc/images/2024/02/07/8e8dae8b402c4c4ed236d7fbe4a9d913.png"],
+  guanwei: [
+    "https://cdnjson.com/images/2023/04/30/guanwei.png",
+    "https://s1.imagehub.cc/images/2024/02/07/a9e42b78adace1b3f93484530613c84c.png",
+    "https://s1.imagehub.cc/images/2024/02/07/8e8dae8b402c4c4ed236d7fbe4a9d913.png"
+  ],
 
 
   // 地点排名
@@ -90,9 +100,9 @@ module.exports = {
 
   message: "../../images/message.png",
   zhixie: "../../images/zhixie.png",
-  zhixie_kaifazhe: "https://cdnjson.com/images/2023/10/24/zhixie_kaifazhe.jpg",
-  zhixie_up: "https://cdnjson.com/images/2023/02/26/zhixie_up.jpg",
-  zhixie_honghui: "https://cdnjson.com/images/2023/02/26/zhixie_honghui.jpg",
+  zhixie_kaifazhe: "../../../images/zhixie_kaifazhe.jpg",
+  zhixie_up: "../../../images/zhixie_up.jpg",
+  // zhixie_honghui: "https://cdnjson.com/images/2023/02/26/zhixie_honghui.jpg",
   notes: "../../images/notes.png",
 
   // 地点获取

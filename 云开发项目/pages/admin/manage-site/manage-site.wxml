@@ -48,7 +48,7 @@
 
                     <view class="card-container-form-list-list">
                         <view class="card-container-form-list-list-text">
-                            所属地点类型：
+                            地点类型：
                         </view>
 
                         <picker class="card-container-form-list-list-picker" range="{{category_name_list}}" mode="selector" bindchange="bindchange" value="{{0}}">

@@ -54,12 +54,13 @@ Page({
         polyline: [],
         // 闭合多边形
         // polygons: [{
-        //   points: map.points??[],
+        //   points: [],
         //   fillColor: "#d5dff233",
         //   strokeColor: "#789cff",
         //   strokeWidth: 2,
         //   zIndex: 1
         // }],
+        points: map.points??[],
 
         mylocationmarker: "",
 
@@ -211,6 +212,18 @@ Page({
                 this.setData({
                     map_bottom: res.data[0].img,
                 })
+                if(!(res.data[0].img)) {
+                  let polygons = [{
+                    points: this.data.points,
+                    fillColor: "#d5dff233",
+                    strokeColor: "#789cff",
+                    strokeWidth: 2,
+                    zIndex: 1
+                  }]
+                  this.setData({
+                    polygons: polygons,
+                  })
+                }
                 this.map()
             })
             .catch(err => {

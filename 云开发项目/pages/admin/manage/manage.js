@@ -9,6 +9,8 @@ Page({
      * 页面的初始数据
      */
     data: {
+        scrollLeft: 0,
+        
         category_list: [],
         site_data: [],
         result_list: [],
@@ -178,8 +180,10 @@ Page({
 
     changeCategory(e) {
         let category = e.currentTarget.id
+        let scrollLeft = (category - 1) * 60
         let result_list = this.data.site_data[e.currentTarget.id].list
         this.setData({
+            scrollLeft: scrollLeft,
             category: category,
             result_list: result_list
         })

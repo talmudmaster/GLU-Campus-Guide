@@ -8,7 +8,7 @@ module.exports = {
   // 地图部分参数
 
   // 学校中心点坐标
-  longitude: 110.277269,
+  longitude: 110.276814,
   latitude: 25.093542,
 
   // 是否展示 POI 点
@@ -16,9 +16,9 @@ module.exports = {
   // 是否显示带有方向的当前定位点
   showLocation: true,
   // 缩放级别
-  scale: 15.8,
+  scale: 15.9,
   // 最小缩放级别，比缩放级别小0.3-0.4为宜
-  minscale: 15.5,
+  minscale: 15.7,
 
   // 地图边界
   boundary: {
@@ -59,67 +59,70 @@ module.exports = {
 
   // 闭合多边形
   points: [{
-    "latitude": "25.098661",
-    "longitude": "110.281085"
+    "latitude": 25.098852,
+    "longitude": 110.280247
   }, {
-    "latitude": "25.098178",
-    "longitude": "110.281189"
+    "latitude": 25.098613,
+    "longitude": 110.281067
   }, {
-    "latitude": "25.098033",
-    "longitude": "110.281212"
+    "latitude": 25.098134,
+    "longitude": 110.281202
   }, {
-    "latitude": "25.097797",
-    "longitude": "110.281240"
+    "latitude": 25.097789,
+    "longitude": 110.28124
   }, {
-    "latitude": "25.097287",
-    "longitude": "110.281246"
+    "latitude": 25.097262,
+    "longitude": 110.281238
   }, {
-    "latitude": "25.096797",
-    "longitude": "110.281191"
+    "latitude": 25.096541,
+    "longitude": 110.281147
   }, {
-    "latitude": "25.096598",
-    "longitude": "110.281161"
+    "latitude": 25.095498,
+    "longitude": 110.280837
   }, {
-    "latitude": "25.095539",
-    "longitude": "110.280851"
+    "latitude": 25.094192,
+    "longitude": 110.280425
   }, {
-    "latitude": "25.094663",
-    "longitude": "110.280573"
+    "latitude": 25.092261,
+    "longitude": 110.279772
   }, {
-    "latitude": "25.092608",
-    "longitude": "110.279896"
+    "latitude": 25.090907,
+    "longitude": 110.279116
   }, {
-    "latitude": "25.092254",
-    "longitude": "110.279774"
+    "latitude": 25.088818,
+    "longitude": 110.278
   }, {
-    "latitude": "25.088440",
-    "longitude": "110.277864"
+    "latitude": 25.088894,
+    "longitude": 110.277343
   }, {
-    "latitude": "25.088595",
-    "longitude": "110.276959"
+    "latitude": 25.088626,
+    "longitude": 110.277048
   }, {
-    "latitude": "25.090170",
-    "longitude": "110.272859"
+    "latitude": 25.089121,
+    "longitude": 110.27522
   }, {
-    "latitude": "25.096446",
-    "longitude": "110.275621"
+    "latitude": 25.090366,
+    "longitude": 110.2723
   }, {
-    "latitude": "25.097469",
-    "longitude": "110.277284"
+    "latitude": 25.094765,
+    "longitude": 110.274592
   }, {
-    "latitude": "25.097880",
-    "longitude": "110.278027"
+    "latitude": 25.095409,
+    "longitude": 110.275153
   }, {
-    "latitude": "25.098033",
-    "longitude": "110.278332"
+    "latitude": 25.096183,
+    "longitude": 110.275245
   }, {
-    "latitude": "25.098576",
-    "longitude": "110.279523"
+    "latitude": 25.097429,
+    "longitude": 110.277281
   }, {
-    "latitude": "25.098777",
-    "longitude": "110.279984"
+    "latitude": 25.097552,
+    "longitude": 110.277502
   }, {
-    "latitude": "25.098935",
-    "longitude": "110.280369"
+    "latitude": 25.098047,
+    "longitude": 110.278465
+  }, {
+    "latitude": 25.098449,
+    "longitude": 110.279324
   }]
 }
