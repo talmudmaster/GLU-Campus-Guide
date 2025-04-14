@@ -45,7 +45,7 @@ Page({
      */
     onShow() {
         if (app.globalData.introductionRefresh) {
-            this.lianbiaoquery();
+            this.get();
             app.globalData.introductionRefresh = false; // 重置标记
         }
     },

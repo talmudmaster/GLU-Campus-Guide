@@ -24,12 +24,18 @@
     </view>
   </view>
 
-  <view class="list-info">
-    <view class="list-info-container">
+  <view class="motto-honor">
       <view class="list-info-container-titletext red">
         {{school_information.motto}}
       </view>
+  
+      <view class="list-info-container-titletext blue">
+        {{school_information.honor}}
+      </view>
+  </view>
 
+  <view class="list-info">
+    <view class="list-info-container">
       <view class="list-info-container-text">
         建校时间：{{school_information.build_time}}年
       </view>
@@ -40,10 +46,6 @@
     </view>
 
     <view class="list-info-container">
-      <view class="list-info-container-titletext blue">
-        {{school_information.honor}}
-      </view>
-
       <view class="list-info-container-text">
         办校类型：{{school_information.school_type}}院校
       </view>

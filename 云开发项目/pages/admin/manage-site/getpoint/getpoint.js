@@ -11,7 +11,6 @@ Page({
         circle: media.circle,
         map_bottom: null,
 
-        subKey: map.mapKey,
         scale: map.scale,
         enable_poi: map.enablepoi,
         location: {
