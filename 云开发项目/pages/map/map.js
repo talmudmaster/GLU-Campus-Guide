@@ -36,7 +36,7 @@ Page({
         // 自定义图层、地图、学校 边界
         groundoverlay: map.groundoverlay,
         boundary: map.boundary,
-        // school_boundary: map.school_boundary,
+        school_boundary: map.school_boundary,
 
         // 默认地点
         default_point: "",
@@ -335,6 +335,7 @@ Page({
         var static_category = this.data.static
         wx.getLocation({
             type: 'gcj02',
+            isHighAccuracy: true,
             success: function (res) {
                 var nowlatitude = res.latitude
                 var nowlongitude = res.longitude

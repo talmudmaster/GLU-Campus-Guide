@@ -260,7 +260,8 @@ Page({
         var static_category = this.data.static
         wx.getLocation({
             type: 'gcj02',
-                        success: function (res) {
+            isHighAccuracy: true,
+            success: function (res) {
                 var nowlatitude = res.latitude
                 var nowlongitude = res.longitude
                 console.log("当前位置坐标", nowlatitude, nowlongitude)
