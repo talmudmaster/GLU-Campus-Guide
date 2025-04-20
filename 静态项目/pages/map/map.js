@@ -17,6 +17,8 @@ Page({
      * 页面的初始数据
      */
     data: {
+        mode: 'walking',
+
         scrollLeft: 0,
 
         category: 1,
@@ -258,7 +260,7 @@ Page({
         var static_category = this.data.static
         wx.getLocation({
             type: 'gcj02',
-            success: function (res) {
+                        success: function (res) {
                 var nowlatitude = res.latitude
                 var nowlongitude = res.longitude
                 console.log("当前位置坐标", nowlatitude, nowlongitude)
@@ -506,6 +508,16 @@ Page({
         })
     },
 
+    modechoose(e) {
+        let choose = e.target.dataset.choose
+        if (choose != this.data.mode) {
+            this.setData({
+                mode: choose
+            })
+            this.formSubmit()
+        }
+    },
+
     // 触发表单提交事件，调用接口
     formSubmit() {
         var _this = this;
@@ -522,7 +534,7 @@ Page({
             } else {
                 //调用距离计算接口
                 qqmapsdk.direction({
-                    mode: 'walking', //可选值：'driving'（驾车）、'walking'（步行）、'bicycling'（骑行），不填默认：'driving',可不填
+                    mode: _this.data.mode, //可选值：'driving'（驾车）、'walking'（步行）、'bicycling'（骑行），不填默认：'driving',可不填
                     //from参数不填默认当前地址
                     from: start.latitude + "," + start.longitude,
                     to: end.latitude + "," + end.longitude,

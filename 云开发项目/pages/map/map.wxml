@@ -27,7 +27,7 @@
   </view>
 </view>
 
-<view class="relative">
+<view class="relative" wx:if="{{polyline.length == 0}}">
   <scroll-view scroll-x="true" scroll-left="{{scrollLeft}}" scroll-with-animation="true">
     <view class="card-bottom-category" style="width: {{site_data.length*75}}px;">
       <view class="card-bottom-category-label {{index == category ? 'choose' : ''}}" wx:for="{{site_data}}" wx:key="id" id="{{index}}" bindtap="changeCategory">
@@ -35,6 +35,20 @@
       </view>
     </view>
   </scroll-view>
+</view>
+
+<view class="relative" wx:else>
+  <view class="relative-mode">
+    <view class="mode {{mode == 'walking' ? 'choose' : ''}}" data-choose="walking" bindtap="modechoose">步行</view>
+  </view>
+
+  <view class="relative-mode">
+    <view class="mode {{mode == 'bicycling' ? 'choose' : ''}}" data-choose="bicycling" bindtap="modechoose">骑行</view>
+  </view>
+
+  <view class="relative-mode">
+    <view class="mode {{mode == 'driving' ? 'choose' : ''}}" data-choose="driving" bindtap="modechoose">驾车</view>
+  </view>
 </view>
 
 <map style="width: 100%; height: calc(100% - 180px);" id="map" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" min-scale="{{minscale}}" show-location="{{showLocation}}" enable-poi="{{enablepoi}}" markers="{{markers}}" include-points="" polyline="{{polyline}}" polygons="{{polygons}}" bindmarkertap="markertap">

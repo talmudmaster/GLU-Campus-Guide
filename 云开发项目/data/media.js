@@ -44,6 +44,7 @@ module.exports = {
   school_icon: "../../images/school_icon.png",
   book: "../../images/book.png",
   money: "../../images/money.png",
+  new: "../../images/new.png",
   magazine: "../../images/magazine.png",
   weather: "../../images/weather.png",
   wave: "https://cdnjson.com/images/2024/02/19/wave1c95582ec21c3965.gif",

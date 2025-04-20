@@ -18,6 +18,8 @@ Page({
      * 页面的初始数据
      */
     data: {
+        mode: 'walking',
+
         scrollLeft: 0,
 
         category: 1,
@@ -34,7 +36,7 @@ Page({
         // 自定义图层、地图、学校 边界
         groundoverlay: map.groundoverlay,
         boundary: map.boundary,
-        school_boundary: map.school_boundary,
+        // school_boundary: map.school_boundary,
 
         // 默认地点
         default_point: "",
@@ -606,6 +608,16 @@ Page({
         })
     },
 
+    modechoose(e) {
+        let choose = e.target.dataset.choose
+        if (choose != this.data.mode) {
+          this.setData({
+            mode: choose
+          })
+          this.formSubmit()
+        }
+    },
+
     // 触发表单提交事件，调用接口
     formSubmit() {
         var _this = this;
@@ -622,7 +634,7 @@ Page({
             } else {
                 //调用距离计算接口
                 qqmapsdk.direction({
-                    mode: 'walking', //可选值：'driving'（驾车）、'walking'（步行）、'bicycling'（骑行），不填默认：'driving',可不填
+                    mode: _this.data.mode, //可选值：'driving'（驾车）、'walking'（步行）、'bicycling'（骑行），不填默认：'driving',可不填
                     //from参数不填默认当前地址
                     from: start.latitude + "," + start.longitude,
                     to: end.latitude + "," + end.longitude,

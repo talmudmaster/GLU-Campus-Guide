@@ -24,6 +24,7 @@ Page({
         school_icon: media.school_icon,
         book: media.book,
         money: media.money,
+        new: media.new,
 
         wave: media.wave,
 

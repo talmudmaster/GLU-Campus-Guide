@@ -95,7 +95,23 @@
   position: relative;
   height: 40px;
   display: flex;
+  justify-content: space-around;
+}
+
+.relative-mode {
+  display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.mode {
+  width: 80px;
+  background-color: #f0f0f099;
+  border-radius: 20px;
+  font-weight: bold;
+  text-align: center;
+  padding: 3px;
+  border: 1px solid lightgray;
 }
 
 .card-bottom-category {

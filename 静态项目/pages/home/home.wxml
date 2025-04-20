@@ -142,6 +142,7 @@
 
     <view class="list-row-container" bindtap="tofinance">
       <image class="list-row-container-img" src="{{money}}" />
+      <!-- <image class="list-row-container-img" src="{{new}}" /> -->
       <view class="list-row-container-text">
         财务处
       </view>
