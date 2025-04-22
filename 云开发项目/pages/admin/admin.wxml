@@ -43,6 +43,16 @@
   </view>
 
   <view class="card">
+    <view class="title">📖 信息管理</view>
+
+    <view class="content">
+      <view class="btn" bindtap="taptoguide">
+          校园指南
+      </view>
+    </view>
+  </view>
+
+  <view class="card">
     <view class="title">👤 成员管理</view>
 
     <view class="content">

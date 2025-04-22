@@ -15,6 +15,7 @@ App({
 		mapRefresh: false,
 		siteRefresh: false,
 		schoolRefresh: false,
+    schoolguideRefresh: false,
 		introductionRefresh: false
 	}
 })

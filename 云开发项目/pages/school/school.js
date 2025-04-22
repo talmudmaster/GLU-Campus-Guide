@@ -1,13 +1,15 @@
 // pages/school/school.js
-var school = require('../../data/school')
+// var school = require('../../data/school')
 var media = require('../../data/media')
+const app = getApp()
+
 Page({
 
 	/**
 	 * 页面的初始数据
 	 */
 	data: {
-		allWords: school.school_guide,
+		allWords: [],
 
 		green_arrow: media.green_arrow
 	},
@@ -16,7 +18,7 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
     onLoad(options) {
-
+			this.get()
     },
 
 	/**
@@ -30,7 +32,10 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
     onShow() {
-
+			if (app.globalData.schoolguideRefresh) {
+				this.get()
+				app.globalData.schoolguideRefresh = false // 重置标记
+			}
     },
 
 	/**
@@ -68,13 +73,27 @@ Page({
 
     },
 
-	/* 关于侧边栏，点击跳转 */
-	jump(event) {
-        let id = event.currentTarget.dataset.id;
-		// 获取到跳转锚点id
-		wx.navigateTo({
-            url: '/pages/school/guidance/guidance?id=' + id, // 通过url传到跳转页面
-		})
+		get() {
+			wx.cloud.database().collection('schoolguide')
+				.get()
+				.then(res => {
+					console.log('success', res)
+					this.setData({
+						allWords: res.data
+					})
+				})
+				.catch(err => {
+					console.log('fail', err)
+				})
+		},
+
+		/* 关于侧边栏，点击跳转 */
+		jump(event) {
+					let id = event.currentTarget.dataset.id;
+			// 获取到跳转锚点id
+			wx.navigateTo({
+							url: '/pages/school/guidance/guidance?id=' + id, // 通过url传到跳转页面
+			})
     },
 
 })

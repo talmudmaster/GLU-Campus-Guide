@@ -29,7 +29,7 @@ Page({
 
     },
 
-      taptosite(e) {
+    taptosite(e) {
         wx.navigateTo({
             url: '../../pages/admin/manage/manage?sid=' + e.target.dataset.id,
         })
@@ -38,6 +38,12 @@ Page({
     taptomedia(e) {
         wx.navigateTo({
             url: '../../pages/admin/media/media?sid=' + e.target.dataset.id,
+        })
+    },
+
+    taptoguide() {
+        wx.navigateTo({
+            url: './schoolguide-list/schoolguide-list',
         })
     },
 

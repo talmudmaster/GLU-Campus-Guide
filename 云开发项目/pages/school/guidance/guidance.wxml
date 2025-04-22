@@ -15,7 +15,7 @@
         <text class="text-blue text-xl">{{item.title}}</text>
       </view>
       <view class="content margin-sm">
-        <text decode="true" user-select>{{item.content}}</text>
+        <rich-text decode="true" user-select nodes="{{item.content}}"></rich-text>
       </view>
       <view class="img" wx:for="{{item.imageList}}" wx:for-item="items" wx:key="index" wx:for-index="id" bindtap='clickImg' data-url="{{items}}" data-id="{{index}}">
         <image src="{{items}}" mode="aspectFit"></image>

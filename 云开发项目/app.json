@@ -17,6 +17,8 @@
         "pages/admin/manage-category/manage-category",
         "pages/admin/manage-site/manage-site",
         "pages/admin/manage-site/getpoint/getpoint",
+        "pages/admin/schoolguide-list/schoolguide-list",
+        "pages/admin/schoolguide-list/schoolguide/schoolguide",
         "pages/admin/adminmanage/adminmanage",
         "pages/admin/manage-admin/manage-admin"
     ],

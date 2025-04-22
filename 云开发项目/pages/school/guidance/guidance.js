@@ -1,9 +1,9 @@
 // pages/school/guidance/guidance.js
-var school = require('../../../data/school')
+// var school = require('../../../data/school')
 Page({
   data: {
-    allWords: school.school_guide,
-    curWords: school.school_guide,
+    allWords: [],
+    curWords: [],
 
     height: 0,
     detail: 'id0'
@@ -13,9 +13,25 @@ Page({
     console.log(options.id);
     // this.getRect()
     this.setData({
-      height: wx.getSystemInfoSync().windowHeight - 50, // 获取屏幕高度
+      height: wx.getWindowInfo().windowHeight - 50, // 获取屏幕高度
       detail: 'id' + options.id // 获取跳转过来的锚点id
     })
+
+		wx.cloud.database().collection('schoolguide')
+      .get()
+      .then(res => {
+        console.log('success', res)
+        res.data.forEach(item => {
+          item.keywords = item.keywords || []
+        })
+        this.setData({
+          allWords: res.data,
+          curWords: res.data
+        })
+      })
+      .catch(err => {
+        console.log('fail', err)
+      })
   },
 
   getRect() {
