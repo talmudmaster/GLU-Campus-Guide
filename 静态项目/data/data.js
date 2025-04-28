@@ -8,8 +8,8 @@ module.exports = {
 
   // 相关信息
   information: {
-    type: "毕业设计",
-    author: "2019级软件工程吴警",
-    teacher: "韦林"
+    type: "计算机设计大赛作品 | 毕业设计",
+    author: "理工学院 2019级 软件工程 吴警",
+    teacher: "刘亮龙、杨嫘 | 韦林"
   }
 }

@@ -36,7 +36,7 @@ Page({
         // 自定义图层、地图、学校 边界
         groundoverlay: map.groundoverlay,
         boundary: map.boundary,
-        school_boundary: map.school_boundary,
+        // school_boundary: map.school_boundary,
 
         // 默认地点
         default_point: "",
@@ -55,13 +55,7 @@ Page({
         markers: [],
         polyline: [],
         // 闭合多边形
-        // polygons: [{
-        //   points: [],
-        //   fillColor: "#d5dff233",
-        //   strokeColor: "#789cff",
-        //   strokeWidth: 2,
-        //   zIndex: 1
-        // }],
+        polygons: null,
         points: map.points??[],
 
         mylocationmarker: "",
@@ -217,15 +211,15 @@ Page({
                 if(!(res.data[0].img)) {
                   let polygons = [{
                     points: this.data.points,
-                    fillColor: "#d5dff233",
-                    strokeColor: "#789cff",
-                    strokeWidth: 2,
-                    zIndex: 1
+                    fillColor: "#d5dff233", // 填充颜色：淡蓝色，7-8位为十六进制透明度00-FF
+                    strokeColor: "#789cff", // 描边颜色：较深的淡蓝色
+                    strokeWidth: 2, // 描边宽度
                   }]
                   this.setData({
                     polygons: polygons,
                   })
                 }
+                this.getRange()
                 this.map()
             })
             .catch(err => {
@@ -247,6 +241,37 @@ Page({
             .catch(err => {
                 console.log('fail', err)
             })
+    },
+
+    getRange() {
+      db.collection('media')
+          .where({
+            name: "学校范围"
+          })
+          .get()
+          .then(res => {
+            console.log('success', res)
+            if (res.data[0]?.range) {
+              let polygons = []
+              console.log('this.data.map_bottom', this.data.map_bottom);
+              if(!(this.data.map_bottom)) {
+                polygons = [{
+                  points: res.data[0].range,
+                  fillColor: "#d5dff233", // 填充颜色：淡蓝色，7-8位为十六进制透明度00-FF
+                  strokeColor: "#789cff", // 描边颜色：较深的淡蓝色
+                  strokeWidth: 2, // 描边宽度
+                }]
+              }
+              console.log('polygons', polygons);
+              this.setData({
+                points: res.data[0].range,
+                polygons: polygons,
+              })
+            }
+          })
+          .catch(err => {
+            console.log('fail', err)
+          })
     },
 
     getDefaultSite() {
@@ -330,7 +355,7 @@ Page({
     // 定位
     location() {
         var that = this
-        var school_boundary = this.data.school_boundary
+        // var school_boundary = this.data.school_boundary
         var default_point = this.data.default_point
         var static_category = this.data.static
         wx.getLocation({
@@ -340,7 +365,13 @@ Page({
                 var nowlatitude = res.latitude
                 var nowlongitude = res.longitude
                 console.log("当前位置坐标", nowlatitude, nowlongitude)
-                if (nowlatitude > school_boundary.south && nowlatitude < school_boundary.north && nowlongitude > school_boundary.west && nowlongitude < school_boundary.east) {
+                let testPoint = {
+                  latitude: nowlatitude,
+                  longitude: nowlongitude
+                }
+                let polygon = that.data.points
+                let result = that.isPointInPolygon(testPoint, polygon)
+                if (result) {
                     that.setData({
                         isAtSchool: true
                     })
@@ -379,6 +410,104 @@ Page({
                 that.changeCategory(static_category)
             }
         })
+    },
+
+    /**
+     * 判断点是否在多边形内部
+     * @param {{longitude: number, latitude: number}} point - 待检测点
+     * @param {{longitude: number, latitude: number}[]} polygon - 多边形顶点数组
+     */
+    isPointInPolygon(point, polygon) {
+      // 预处理：全部转为数值
+      const toNum = ({
+        longitude,
+        latitude
+      }) => ({
+        longitude: +longitude,
+        latitude: +latitude
+      })
+      point = toNum(point)
+      polygon = polygon.map(v => toNum(v))
+
+      // 检查顶点
+      for (const v of polygon) {
+        if (
+          Math.abs(v.longitude - point.longitude) < 1e-9 &&
+          Math.abs(v.latitude - point.latitude) < 1e-9
+        ) {
+          return true
+        }
+      }
+
+      // 检查边
+      const n = polygon.length
+      for (let i = 0; i < n; i++) {
+        const a = polygon[i]
+        const b = polygon[(i + 1) % n]
+        if (this.isPointOnSegment(point, a, b)) return true
+      }
+
+      // 射线法核心逻辑
+      let crossings = 0
+      for (let i = 0; i < n; i++) {
+        const a = polygon[i]
+        const b = polygon[(i + 1) % n]
+        const [aLat, bLat] = [a.latitude, b.latitude]
+        const pLat = point.latitude
+
+        // 边跨越射线时才处理
+        if (aLat >= pLat === bLat >= pLat) continue
+
+        // 排除水平边
+        if (aLat === bLat) continue
+
+        // 计算交点经度
+        const t = (pLat - aLat) / (bLat - aLat)
+        const intersectLon = a.longitude + t * (b.longitude - a.longitude)
+
+        // 交点在射线右侧（经度更大）
+        if (intersectLon > point.longitude + 1e-9) {
+          crossings++
+        }
+      }
+
+      return crossings % 2 === 1
+    },
+
+    /**
+     * 判断点是否在多边形边上
+     * @param {{longitude: number, latitude: number}} p - 待检测点
+     * @param {{longitude: number, latitude: number}} a - 线段起点
+     * @param {{longitude: number, latitude: number}} b - 线段终点
+     */
+    isPointOnSegment(p, a, b) {
+      // 强制转换为数值
+      const toNum = obj => ({
+        longitude: +obj.longitude,
+        latitude: +obj.latitude
+      })
+      p = toNum(p)
+      a = toNum(a)
+      b = toNum(b)
+
+      // 叉积判共线
+      const cross =
+        (p.longitude - a.longitude) * (b.latitude - a.latitude) -
+        (p.latitude - a.latitude) * (b.longitude - a.longitude)
+      if (Math.abs(cross) > 1e-9) return false
+
+      // 包围盒检查
+      const minLon = Math.min(a.longitude, b.longitude)
+      const maxLon = Math.max(a.longitude, b.longitude)
+      const minLat = Math.min(a.latitude, b.latitude)
+      const maxLat = Math.max(a.latitude, b.latitude)
+
+      return (
+        p.longitude >= minLon - 1e-9 &&
+        p.longitude <= maxLon + 1e-9 &&
+        p.latitude >= minLat - 1e-9 &&
+        p.latitude <= maxLat + 1e-9
+      )
     },
 
     set_default_point(default_point) {

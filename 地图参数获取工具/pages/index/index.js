@@ -45,6 +45,12 @@ Page({
     })
   },
 
+  range() {
+    wx.navigateTo({
+      url: '../polygons/range/range',
+    })
+  },
+
   study() {
     this.setData({
       dialogShow: true

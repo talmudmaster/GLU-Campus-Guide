@@ -20,7 +20,8 @@
         </view>
 
         <view class="card-container-text">
-          计算机设计大赛参赛作品 | {{information.type}}
+          <!-- 计算机设计大赛参赛作品 | {{information.type}} -->
+          {{information.type}}：{{miniprogram_name}}小程序
         </view>
 
         <view class="card-container-text">
@@ -29,8 +30,13 @@
         </view>
 
         <view class="card-container-text">
+            <!-- {{information.author}} | 指导老师:{{information.teacher}} -->
+            指导老师: {{information.teacher}}
+        </view>
+
+        <view class="card-container-text">
             <!-- 版权归{{school_name_full}}开发者所有! -->
-            版权归开发者所有!
+            版权归开发者所有！
         </view>
 
     </view>

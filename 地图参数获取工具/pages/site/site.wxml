@@ -64,10 +64,9 @@
 </view>
 
 
-<mp-dialog title="生成的数据" show="{{dialogShow}}" bindbuttontap="dialogButton" buttons="{{button}}">
+<mp-dialog title="生成的数据" show="{{dialogShow}}" bindbuttontap="dialogButton" buttons="{{buttons}}">
   <view class="title">
     <view class="title_text">当前地点的相关数据</view>
     <textarea style="width: 100%;height: 13em" value="{{result}}" />
-    <!-- <button type="default" bind:tap="getInfo" data-id="1">复制</button> -->
   </view>
 </mp-dialog>

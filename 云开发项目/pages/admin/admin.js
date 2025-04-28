@@ -35,6 +35,12 @@ Page({
         })
     },
 
+    taptorange() {
+        wx.navigateTo({
+            url: './range/range',
+        })
+    },
+
     taptomedia(e) {
         wx.navigateTo({
             url: '../../pages/admin/media/media?sid=' + e.target.dataset.id,

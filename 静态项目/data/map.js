@@ -42,20 +42,89 @@ module.exports = {
   },
 
   // 学校边界
-  school_boundary: {
-    // 东（学校最东端点的 经度）
-    east: 110.280699,
-    // 西（学校最西端点的 经度）
-    west: 110.2733,
-    // 南（学校最南端点的 纬度）
-    south: 25.089701,
-    // 北（学校最北端点的 纬度）
-    north: 25.09839,
-  },
+  // school_boundary: {
+  //   // 东（学校最东端点的 经度）
+  //   east: 110.280699,
+  //   // 西（学校最西端点的 经度）
+  //   west: 110.2733,
+  //   // 南（学校最南端点的 纬度）
+  //   south: 25.089701,
+  //   // 北（学校最北端点的 纬度）
+  //   north: 25.09839,
+  // },
 
   // 闭合多边形
-  points: [],
-
+  points: [
+    {
+      "latitude": 25.098567,
+      "longitude": 110.280995
+    },
+    {
+      "latitude": 25.097711,
+      "longitude": 110.281167
+    },
+    {
+      "latitude": 25.096842,
+      "longitude": 110.281137
+    },
+    {
+      "latitude": 25.095527,
+      "longitude": 110.280778
+    },
+    {
+      "latitude": 25.092988,
+      "longitude": 110.279991
+    },
+    {
+      "latitude": 25.090947,
+      "longitude": 110.279089
+    },
+    {
+      "latitude": 25.088824,
+      "longitude": 110.277994
+    },
+    {
+      "latitude": 25.088921,
+      "longitude": 110.277342
+    },
+    {
+      "latitude": 25.088633,
+      "longitude": 110.277057
+    },
+    {
+      "latitude": 25.089162,
+      "longitude": 110.275070
+    },
+    {
+      "latitude": 25.090355,
+      "longitude": 110.272274
+    },
+    {
+      "latitude": 25.094758,
+      "longitude": 110.274553
+    },
+    {
+      "latitude": 25.095421,
+      "longitude": 110.275129
+    },
+    {
+      "latitude": 25.096114,
+      "longitude": 110.275212
+    },
+    {
+      "latitude": 25.097485,
+      "longitude": 110.277418
+    },
+    {
+      "latitude": 25.098553,
+      "longitude": 110.279565
+    },
+    {
+      "latitude": 25.098779,
+      "longitude": 110.280243
+    }
+  ],
+  
   // 默认地点
   default_point: {
     name: "东门",

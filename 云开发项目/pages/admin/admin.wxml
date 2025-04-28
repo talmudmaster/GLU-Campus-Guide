@@ -17,6 +17,10 @@
       <view class="btn" bindtap="taptosite" data-id="3">
           默认地点
       </view>
+
+      <view class="btn" bindtap="taptorange">
+          学校范围
+      </view>
     </view>
   </view>
 
@@ -25,7 +29,7 @@
 
     <view class="content">
       <view class="btn" bindtap="taptomedia" data-id="1">
-          地图
+          校园地图图片
       </view>
 
       <view class="btn" bindtap="taptomedia" data-id="2">

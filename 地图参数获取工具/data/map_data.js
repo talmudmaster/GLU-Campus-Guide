@@ -18,7 +18,7 @@ module.exports = {
   // 缩放级别
   scale: 15.9,
   // 最小缩放级别，比缩放级别小0.3-0.4为宜
-  minscale: 15.7,
+  // minscale: 15.7,
 
   // 地图边界
   boundary: {
@@ -31,16 +31,16 @@ module.exports = {
   },
 
   // 学校边界
-  school_boundary: {
-    // 东（学校最东端点的 经度，地图最右端）
-    east: 110.280699,
-    // 西（学校最西端点的 经度，地图最左端）
-    west: 110.2733,
-    // 南（学校最南端点的 纬度，地图最下端）
-    south: 25.089701,
-    // 北（学校最北端点的 纬度，地图最上端）
-    north: 25.09839,
-  },
+  // school_boundary: {
+  //   // 东（学校最东端点的 经度，地图最右端）
+  //   east: 110.280699,
+  //   // 西（学校最西端点的 经度，地图最左端）
+  //   west: 110.2733,
+  //   // 南（学校最南端点的 纬度，地图最下端）
+  //   south: 25.089701,
+  //   // 北（学校最北端点的 纬度，地图最上端）
+  //   north: 25.09839,
+  // },
 
   // 自定义图层
   groundoverlay: {
@@ -58,71 +58,74 @@ module.exports = {
   map_bottom: "https://cdnjson.com/images/2024/03/13/GXNU9b2e3c77b9ff605a.jpg",
 
   // 闭合多边形
-  points: [{
-    "latitude": 25.098852,
-    "longitude": 110.280247
-  }, {
-    "latitude": 25.098613,
-    "longitude": 110.281067
-  }, {
-    "latitude": 25.098134,
-    "longitude": 110.281202
-  }, {
-    "latitude": 25.097789,
-    "longitude": 110.28124
-  }, {
-    "latitude": 25.097262,
-    "longitude": 110.281238
-  }, {
-    "latitude": 25.096541,
-    "longitude": 110.281147
-  }, {
-    "latitude": 25.095498,
-    "longitude": 110.280837
-  }, {
-    "latitude": 25.094192,
-    "longitude": 110.280425
-  }, {
-    "latitude": 25.092261,
-    "longitude": 110.279772
-  }, {
-    "latitude": 25.090907,
-    "longitude": 110.279116
-  }, {
-    "latitude": 25.088818,
-    "longitude": 110.278
-  }, {
-    "latitude": 25.088894,
-    "longitude": 110.277343
-  }, {
-    "latitude": 25.088626,
-    "longitude": 110.277048
-  }, {
-    "latitude": 25.089121,
-    "longitude": 110.27522
-  }, {
-    "latitude": 25.090366,
-    "longitude": 110.2723
-  }, {
-    "latitude": 25.094765,
-    "longitude": 110.274592
-  }, {
-    "latitude": 25.095409,
-    "longitude": 110.275153
-  }, {
-    "latitude": 25.096183,
-    "longitude": 110.275245
-  }, {
-    "latitude": 25.097429,
-    "longitude": 110.277281
-  }, {
-    "latitude": 25.097552,
-    "longitude": 110.277502
-  }, {
-    "latitude": 25.098047,
-    "longitude": 110.278465
-  }, {
-    "latitude": 25.098449,
-    "longitude": 110.279324
-  }]
+  points: [
+    {
+      "latitude": 25.098567,
+      "longitude": 110.280995
+    },
+    {
+      "latitude": 25.097711,
+      "longitude": 110.281167
+    },
+    {
+      "latitude": 25.096842,
+      "longitude": 110.281137
+    },
+    {
+      "latitude": 25.095527,
+      "longitude": 110.280778
+    },
+    {
+      "latitude": 25.092988,
+      "longitude": 110.279991
+    },
+    {
+      "latitude": 25.090947,
+      "longitude": 110.279089
+    },
+    {
+      "latitude": 25.088824,
+      "longitude": 110.277994
+    },
+    {
+      "latitude": 25.088921,
+      "longitude": 110.277342
+    },
+    {
+      "latitude": 25.088633,
+      "longitude": 110.277057
+    },
+    {
+      "latitude": 25.089162,
+      "longitude": 110.275070
+    },
+    {
+      "latitude": 25.090355,
+      "longitude": 110.272274
+    },
+    {
+      "latitude": 25.094758,
+      "longitude": 110.274553
+    },
+    {
+      "latitude": 25.095421,
+      "longitude": 110.275129
+    },
+    {
+      "latitude": 25.096114,
+      "longitude": 110.275212
+    },
+    {
+      "latitude": 25.097485,
+      "longitude": 110.277418
+    },
+    {
+      "latitude": 25.098553,
+      "longitude": 110.279565
+    },
+    {
+      "latitude": 25.098779,
+      "longitude": 110.280243
+    }
+  ]
 }

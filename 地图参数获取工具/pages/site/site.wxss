@@ -23,7 +23,7 @@
   margin-bottom: 5px;
 }
 
-.weui-dialog__btn {
+.weui-dialog__btn_primary {
   background-color: #07c160;
   color: #fff;
 }

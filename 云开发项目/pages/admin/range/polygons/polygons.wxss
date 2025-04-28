@@ -1,0 +1,17 @@
+/* pages/admin/range/polygons/polygons.wxss */
+page{
+  height: 100%;
+}
+
+map {
+  width: 100%;
+  height: calc(100% - 100px);
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  margin: 5px;
+}

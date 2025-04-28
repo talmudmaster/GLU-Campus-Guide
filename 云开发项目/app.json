@@ -20,7 +20,9 @@
         "pages/admin/schoolguide-list/schoolguide-list",
         "pages/admin/schoolguide-list/schoolguide/schoolguide",
         "pages/admin/adminmanage/adminmanage",
-        "pages/admin/manage-admin/manage-admin"
+        "pages/admin/manage-admin/manage-admin",
+        "pages/admin/range/range",
+        "pages/admin/range/polygons/polygons"
     ],
     "window": {
         "backgroundTextStyle": "light",

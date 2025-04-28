@@ -1,7 +1,7 @@
-<!--pages/polygons/polygons.wxml-->
+<!--pages/admin/range/range.wxml-->
 <map id="map" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" markers='{{markers}}' polygons="{{polygons}}" bindtap="bindMap">
-  <view class="control-btn" wx:if="{{points.length > 2}}">
-    <image src="{{Marker2_Activated}}" class="img" bindtap="torange"></image>
+  <view wx:if="{{points.length}}" class="control-btn">
+    <image src="{{Marker2_Activated}}" class="img" bindtap="topolygons"></image>
     <view class="text">点与多边形</view>
   </view>
 </map>
@@ -13,13 +13,5 @@
 
 <view style="display: flex; margin: 10px 0;">
   <button type="{{!isShow ? 'default' : 'warn' }}" bindtap="show">{{!isShow ? '显示' : '隐藏' }} 标记点</button>
-  <button style="height: 45px;" type="primary" bindtap="generate">生成数据</button>
+  <button style="height: 45px;" type="primary" bindtap="generate">获取范围</button>
 </view>
-
-<mp-dialog title="经纬度数组" show="{{dialogShow}}" bindbuttontap="dialogButton" buttons="{{buttons}}">
-  <view class="title">
-    <scroll-view scroll-y="true" class="scroll">
-      <text user-select="true">{{points_data}}</text>
-    </scroll-view>
-  </view>
-</mp-dialog>

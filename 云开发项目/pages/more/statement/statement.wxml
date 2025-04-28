@@ -15,15 +15,23 @@
             </view>
         </view>
         <view class="card-container-text">
-            {{miniprogram_name}}小程序 | {{information.type}}
+            <!-- {{miniprogram_name}}小程序 | {{information.type}} -->
+            {{information.type}}：{{miniprogram_name}}小程序
         </view>
 
         <view class="card-container-text">
-            {{information.author}} | 指导老师:{{information.teacher}}
+            <!-- {{information.author}} | 指导老师:{{information.teacher}} -->
+            作者：{{information.author}}
         </view>
 
         <view class="card-container-text">
-            版权归{{school_name_full}}开发者所有!
+            <!-- {{information.author}} | 指导老师:{{information.teacher}} -->
+            指导老师：{{information.teacher}}
+        </view>
+
+        <view class="card-container-text">
+            <!-- 版权归{{school_name_full}}开发者所有! -->
+            版权归开发者所有！
         </view>
 
     </view>

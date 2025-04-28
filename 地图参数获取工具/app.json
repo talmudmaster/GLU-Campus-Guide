@@ -5,6 +5,7 @@
     "pages/site/site",
     "pages/site/getpoint/getpoint",
     "pages/polygons/polygons",
+    "pages/polygons/range/range",
     "pages/location/location"
   ],
   "window": {

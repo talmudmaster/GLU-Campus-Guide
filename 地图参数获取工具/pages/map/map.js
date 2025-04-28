@@ -50,13 +50,10 @@ Page({
     map_bottom: map_data.map_bottom,
 
     // 闭合多边形
-    polygons: [{
-      points: map_data.points??[],
-      fillColor: "#d5dff233",
-      strokeColor: "#789cff",
-      strokeWidth: 2,
-      zIndex: 1
-    }],
+    polygons: null,
+
+    // 经纬度数组
+    points: map_data.points ?? [],
 
     // 起点、终点的坐标
     start: {
@@ -85,6 +82,19 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
+    let points = this.data.points
+    if (points.length > 2) {
+      let polygons = [{
+        points,
+        fillColor: "#d5dff233", // 填充颜色：淡蓝色，7-8位为十六进制透明度00-FF
+        strokeColor: "#789cff", // 描边颜色：较深的淡蓝色
+        strokeWidth: 2, // 描边宽度
+      }]
+      this.setData({
+        polygons,
+      })
+    }
+
     this.mapCtx = wx.createMapContext('map')
     
     var boundary = this.data.boundary
@@ -333,11 +343,10 @@ Page({
     var latitude = la.toFixed(6)
     var longitude = lo.toFixed(6)
 
-    var location_data = "longitude: " + longitude + "," + '\n' + "latitude: " + latitude + ","
-
-    console.log("地点坐标：" + '\n' + location_data)
-    console.log("可用于学校区域经纬度的选取" + '\n' + "东(右) / 西(左) 经度： " + longitude + '\n' + "北(上) / 南(下) 纬度： " + latitude)
-    console.log("")
+    // var location_data = "longitude: " + longitude + "," + '\n' + "latitude: " + latitude + ","
+    // console.log("地点坐标：" + '\n' + location_data)
+    // console.log("可用于学校区域经纬度的选取" + '\n' + "东(右) / 西(左) 经度： " + longitude + '\n' + "北(上) / 南(下) 纬度： " + latitude)
+    // console.log("")
     this.setData({
       mapCallbackTxt: latitude + ',' + longitude,
       markers: [{

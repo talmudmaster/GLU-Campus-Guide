@@ -107,5 +107,7 @@ module.exports = {
   notes: "../../images/notes.png",
 
   // 地点获取
-  circle: "../../../../images/circle.png"
+  circle: "../../../../images/circle.png",
+  Marker2_Activated: "https://3gimg.qq.com/lightmap/xcx/demoCenter/images/Marker2_Activated@3x.png",
+  Marker3_Activated: "https://3gimg.qq.com/lightmap/xcx/demoCenter/images/Marker3_Activated@3x.png",
 }

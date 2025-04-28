@@ -37,8 +37,12 @@ Page({
       },
     }],
 
+    // 显示/隐藏 对话框
     dialogShow: false,
-    button: [{
+    // 对话框按钮组
+    buttons: [{
+      text: '关闭'
+    }, {
       text: '复制'
     }],
   },
@@ -114,11 +118,14 @@ Page({
   },
 
   // 对话框按钮
-  dialogButton() {
+  dialogButton(e) {
     this.setData({
       dialogShow: false,
     })
-    this.copy()
+    let choose = e.detail.item.text
+    if (choose == "复制") {
+      this.copy()
+    }
   },
 
 })

@@ -1,12 +1,13 @@
 /* pages/index/index.wxss */
-.page-body {
-  padding-top: 30px;
-  height: 80%;
+.btn-area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
 }
 
 .button-index {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin: 12px 0;
   height: 70px;
   display: flex;
   justify-content: center;
