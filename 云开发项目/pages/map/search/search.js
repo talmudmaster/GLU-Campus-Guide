@@ -1,8 +1,10 @@
 // pages/map/search/search.js
-var map = require('../../../data/map')
-var media = require('../../../data/media')
-let db = wx.cloud.database()
-let _ = db.command
+import map from '@data/map'
+import media from '@data/media'
+
+const db = wx.cloud.database()
+const _ = db.command
+
 Page({
 
     /**
@@ -55,27 +57,6 @@ Page({
 
         //调用热门搜索
         this.gethotSearch()
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
-
     },
 
     //热门搜素的隐藏

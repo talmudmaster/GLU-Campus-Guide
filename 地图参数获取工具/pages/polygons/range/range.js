@@ -1,5 +1,5 @@
 // pages/polygons/range/range.js
-var map_data = require('../../../data/map_data')
+import map_data from '@data/map_data'
 
 Page({
   /**

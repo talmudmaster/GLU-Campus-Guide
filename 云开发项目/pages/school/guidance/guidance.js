@@ -1,5 +1,6 @@
 // pages/school/guidance/guidance.js
-// var school = require('../../../data/school')
+const db = wx.cloud.database()
+
 Page({
   data: {
     allWords: [],
@@ -17,7 +18,7 @@ Page({
       detail: 'id' + options.id // 获取跳转过来的锚点id
     })
 
-		wx.cloud.database().collection('schoolguide')
+		db.collection('schoolguide')
       .get()
       .then(res => {
         console.log('success', res)

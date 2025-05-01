@@ -1,8 +1,7 @@
 // pages/site/site.js
-var map = require('../../data/map')
-var media = require('../../data/media')
+import media from '@data/media'
+
 const app = getApp()
-var db = wx.cloud.database()
 
 Page({
 
@@ -34,13 +33,6 @@ Page({
     },
 
     /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
-    /**
      * 生命周期函数--监听页面显示
      */
     onShow() {
@@ -48,27 +40,6 @@ Page({
             this.lianbiaoquery();
             app.globalData.siteRefresh = false; // 重置标记
         }
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
-
-    },
-
-    /**
-     * 用户点击右上角分享到朋友圈
-     */
-    onShareTimeline: function (res) {
-
     },
 
     // 联表查询
@@ -132,14 +103,14 @@ Page({
             console.log(end)
             wx.setStorageSync('end', end)
             wx.switchTab({
-                url: '../../pages/map/map',
+                url: '../map/map',
             })
         } else {
             var start = this.data.site_data[category].list[id]
             console.log(start)
             wx.setStorageSync('start', start)
             wx.switchTab({
-                url: '../../pages/map/map',
+                url: '../map/map',
             })
         }
     }

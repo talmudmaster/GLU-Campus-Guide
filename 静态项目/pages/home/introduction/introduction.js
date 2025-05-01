@@ -1,7 +1,9 @@
 // pages/home/introduction/introduction.js
-var school = require('../../../data/school')
-var media = require('../../../data/media')
+import media from '@data/media'
+import school from '@data/school'
+
 const app = getApp()
+
 Page({
 
     /**
@@ -23,41 +25,6 @@ Page({
         duration: 1500, //滑动时间
     },
 
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad(options) {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
-    },
-
-    /**
-     * 用户点击右上角分享到朋友圈
-     */
-    onShareTimeline: function (res) {
-
-    },
-
     //图片比例
     imgHeight: function (e) {
         var winWid = wx.getWindowInfo().windowWidth; //获取当前屏幕的宽度
@@ -71,7 +38,7 @@ Page({
 
     tomap() {
         wx.switchTab({
-            url: '../../../pages/map/map',
+            url: '../../map/map',
         })
     },
     //点击图片可查看

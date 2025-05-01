@@ -52,5 +52,9 @@
   "lazyCodeLoading": "requiredComponents",
   "useExtendedLib": {
     "weui": true
+  },
+  "resolveAlias": {
+    "@data/*": "data/*",
+    "@libs/*": "libs/*"
   }
 }

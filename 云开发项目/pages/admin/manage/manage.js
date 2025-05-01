@@ -1,7 +1,8 @@
 // pages/admin/manage/manage.js
 const app = getApp()
-let db = wx.cloud.database()
-let _ = db.command
+
+const db = wx.cloud.database()
+const _ = db.command
 
 Page({
 
@@ -42,27 +43,6 @@ Page({
           sid: options.sid
         })
         this.get()
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
-        
     },
 
     get() {
@@ -191,7 +171,7 @@ Page({
 
     addcategory() {
         wx.navigateTo({
-            url: '../../admin/manage-category/manage-category?sid=1',
+            url: '../manage-category/manage-category?sid=1',
         })
     },
 
@@ -199,20 +179,20 @@ Page({
         console.log(e.target.dataset._id)
         console.log(e.target.dataset.id)
         wx.navigateTo({
-            url: '../../admin/manage-category/manage-category?sid=2&_id=' + e.target.dataset._id + '&id=' + e.target.dataset.id + '&name=' + e.target.dataset.name,
+            url: '../manage-category/manage-category?sid=2&_id=' + e.target.dataset._id + '&id=' + e.target.dataset.id + '&name=' + e.target.dataset.name,
         })
     },
 
     addsite() {
         wx.navigateTo({
-            url: '../../admin/manage-site/manage-site?sid=1',
+            url: '../manage-site/manage-site?sid=1',
         })
     },
 
     managesite(e) {
         console.log(e.target.dataset)
         wx.navigateTo({
-            url: '../../admin/manage-site/manage-site?sid=2&_id=' + e.target.dataset._id + '&c_id=' + e.target.dataset.c_id,
+            url: '../manage-site/manage-site?sid=2&_id=' + e.target.dataset._id + '&c_id=' + e.target.dataset.c_id,
         })
     },
 

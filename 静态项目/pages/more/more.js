@@ -1,6 +1,7 @@
 // pages/more/more.js
-var media = require('../../data/media')
-var data = require('../../data/data')
+import data from '@data/data'
+import media from '@data/media'
+
 Page({
     data: {
         miniprogram_name: data.miniprogram_name,
@@ -22,18 +23,10 @@ Page({
         miniprogramming_ma: media.miniprogramming_ma,
     },
 
-    onLoad: function () {},
-
-    // 用户点击右上角分享
-    onShareAppMessage() {},
-
-    // 用户点击右上角分享到朋友圈
-    onShareTimeline: function (res) {},
-
     // 软件声明
     tostatement() {
         wx.navigateTo({
-            url: '../../pages/more/statement/statement',
+            url: '../more/statement/statement',
         })
     },
     // 特别说明

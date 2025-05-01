@@ -24,7 +24,7 @@
                     </view>
 
                     <view class="card-container-container-instr-right">
-                        <text decode="true">点击定位图标可以重新定位\n若不在学校，设置{{default_point}}为起点</text>
+                        <text decode="true">点击定位图标可以重新定位\n若不在学校，设置 {{default_point}} 为起点</text>
                     </view>
 
                 </view>

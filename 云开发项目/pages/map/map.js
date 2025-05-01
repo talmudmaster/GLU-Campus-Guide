@@ -1,16 +1,18 @@
 // pages/map/map.js
-var map = require('../../data/map')
-var media = require('../../data/media')
-const app = getApp()
-var db = wx.cloud.database()
+import map from '@data/map'
+import media from '@data/media'
 
 // 引入SDK核心类
-var QQMapWX = require('../../libs/qqmap-wx-jssdk.min')
+const QQMapWX = require('@libs/qqmap-wx-jssdk.min')
 
 // 实例化API核心类
-var qqmapsdk = new QQMapWX({
-    key: map.mapKey // 必填
-});
+const qqmapsdk = new QQMapWX({
+  key: map.mapKey // 必填
+})
+
+const app = getApp()
+
+const db = wx.cloud.database()
 
 Page({
 
@@ -32,6 +34,10 @@ Page({
 
         exchange: media.exchange,
         map_bottom: media.map_bottom,
+        Marker3_Activated: media.Marker3_Activated,
+        startImg: media.start,
+        endImg: media.end,
+        car: media.car,
 
         // 自定义图层、地图、学校 边界
         groundoverlay: map.groundoverlay,
@@ -111,13 +117,6 @@ Page({
     },
 
     /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-        
-    },
-
-    /**
      * 生命周期函数--监听页面显示
      */
     onShow() {
@@ -152,48 +151,6 @@ Page({
             })
             wx.clearStorageSync()
         }
-    },
-
-    /**
-     * 生命周期函数--监听页面隐藏
-     */
-    onHide() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面卸载
-     */
-    onUnload() {
-
-    },
-
-    /**
-     * 页面上拉触底事件的处理函数
-     */
-    onReachBottom() {
-
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
-        
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
-    },
-
-    /**
-     * 用户点击右上角分享到朋友圈
-     */
-    onShareTimeline() {
-
     },
 
     // 获取地图的图片链接 和 默认地点
@@ -677,7 +634,7 @@ Page({
                 id: i + 1,
                 latitude: la,
                 longitude: lo,
-                iconPath: "https://3gimg.qq.com/lightmap/xcx/demoCenter/images/Marker3_Activated@3x.png",
+                iconPath: this.data.Marker3_Activated,
                 width: 30,
                 height: 30,
                 callout: {
@@ -733,8 +690,9 @@ Page({
 
     // 跳转至使用说明页
     toinstruction() {
+        let name = this.data.default_point.name
         wx.navigateTo({
-            url: '../../pages/map/instruction/instruction',
+            url: './instruction/instruction?name=' + name
         })
     },
 
@@ -821,13 +779,15 @@ Page({
                         // console.log(res);
                     }
                 });
-
+                let startImg = this.data.startImg
+                let endImg = this.data.endImg
+                let car = this.data.car
                 this.setData({
                     markers: [{
                             id: 0,
                             latitude: start.latitude,
                             longitude: start.longitude,
-                            iconPath: "https://mapapi.qq.com/web/lbs/javascriptGL/demo/img/start.png",
+                            iconPath: startImg,
                             width: 25,
                             height: 37,
                             callout: {
@@ -841,7 +801,7 @@ Page({
                             id: 1,
                             latitude: end.latitude,
                             longitude: end.longitude,
-                            iconPath: "https://mapapi.qq.com/web/lbs/javascriptGL/demo/img/end.png",
+                            iconPath: endImg,
                             width: 25,
                             height: 37,
                             callout: {
@@ -855,7 +815,7 @@ Page({
                             id: 2,
                             latitude: start.latitude,
                             longitude: start.longitude,
-                            iconPath: "https://mapapi.qq.com/web/lbs/javascriptGL/demo/img/car.png",
+                            iconPath: car,
                             width: 30,
                             height: 30,
                             callout: {

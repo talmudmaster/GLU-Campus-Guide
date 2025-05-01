@@ -1,6 +1,7 @@
 // pages/map/search/search.js
-var map = require('../../../data/map')
-var media = require('../../../data/media')
+import map from '@data/map'
+import media from '@data/media'
+
 Page({
 
   /**
@@ -43,27 +44,6 @@ Page({
         })
       }
     })
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
   },
 
   // 获取输入框的内容

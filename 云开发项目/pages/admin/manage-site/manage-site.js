@@ -1,7 +1,8 @@
 // pages/admin/manage-site/manage-site.js
-let db = wx.cloud.database()
-let _ = db.command
 const app = getApp()
+
+const db = wx.cloud.database()
+const _ = db.command
 
 Page({
 
@@ -89,20 +90,6 @@ Page({
                 console.log('fail', err)
             })
         this.get()
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-
     },
 
     get() {
@@ -299,7 +286,7 @@ Page({
 
     getPoint() {
         wx.navigateTo({
-            url: '../../admin/manage-site/getpoint/getpoint?lo=' + this.data.lo + '&la=' + this.data.la,
+            url: '../manage-site/getpoint/getpoint?lo=' + this.data.lo + '&la=' + this.data.la,
         })
     },
 

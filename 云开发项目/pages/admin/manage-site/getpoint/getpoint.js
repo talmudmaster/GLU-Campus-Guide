@@ -1,7 +1,9 @@
 // pages/admin/getpoint/getpoint.js
-var media = require('../../../../data/media')
-var map = require('../../../../data/map')
-let db = wx.cloud.database()
+import map from '@data/map'
+import media from '@data/media'
+
+const db = wx.cloud.database()
+
 Page({
 
     /**
@@ -10,6 +12,7 @@ Page({
     data: {
         circle: media.circle,
         map_bottom: null,
+        Marker3_Activated: media.Marker3_Activated,
 
         scale: map.scale,
         enable_poi: map.enablepoi,
@@ -35,13 +38,6 @@ Page({
         }
         this.addMarkers()
         this.get()
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
     },
 
     /**
@@ -138,11 +134,12 @@ Page({
     // 添加标记点
     addMarkers: function () {
         var location = this.data.location
+        var Marker3_Activated = this.data.Marker3_Activated
         this.mapCtx = wx.createMapContext('map')
         this.mapCtx.addMarkers({
             markers: [{
                 id: 0,
-                iconPath: `https://3gimg.qq.com/lightmap/xcx/demoCenter/images/Marker3_Activated@3x.png`,
+                iconPath: Marker3_Activated,
                 latitude: location.latitude,
                 longitude: location.longitude,
                 width: 30,

@@ -1,6 +1,7 @@
 // pages/admin/media/media.js
 const app = getApp()
-let db = wx.cloud.database()
+
+const db = wx.cloud.database()
 
 Page({
 
@@ -42,20 +43,6 @@ Page({
           sid: options.sid
         })  
         this.get()
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-
     },
 
     get() {

@@ -1,5 +1,6 @@
 // pages/school/guidance/guidance.js
-var school = require('../../../data/school')
+import school from '@data/school'
+
 Page({
 	data: {
 		allWords: school.school_guide,

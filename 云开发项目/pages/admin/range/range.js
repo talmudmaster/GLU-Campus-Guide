@@ -1,7 +1,8 @@
 // pages/admin/range/range.js
-var media = require('../../../data/media')
-var map = require('../../../data/map')
-let db = wx.cloud.database()
+import map from '@data/map'
+import media from '@data/media'
+
+const db = wx.cloud.database()
 
 Page({
 

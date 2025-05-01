@@ -1,7 +1,8 @@
 // pages/manage/guide-list/guide-list.js
 const app = getApp()
-let db = wx.cloud.database()
-let _ = db.command
+
+const db = wx.cloud.database()
+const _ = db.command
 
 Page({
 
@@ -25,7 +26,7 @@ Page({
   },
 
   getschoolguide() {
-    wx.cloud.database().collection('schoolguide')
+    db.collection('schoolguide')
       .get()
       .then(res => {
         console.log('success', res)

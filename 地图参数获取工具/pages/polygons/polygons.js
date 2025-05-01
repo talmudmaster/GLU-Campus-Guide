@@ -1,6 +1,6 @@
 // pages/polygons/polygons.js
-var map_data = require('../../data/map_data')
-var img_data = require('../../data/img_data')
+import map_data from '@data/map_data'
+import img_data from '@data/img_data'
 
 Page({
   /**

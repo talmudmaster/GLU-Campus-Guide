@@ -1,12 +1,12 @@
 // pages/map/map.js
-var map_data = require('../../data/map_data')
-var img_data = require('../../data/img_data')
+import map_data from '@data/map_data'
+import img_data from '@data/img_data'
 
 // 引入SDK核心类
-var QQMapWX = require('../../libs/qqmap-wx-jssdk.min')
+const QQMapWX = require('@libs/qqmap-wx-jssdk.min')
 
 // 实例化API核心类
-var qqmapsdk = new QQMapWX({
+const qqmapsdk = new QQMapWX({
   key: map_data.mapKey
 });
 
@@ -20,6 +20,9 @@ Page({
 
     plus: img_data.plus,
     minus: img_data.minus,
+    startImg: img_data.start,
+    endImg: img_data.end,
+    car: img_data.car,
 
 
     // 地图相关数据
@@ -270,14 +273,16 @@ Page({
         console.error(error);
       },
     });
-
+    let startImg = this.data.startImg
+    let endImg = this.data.endImg
+    let car = this.data.car
     // 添加标记点
     this.mapCtx.addMarkers({
       markers: [{
           id: 0,
           latitude: start.latitude,
           longitude: start.longitude,
-          iconPath: "https://mapapi.qq.com/web/lbs/javascriptGL/demo/img/start.png",
+          iconPath: startImg,
           width: 25,
           height: 37,
           callout: {
@@ -291,7 +296,7 @@ Page({
           id: 1,
           latitude: end.latitude,
           longitude: end.longitude,
-          iconPath: "https://mapapi.qq.com/web/lbs/javascriptGL/demo/img/end.png",
+          iconPath: endImg,
           width: 25,
           height: 37,
           callout: {
@@ -342,6 +347,7 @@ Page({
 
     var latitude = la.toFixed(6)
     var longitude = lo.toFixed(6)
+    var Marker3_Activated = this.data.Marker3_Activated
 
     // var location_data = "longitude: " + longitude + "," + '\n' + "latitude: " + latitude + ","
     // console.log("地点坐标：" + '\n' + location_data)
@@ -351,7 +357,7 @@ Page({
       mapCallbackTxt: latitude + ',' + longitude,
       markers: [{
         id: 0,
-        iconPath: `https://3gimg.qq.com/lightmap/xcx/demoCenter/images/Marker3_Activated@3x.png`,
+        iconPath: Marker3_Activated,
         latitude: latitude,
         longitude: longitude,
         width: 30,
@@ -366,7 +372,7 @@ Page({
     this.mapCtx.addMarkers({
       markers: [{
         id: 0,
-        iconPath: `https://3gimg.qq.com/lightmap/xcx/demoCenter/images/Marker3_Activated@3x.png`,
+        iconPath: Marker3_Activated,
         latitude: latitude,
         longitude: longitude,
         width: 30,

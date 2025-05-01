@@ -1,9 +1,11 @@
 // pages/home/home.js
-var media = require('../../data/media')
-var map = require('../../data/map')
-var school = require('../../data/school')
-var data = require('../../data/data')
+import data from '@data/data'
+import map from '@data/map'
+import media from '@data/media'
+import school from '@data/school'
+
 const app = getApp()
+
 Page({
 
     /**
@@ -63,34 +65,6 @@ Page({
      */
     onLoad(options) {
         this.getWeather()
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
-    },
-
-    /**
-     * 用户点击右上角分享到朋友圈
-     */
-    onShareTimeline: function (res) {
-
     },
 
     //图片比例
@@ -209,7 +183,7 @@ Page({
     // 学校简介
     tointroduction() {
         wx.navigateTo({
-            url: "../../pages/home/introduction/introduction",
+            url: "./introduction/introduction",
         })
     },
 })

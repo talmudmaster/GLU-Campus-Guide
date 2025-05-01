@@ -1,13 +1,14 @@
 // pages/home/home.js
-var media = require('../../data/media')
-var map = require('../../data/map')
-var school = require('../../data/school')
-var data = require('../../data/data')
+import data from '@data/data'
+import map from '@data/map'
+import media from '@data/media'
+import school from '@data/school'
+
 const app = getApp()
-var db = wx.cloud.database()
+
+const db = wx.cloud.database()
 
 Page({
-
 	/**
 	 * 页面的初始数据
 	 */
@@ -69,13 +70,6 @@ Page({
 	},
 
 	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-    onReady() {
-
-    },
-
-	/**
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow() {
@@ -84,27 +78,6 @@ Page({
 				app.globalData.schoolRefresh = false; // 重置标记
 		}
 	},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-    onShareAppMessage() {
-
-    },
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-    onPullDownRefresh() {
-        
-    },
-
-	/**
-	 * 用户点击右上角分享到朋友圈
-	 */
-    onShareTimeline: function (res) {
-
-    },
 
 	//图片比例
 	imgHeight: function (e) {
@@ -237,7 +210,7 @@ Page({
 	// 学校简介
 	tointroduction() {
 		wx.navigateTo({
-            url: "../../pages/home/introduction/introduction",
+            url: "../home/introduction/introduction",
 		})
     },
 })

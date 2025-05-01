@@ -1,7 +1,8 @@
 // pages/manage/guide-list/guide/guide.js
-let db = wx.cloud.database()
-let _ = db.command
 const app = getApp()
+
+const db = wx.cloud.database()
+const _ = db.command
 
 Page({
 

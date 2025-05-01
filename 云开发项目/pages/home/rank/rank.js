@@ -1,5 +1,6 @@
 // pages/home/rank/rank.js
-var media = require('../../../data/media')
+import media from '@data/media'
+
 Page({
 
     /**
@@ -28,38 +29,10 @@ Page({
     },
 
     /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
-    /**
      * 生命周期函数--监听页面显示
      */
     onShow() {
         this.getList()
-    },
-
-    /**
-     * 页面相关事件处理函数--监听用户下拉动作
-     */
-    onPullDownRefresh() {
-        
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
-    },
-
-    /**
-     * 用户点击右上角分享到朋友圈
-     */
-    onShareTimeline: function (res) {
-
     },
 
     getList() {

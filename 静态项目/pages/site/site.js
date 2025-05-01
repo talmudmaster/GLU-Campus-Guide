@@ -1,7 +1,9 @@
 // pages/site/site.js
-var map = require('../../data/map')
-var media = require('../../data/media')
+import map from '@data/map'
+import media from '@data/media'
+
 const app = getApp()
+
 Page({
 
     /**
@@ -22,41 +24,6 @@ Page({
         }, {
             text: '设为终点'
         }],
-    },
-
-    /**
-     * 生命周期函数--监听页面加载
-     */
-    onLoad(options) {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
-
-    },
-
-    /**
-     * 用户点击右上角分享
-     */
-    onShareAppMessage() {
-
-    },
-
-    /**
-     * 用户点击右上角分享到朋友圈
-     */
-    onShareTimeline: function (res) {
-
     },
 
     changeCategory: function (e) {
@@ -103,14 +70,14 @@ Page({
             console.log(end)
             wx.setStorageSync('end', end)
             wx.switchTab({
-                url: '../../pages/map/map',
+                url: '../map/map',
             })
         } else {
             var start = this.data.site_data[category].list[id]
             console.log(start)
             wx.setStorageSync('start', start)
             wx.switchTab({
-                url: '../../pages/map/map',
+                url: '../map/map',
             })
         }
     }

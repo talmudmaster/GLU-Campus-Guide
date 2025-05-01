@@ -1,8 +1,10 @@
 // pages/home/introduction/introduction.js
-var school = require('../../../data/school')
-var media = require('../../../data/media')
+import media from '@data/media'
+import school from '@data/school'
+
 const app = getApp()
-var db = wx.cloud.database()
+
+const db = wx.cloud.database()
 
 Page({
 
@@ -34,13 +36,6 @@ Page({
 	},
 
 	/**
-	 * 生命周期函数--监听页面初次渲染完成
-	 */
-    onReady() {
-
-    },
-
-	/**
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow() {
@@ -49,27 +44,6 @@ Page({
             app.globalData.introductionRefresh = false; // 重置标记
 		}
 	},
-
-	/**
-	 * 用户点击右上角分享
-	 */
-    onShareAppMessage() {
-
-    },
-
-	/**
-	 * 页面相关事件处理函数--监听用户下拉动作
-	 */
-    onPullDownRefresh() {
-        
-    },
-
-	/**
-	 * 用户点击右上角分享到朋友圈
-	 */
-    onShareTimeline: function (res) {
-
-    },
 
 	//图片比例
 	imgHeight: function (e) {
@@ -117,7 +91,7 @@ Page({
 
 	tomap() {
 		wx.switchTab({
-            url: '../../../pages/map/map',
+            url: '../../map/map',
 		})
 	},
 	//点击图片可查看

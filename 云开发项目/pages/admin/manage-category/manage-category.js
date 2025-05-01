@@ -1,6 +1,7 @@
 // pages/admin/manage-category/manage-category.js
-let db = wx.cloud.database()
-let _ = db.command
+const db = wx.cloud.database()
+const _ = db.command
+
 Page({
 
     /**
@@ -42,20 +43,6 @@ Page({
             .catch(err => {
                 console.log('fail', err)
             })
-
-    },
-
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady() {
-
-    },
-
-    /**
-     * 生命周期函数--监听页面显示
-     */
-    onShow() {
 
     },
 

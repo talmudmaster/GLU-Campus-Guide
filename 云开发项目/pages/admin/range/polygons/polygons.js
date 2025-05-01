@@ -1,5 +1,6 @@
 // pages/admin/range/polygons/polygons.js
-var map = require('../../../../data/map')
+import map from '@data/map'
+
 Page({
     /**
      * 页面的初始数据

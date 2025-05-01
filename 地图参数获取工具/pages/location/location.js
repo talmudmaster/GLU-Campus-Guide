@@ -1,11 +1,12 @@
 // pages/location/location.js
-var map_data = require('../../data/map_data')
+import map_data from '@data/map_data'
+import img_data from '@data/img_data'
 
 // 引入SDK核心类
-var QQMapWX = require('../../libs/qqmap-wx-jssdk.min');
+const QQMapWX = require('@libs/qqmap-wx-jssdk.min');
 
 // 实例化API核心类
-var qqmapsdk = new QQMapWX({
+const qqmapsdk = new QQMapWX({
   key: map_data.mapKey // 必填
 });
 
@@ -15,6 +16,9 @@ Page({
    * 页面的初始数据
    */
   data: {
+    start: img_data.start,
+    end: img_data.end,
+
     // 学校精确坐标（用于地图定位和获取天气数据）
     longitude: map_data.longitude,
     latitude: map_data.latitude,
@@ -26,7 +30,6 @@ Page({
     polyline: [],
   },
 
-  //在Page({})中使用下列代码
   //触发表单提交事件，调用接口
   formSubmit(e) {
     var _this = this;
@@ -79,13 +82,14 @@ Page({
         // console.log(res);
       }
     });
-
+    let start = this.data.start
+    let end = this.data.end
     this.setData({
       markers: [{
           id: 0,
           latitude: e.detail.value.start.split(",")[0],
           longitude: e.detail.value.start.split(",")[1],
-          iconPath: "https://mapapi.qq.com/web/lbs/javascriptGL/demo/img/start.png",
+          iconPath: start,
           width: 25,
           height: 37,
           callout: {
@@ -99,7 +103,7 @@ Page({
           id: 1,
           latitude: e.detail.value.dest.split(",")[0],
           longitude: e.detail.value.dest.split(",")[1],
-          iconPath: "https://mapapi.qq.com/web/lbs/javascriptGL/demo/img/end.png",
+          iconPath: end,
           width: 25,
           height: 37,
           callout: {
