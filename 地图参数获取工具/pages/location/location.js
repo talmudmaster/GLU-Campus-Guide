@@ -39,7 +39,7 @@ Page({
       //from参数不填默认当前地址
       from: e.detail.value.start,
       to: e.detail.value.dest,
-      success: function (res) {
+      success(res) {
         var ret = res;
         var coors = ret.result.routes[0].polyline,
           pl = [{
@@ -75,10 +75,10 @@ Page({
         })
         _this.includePoints()
       },
-      fail: function (error) {
+      fail(error) {
         // console.error(error);
       },
-      complete: function (res) {
+      complete(res) {
         // console.log(res);
       }
     });

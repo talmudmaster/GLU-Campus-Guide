@@ -98,7 +98,7 @@ Page({
     },
 
     // 地图视野变化
-    bindregionchange: function (e) {
+    bindregionchange(e) {
         // console.log(e.type, e.causedBy)
         if (e.type == 'end' && (e.causedBy == "scale" || e.causedBy == "drag")) {
             this.getCenterLocation()
@@ -106,11 +106,11 @@ Page({
     },
 
     // 获取中心点坐标
-    getCenterLocation: function () {
+    getCenterLocation() {
         var that = this
         this.mapCtx = wx.createMapContext('map')
         this.mapCtx.getCenterLocation({
-            success: function (res) {
+            success(res) {
                 // console.log(res)
                 // console.log("longitude:" + res.longitude + ", latitude:" + res.latitude)
 
@@ -132,7 +132,7 @@ Page({
     },
 
     // 添加标记点
-    addMarkers: function () {
+    addMarkers() {
         var location = this.data.location
         var Marker3_Activated = this.data.Marker3_Activated
         this.mapCtx = wx.createMapContext('map')

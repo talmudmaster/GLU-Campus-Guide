@@ -48,7 +48,7 @@ Page({
   },
 
 
-  clickImg: function (e) {
+  clickImg(e) {
     console.log(e.currentTarget.dataset)
     var currentUrl = e.currentTarget.dataset.url;
     var currentId = e.currentTarget.dataset.id;
@@ -58,7 +58,7 @@ Page({
     wx.previewImage({
       current: currentUrl, // 当前显示图片的http链接
       urls: imageList, // 需要预览的图片http链接列表，注意是数组
-      fail: function (err) {
+      fail(err) {
         console.log('放大图片失败', err)
         wx.showToast({
           title: '放大图片失败',
@@ -68,7 +68,7 @@ Page({
     })
   },
 
-  bindInput: function (e) {
+  bindInput(e) {
     this.setData({
       inputValue: e.detail.value
     })

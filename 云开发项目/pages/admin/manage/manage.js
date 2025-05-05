@@ -224,19 +224,19 @@ Page({
             })
     },
 
-    click1: function (e) {
+    click1(e) {
         this.setData({
             sid: 1,
         })
     },
 
-    click2: function (e) {
+    click2(e) {
         this.setData({
             sid: 2,
         })
     },
 
-    click3: function (e) {
+    click3(e) {
         this.setData({
             sid: 3,
         })

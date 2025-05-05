@@ -46,7 +46,7 @@ Page({
         //that.searchtype = options.searchtype;
         wx.getStorage({
             key: 'historyStorage',
-            success: function (res) {
+            success(res) {
                 //console.log(res.data)
                 that.setData({
                     historyStorageShow: true,
@@ -60,13 +60,13 @@ Page({
     },
 
     //热门搜素的隐藏
-    open_eye: function () {
+    open_eye() {
         this.setData({
             isShoweye: false,
             isShow: !this.data.isShow,
         })
     },
-    close_eye: function () {
+    close_eye() {
         this.setData({
             isShoweye: true,
             isShow: !this.data.isShow,
@@ -160,7 +160,7 @@ Page({
         let that = this;
         wx.getStorage({
             key: 'historyStorage',
-            success: function (res) {
+            success(res) {
                 //console.log(res.data)
                 that.setData({
                     historyStorageShow: true,
@@ -261,15 +261,15 @@ Page({
 
 
     // 清除搜索历史记录
-    remove: function () {
+    remove() {
         var _this = this
         wx.showModal({
             content: '确认清除所有历史记录?',
-            success: function (res) {
+            success(res) {
                 if (res.confirm) {
                     wx: wx.removeStorage({
                         key: 'historyStorage',
-                        success: function (res) {
+                        success(res) {
                             _this.setData({
                                 historyStorage: []
                             })

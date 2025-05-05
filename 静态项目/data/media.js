@@ -1,6 +1,23 @@
 /* data/media.js */
 // 媒体相关（图片和视频）
 module.exports = {
+  // 一定需要修改的
+
+  // 学校公众号
+  guanwei: [
+    "https://cdnjson.com/images/2023/04/30/guanwei.png",
+    "https://s1.imagehub.cc/images/2024/02/07/a9e42b78adace1b3f93484530613c84c.png",
+    "https://s1.imagehub.cc/images/2024/02/07/8e8dae8b402c4c4ed236d7fbe4a9d913.png"
+  ],
+
+  // 联系作者
+  contact: "https://cdnjson.com/images/2023/02/26/contact.png",
+  // 小程序码
+  miniprogramming_ma: "https://s1.imagehub.cc/images/2024/03/20/b2b3bfb91a1ee49b269b93f6ffed651e.jpeg",
+
+
+  // ----------
+
 
   // 公共
 
@@ -58,12 +75,6 @@ module.exports = {
     "/images/button/site_popularity.png",
     "/images/button/panoramic_map.png"
   ],
-  // 学校公众号
-  guanwei: [
-    "https://cdnjson.com/images/2023/04/30/guanwei.png",
-    "https://s1.imagehub.cc/images/2024/02/07/a9e42b78adace1b3f93484530613c84c.png",
-    "https://s1.imagehub.cc/images/2024/02/07/8e8dae8b402c4c4ed236d7fbe4a9d913.png"
-  ],
 
 
   // 学校简介页
@@ -88,10 +99,6 @@ module.exports = {
   chat: "/images/chat.png",
   feedback: "/images/feedback.png",
   share: "/images/share.png",
-  // 联系作者
-  contact: "https://cdnjson.com/images/2023/02/26/contact.png",
-  // 小程序码
-  miniprogramming_ma: "https://s1.imagehub.cc/images/2024/03/20/b2b3bfb91a1ee49b269b93f6ffed651e.jpeg",
 
 
   // 软件声明页

@@ -13,7 +13,7 @@ exports.main = async (event, context) => {
                 title: event.title,
                 keywords: event.keywords,
                 content: event.content,
-                img: event.img,
+                imageList: event.imageList,
             }
         })
 }

@@ -26,14 +26,14 @@ Page({
         }],
     },
 
-    changeCategory: function (e) {
+    changeCategory(e) {
         console.log("地点类型", e.currentTarget.id)
         this.setData({
             category: e.currentTarget.id,
         })
     },
 
-    click: function (e) {
+    click(e) {
         console.log(e)
         var card = e.currentTarget.dataset
         let id = e.currentTarget.id

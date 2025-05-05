@@ -80,7 +80,7 @@ Page({
 	},
 
 	//图片比例
-	imgHeight: function (e) {
+	imgHeight(){
         var winWid = wx.getWindowInfo().windowWidth; //获取当前屏幕的宽度
         var imgh = e.detail.height; //图片高度
         var imgw = e.detail.width; //图片宽度

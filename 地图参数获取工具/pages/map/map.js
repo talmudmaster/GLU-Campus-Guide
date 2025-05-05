@@ -228,7 +228,7 @@ Page({
       mode: 'walking', //可选值：'driving'（驾车）、'walking'（步行）、'bicycling'（骑行），不填默认：'driving'，可不填
       from: start, //from参数不填默认当前地址
       to: end,
-      success: function (res) {
+      success(res) {
         console.log("接口返回数据", res.result.routes[0]);
         var ret = res;
         //获取各个步骤的polyline
@@ -269,7 +269,7 @@ Page({
         })
         _this.includePoints()
       },
-      fail: function (error) {
+      fail(error) {
         console.error(error);
       },
     });

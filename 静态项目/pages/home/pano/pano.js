@@ -64,7 +64,7 @@ Page({
     });
   },
 
-  covertap: function () {
+  covertap() {
     var panoId = wxPano.getPanoInfo().panoId
     var panolist = this.data.panolist
     var name = panolist[(panoId + 1) % panolist.length].name
@@ -74,14 +74,14 @@ Page({
       entryname: name
     });
   },
-  setCameraLookAt: function () {
+  setCameraLookAt() {
     wxPano.setCameraLookAt({
       x: 0.5,
       y: 0.5
     })
   },
 
-  getPanoInfo: function () {
+  getPanoInfo() {
     // console.log('wxPano.getPanoInfo()',wxPano.getPanoInfo())
     var panoId = wxPano.getPanoInfo().panoId
     console.log(panoId)

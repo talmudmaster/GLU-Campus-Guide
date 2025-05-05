@@ -21,7 +21,7 @@ Page({
       keyword: null,
       keywords: [],
       content: null,
-      img: [],
+      imageList: [],
     },
 
     /**
@@ -51,7 +51,7 @@ Page({
             title: res.data.title,
             keywords: keywords,
             content: res.data.content,
-            img: res.data.img,
+            imageList: res.data.imageList,
           })
           this.onEditorReady()
         })
@@ -152,7 +152,7 @@ Page({
         that.editorCtx = res.context
         that.editorCtx.setContents({
           html: content,
-          success: function() {
+          success() {
             // console.log('设置成功')
           }
         })
@@ -169,7 +169,7 @@ Page({
 
     getImg() {
       var that = this
-      var list = that.data.img
+      var list = that.data.imageList
       wx.chooseMedia({
         count: 6,
         success(res) {
@@ -185,7 +185,7 @@ Page({
                 list.push(res.fileID)
                 console.log(list)
                 that.setData({
-                  img: list
+                  imageList: list
                 })
               }
             })
@@ -205,7 +205,7 @@ Page({
               title: this.data.title,
               keywords: keywords,
               content: this.data.content,
-              img: this.data.img,
+              imageList: this.data.imageList,
             }
           })
           .then(res => {
@@ -243,7 +243,7 @@ Page({
               title: this.data.title,
               keywords: keywords,
               content: this.data.content,
-              img: this.data.img,
+              imageList: this.data.imageList,
             }
           })
           .then(res => {

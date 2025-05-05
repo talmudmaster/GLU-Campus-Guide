@@ -82,8 +82,8 @@
                     </view>
                 </view>
 
-                <swiper class="list-landscape-container-swiper" next-margin="20px" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{activeColor}}" wx:if="{{img.length}}">
-                    <block wx:for="{{img}}" wx:key="*this">
+                <swiper class="list-landscape-container-swiper" next-margin="20px" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{activeColor}}" wx:if="{{imageList.length}}">
+                    <block wx:for="{{imageList}}" wx:key="*this">
                         <swiper-item>
                             <view class="list-landscape-container-swiper-item">
                                 <image class="list-landscape-container-swiper-item-img" mode="aspectFit" src="{{item}}"></image>

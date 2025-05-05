@@ -210,7 +210,7 @@ Page({
         wx.getLocation({
             type: 'gcj02',
             isHighAccuracy: true,
-            success: function (res) {
+            success(res) {
                 var nowlatitude = res.latitude
                 var nowlongitude = res.longitude
                 console.log("当前位置坐标", nowlatitude, nowlongitude)
@@ -244,7 +244,7 @@ Page({
                     })
                 }
             },
-            fail: function (err) {
+            fail(err) {
                 that.setData({
                     isAtSchool: false
                 })
@@ -256,7 +256,7 @@ Page({
                     duration: 2000
                 })
             },
-            complete: function (err) {
+            complete(err) {
                 that.changeCategory(static_category)
             }
         })
@@ -592,7 +592,7 @@ Page({
                     //from参数不填默认当前地址
                     from: start.latitude + "," + start.longitude,
                     to: end.latitude + "," + end.longitude,
-                    success: function (res) {
+                    success(res) {
                         console.log("接口返回的数据",res);
                         var ret = res;
                         var duration = ret.result.routes[0].duration;
@@ -638,10 +638,10 @@ Page({
                         _this.moveAlong()
 
                     },
-                    fail: function (error) {
+                    fail(error) {
                         // console.error(error);
                     },
-                    complete: function (res) {
+                    complete(res) {
                         // console.log(res);
                     }
                 });
@@ -714,7 +714,7 @@ Page({
             path: points,
             duration: 4000,
             autoRotate: true,
-            success: function (res) {
+            success(res) {
                 markers.pop()
                 that.setData({
                     markers: markers
