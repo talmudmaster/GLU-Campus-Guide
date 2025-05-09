@@ -1,5 +1,5 @@
 {
-    "name": "removecategory",
+    "name": "remove_category",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",

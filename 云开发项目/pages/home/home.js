@@ -15,17 +15,14 @@ Page({
 	data: {
 		miniprogram_name: data.miniprogram_name,
 		school_information: school.school_information,
-		AppID: school.AppID,
+    
+    guanwei: school.guanwei,
+    AppID: school.AppID,
 
 		laba: media.laba,
 		school_logo: media.school_logo,
 
 		function_buttons: media.function_buttons,
-
-		school_icon: media.school_icon,
-		book: media.book,
-		money: media.money,
-		new: media.new,
 
 		wave: media.wave,
 
@@ -38,17 +35,16 @@ Page({
 		notes: media.notes,
 		admin: media.admin,
 		contact: media.contact,
-		guanwei: media.guanwei,
 		weather: media.weather,
 
 		APIKEY: data.weatherKey,
-        school_location: parseFloat(map.longitude).toFixed(2) + "," + parseFloat(map.latitude).toFixed(2),
+    school_location: parseFloat(map.longitude).toFixed(2) + "," + parseFloat(map.latitude).toFixed(2),
 
 		background: [],
 
 		indicatorDots: true, //是否显示面板指示点
-        indicatorColor: "white", //指示点颜色
-        activeColor: "#2adce2", //当前选中的指示点颜色
+    indicatorColor: "white", //指示点颜色
+    activeColor: "#2adce2", //当前选中的指示点颜色
 		autoplay: true, //是否自动切换
 		circular: true, //是否采用衔接滑动
 		interval: 3500, //间隔时间
@@ -94,7 +90,7 @@ Page({
 	get() {
 		db.collection('media')
 			.where({
-                name: "轮播图"
+        name: "轮播图"
 			})
 			.get()
 			.then(res => {
@@ -108,43 +104,23 @@ Page({
 			})
 	},
 
-	// 学校官微
-	toschool() {
-		wx.previewImage({
-			current: this.data.guanwei[0],
-			urls: this.data.guanwei
-		})
-	},
+  // 公众号二维码
+  towechat(e) {
+    let img = e.currentTarget.dataset.img
+    wx.previewImage({
+      current: img,
+      urls: this.data.guanwei.map(item => item.img)
+    })
+  },
 
-	// 图书馆官微
-	tolibrary() {
-		wx.previewImage({
-			current: this.data.guanwei[1],
-			urls: this.data.guanwei
-		})
-	},
+  // 跳转小程序
+  toMiniProgram(e) {
+    let appId = e.currentTarget.dataset.appId
+    wx.navigateToMiniProgram({
+      appId: appId,
+    })
+  },
 
-	// 财务处官微
-	tofinance() {
-		wx.previewImage({
-			current: this.data.guanwei[2],
-			urls: this.data.guanwei
-		})
-	},
-
-
-	// 招生官微
-	toMiniProgram() {
-		wx.navigateToMiniProgram({
-			appId: this.data.AppID,
-			success(res) {
-				// console.log("打开成功")
-			},
-			fail(res) {
-				// console.log("打开失败")
-			}
-		})
-	},
 	// 获取天气
 	getWeather() {
 		var that = this
@@ -164,7 +140,7 @@ Page({
 
 	//点击图片可查看
 	lookPhoto(e) {
-        console.log("点击了图片", e.target.dataset.src)
+    console.log("点击了图片", e.target.dataset.src)
 		var url = e.target.dataset.src
 		wx.previewImage({
 			current: url, // 当前显示图片的http链接
@@ -175,7 +151,7 @@ Page({
 	// 跳转到地图页
 	map() {
 		wx.switchTab({
-            url: '../map/map',
+      url: '../map/map',
 		})
 	},
 
@@ -189,7 +165,7 @@ Page({
 	// 跳转到地点排名页
 	rank() {
 		wx.navigateTo({
-            url: '../home/rank/rank',
+      url: '../home/rank/rank',
 		})
 	},
 
@@ -210,7 +186,7 @@ Page({
 	// 学校简介
 	tointroduction() {
 		wx.navigateTo({
-            url: "../home/introduction/introduction",
+      url: "../home/introduction/introduction",
 		})
     },
 })

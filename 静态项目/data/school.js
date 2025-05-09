@@ -1,8 +1,39 @@
 /* data/school.js */
 // 学校相关
 module.exports = {
-  // 学校官方小程序AppID
-  AppID: "wx0a954435bd49aca4",
+  // 学校公众号二维码
+  guanwei: [
+    {
+      // 显示名
+      name: "学校",
+      // 显示图标
+      icon: "/images/school_icon.png",
+      // 二维码图片链接
+      img: "https://cdnjson.com/images/2023/04/30/guanwei.png",
+    },
+    {
+      name: "图书馆",
+      icon: "/images/book.png",
+      img: "https://s1.imagehub.cc/images/2024/02/07/a9e42b78adace1b3f93484530613c84c.png",
+    },
+    {
+      name: "财务处",
+      icon: "/images/new.png",
+      img: "https://s1.imagehub.cc/images/2024/02/07/8e8dae8b402c4c4ed236d7fbe4a9d913.png",
+    },
+  ],
+
+  // 学校小程序AppID
+  AppID: [
+    {
+      // 显示名
+      name: "招生",
+      // 显示图标
+      icon: "/images/magazine.png",
+      // 小程序id
+      appId: "wx0a954435bd49aca4",
+    }
+  ],
 
   // 学校信息
   school_information: {
@@ -13,7 +44,7 @@ module.exports = {
     // 校规校训
     motto: "向学·向善·自律·自强",
     // 学校荣誉
-    honor: "广西优秀民办高等学校",
+    honor: "2025中国百强民办高校",
     // 建校时间
     build_time: 2001,
     // 办校类型

@@ -125,33 +125,17 @@
 
 <mp-dialog title="友情链接" show="{{dialogShow}}" bindbuttontap="mapmarker" buttons="{{buttons}}">
   <view class="list-row">
-
-    <view class="list-row-container" bindtap="toschool">
-      <image class="list-row-container-img" src="{{school_icon}}" />
+    <view wx:for="{{guanwei}}" wx:key="index" data-img="{{item.img}}" class="list-row-container" bindtap="towechat">
+      <image class="list-row-container-img" src="{{item.icon}}" />
       <view class="list-row-container-text">
-        学校
+        {{item.name}}
       </view>
     </view>
 
-    <view class="list-row-container" bindtap="tolibrary">
-      <image class="list-row-container-img" src="{{book}}" />
+    <view wx:for="{{AppID}}" wx:key="index" data-app-id="{{item.appId}}"  class="list-row-container" bindtap="toMiniProgram">
+      <image class="list-row-container-img" src="{{item.icon}}" />
       <view class="list-row-container-text">
-        图书馆
-      </view>
-    </view>
-
-    <view class="list-row-container" bindtap="tofinance">
-      <image class="list-row-container-img" src="{{money}}" />
-      <!-- <image class="list-row-container-img" src="{{new}}" /> -->
-      <view class="list-row-container-text">
-        财务处
-      </view>
-    </view>
-
-    <view class="list-row-container" bindtap="toMiniProgram">
-      <image class="list-row-container-img" src="{{magazine}}" />
-      <view class="list-row-container-text">
-        招生
+        {{item.name}}
       </view>
     </view>
   </view>

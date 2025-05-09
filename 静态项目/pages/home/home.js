@@ -14,17 +14,14 @@ Page({
     data: {
         miniprogram_name: data.miniprogram_name,
         school_information: school.school_information,
+
+        guanwei: school.guanwei,
         AppID: school.AppID,
 
         laba: media.laba,
         school_logo: media.school_logo,
 
         function_buttons: media.function_buttons,
-
-        school_icon: media.school_icon,
-        book: media.book,
-        money: media.money,
-        new: media.new,
 
         wave: media.wave,
 
@@ -37,7 +34,6 @@ Page({
         notes: media.notes,
         admin: media.admin,
         contact: media.contact,
-        guanwei: media.guanwei,
         weather: media.weather,
 
         APIKEY: data.weatherKey,
@@ -78,43 +74,23 @@ Page({
         })
     },
 
-    // 学校官微
-    toschool() {
-        wx.previewImage({
-            current: this.data.guanwei[0],
-            urls: this.data.guanwei
-        })
+    // 公众号二维码
+    towechat(e) {
+      let img = e.currentTarget.dataset.img
+      wx.previewImage({
+        current: img,
+        urls: this.data.guanwei.map(item => item.img)
+      })
     },
 
-    // 图书馆官微
-    tolibrary() {
-        wx.previewImage({
-            current: this.data.guanwei[1],
-            urls: this.data.guanwei
-        })
+    // 跳转小程序
+    toMiniProgram(e) {
+      let appId = e.currentTarget.dataset.appId
+      wx.navigateToMiniProgram({
+        appId: appId,
+      })
     },
 
-    // 财务处官微
-    tofinance() {
-        wx.previewImage({
-            current: this.data.guanwei[2],
-            urls: this.data.guanwei
-        })
-    },
-
-
-    // 招生官微
-    toMiniProgram() {
-        wx.navigateToMiniProgram({
-            appId: this.data.AppID,
-            success(res) {
-                // console.log("打开成功")
-            },
-            fail(res) {
-                // console.log("打开失败")
-            }
-        })
-    },
     // 获取天气
     getWeather() {
         var that = this
