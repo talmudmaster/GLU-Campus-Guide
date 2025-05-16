@@ -496,10 +496,12 @@ Page({
         let site_list = this.data.site_data[this.data.category].list
         console.log("当前地点类型", site_list)
         let markers = []
-        // 不在学校且当前地点类型下存在默认地点
-        let judege = site_list.some((item) => item._id == this.data.default_point._id)
-        if (!this.data.isAtSchool && !judege) {
-            markers.push(this.data.mylocationmarker)
+        // 检查地点列表中是否包含默认地点（用于判断是否在校外且有默认地点）
+        let judge = site_list.some(item => item._id == this.data.default_point._id)
+        // 在校时，添加当前位置标记
+        // 不在校时，仅当前地点类型下不存在默认地点,，添加当前位置标记
+        if (!judge || this.data.isAtSchool) {
+        markers.push(this.data.mylocationmarker)
         }
         for (let i = 0; i < site_list.length; i++) {
             let la = site_list[i].latitude

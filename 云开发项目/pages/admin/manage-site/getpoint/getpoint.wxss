@@ -1,4 +1,9 @@
 /* pages/admin/getpoint/getpoint.wxss */
+map {
+    width: 100%;
+    height: calc(100% - 80px);
+}
+
 .img {
     height: 24px;
     width: 24px;

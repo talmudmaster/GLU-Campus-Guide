@@ -23,6 +23,7 @@ Page({
     startImg: img_data.start,
     endImg: img_data.end,
     car: img_data.car,
+    Marker3_Activated: img_data.Marker3_Activated,
 
 
     // 地图相关数据
