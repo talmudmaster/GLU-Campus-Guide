@@ -12,12 +12,34 @@ Page({
     }],
 
     info: [
-      "815075137",
-      "https://pan.baidu.com/s/178lwGP1KIwtJekt55Fv2FA?pwd=f6gg",
-      "https://blog.csdn.net/weixin_45940369/category_12257059.html",
-      "https://gitee.com/talmudmaster/GLU-Campus-Guide",
-      "https://github.com/talmudmaster/GLU-Campus-Guide",
-      "https://space.bilibili.com/384844986/channel/collectiondetail?sid=1197124",
+      {
+        name: "QQ",
+        content: "229600398"
+      },
+      {
+        name: "QQ交流群",
+        content: "815075137"
+      },
+      {
+        name: "相关资料",
+        content: "https://pan.baidu.com/s/178lwGP1KIwtJekt55Fv2FA?pwd=f6gg"
+      },
+      {
+        name: "CSDN",
+        content: "https://blog.csdn.net/weixin_45940369/category_12257059.html"
+      },
+      {
+        name: "Gitee",
+        content: "https://gitee.com/talmudmaster/GLU-Campus-Guide"
+      },
+      {
+        name: "GitHub",
+        content: "https://github.com/talmudmaster/GLU-Campus-Guide"
+      },
+      {
+        name: "bilibili",
+        content: "https://space.bilibili.com/384844986/channel/collectiondetail?sid=1197124"
+      },
     ]
   },
 
@@ -65,18 +87,9 @@ Page({
   },
 
   getInfo(e) {
-    let id = e.currentTarget.dataset.id
-
-    var result = this.data.info[id]
+    let data = e.currentTarget.dataset.content
     wx.setClipboardData({
-      data: result,
-      success(res) {
-        wx.getClipboardData({
-          success(res) {
-            // console.log(res.data) // data
-          }
-        })
-      }
+      data,
     })
   }
 })

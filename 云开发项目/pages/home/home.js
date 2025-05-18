@@ -186,7 +186,7 @@ Page({
 	// 学校简介
 	tointroduction() {
 		wx.navigateTo({
-      url: "../home/introduction/introduction",
+      url: "./introduction/introduction",
 		})
     },
 })

@@ -686,7 +686,7 @@ Page({
     // 跳转至搜索页
     tosearch(e) {
         wx.navigateTo({
-            url: '../map/search/search?id=' + e.currentTarget.dataset.search_id,
+            url: './search/search?id=' + e.currentTarget.dataset.search_id,
         })
     },
 

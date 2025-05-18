@@ -83,7 +83,7 @@ Page({
 
   getPoint() {
     wx.navigateTo({
-      url: '../site/getpoint/getpoint?lo=' + this.data.formData.lo + '&la=' + this.data.formData.la,
+      url: './getpoint/getpoint?lo=' + this.data.formData.lo + '&la=' + this.data.formData.la,
     })
   },
 
@@ -107,13 +107,6 @@ Page({
     var result = this.data.result
     wx.setClipboardData({
       data: result,
-      success(res) {
-        wx.getClipboardData({
-          success(res) {
-            // console.log(res.data) // data
-          }
-        })
-      }
     })
   },
 

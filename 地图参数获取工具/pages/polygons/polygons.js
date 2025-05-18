@@ -202,16 +202,6 @@ Page({
   copy() {
     wx.setClipboardData({
       data: this.data.points_data,
-      success() {
-        wx.getClipboardData({
-          success() {
-            wx.showToast({
-              title: '复制成功',
-              icon: 'success'
-            })
-          }
-        })
-      }
     })
   },
 

@@ -459,13 +459,6 @@ Page({
 
     wx.setClipboardData({
       data: result,
-      success(res) {
-        wx.getClipboardData({
-          success(res) {
-            // console.log(res.data) // data
-          }
-        })
-      }
     })
   }
 })

@@ -286,7 +286,7 @@ Page({
 
     getPoint() {
         wx.navigateTo({
-            url: '../manage-site/getpoint/getpoint?lo=' + this.data.lo + '&la=' + this.data.la,
+            url: './getpoint/getpoint?lo=' + this.data.lo + '&la=' + this.data.la,
         })
     },
 

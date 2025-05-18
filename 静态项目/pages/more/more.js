@@ -26,7 +26,7 @@ Page({
     // 软件声明
     tostatement() {
         wx.navigateTo({
-            url: '../more/statement/statement',
+            url: './statement/statement',
         })
     },
     // 特别说明
