@@ -59,13 +59,14 @@ Page({
 	},
 
 	search() {
-		console.log('search', this.data.inputValue)
+		let inputValue = this.data.inputValue || ''
+		console.log('search', inputValue)
 		wx.showLoading({
       title: '搜索中',
 		})
 		var res = []
 		for (const i of this.data.allWords) {
-      if (i.title.indexOf(this.data.inputValue) != -1 || i.content.indexOf(this.data.inputValue) != -1 || i.keywords.indexOf(this.data.inputValue) != -1) {
+      if (i.title.indexOf(inputValue) != -1 || i.content.indexOf(inputValue) != -1 || i.keywords.indexOf(inputValue) != -1) {
 				res.push(i)
 			}
 		}

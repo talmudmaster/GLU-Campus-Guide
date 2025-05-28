@@ -195,7 +195,7 @@ Page({
     },
 
     addschoolguide() {
-      if (this.data.title != null && this.data.title != "") {
+      if (this.data.title != null && this.data.title != "" && this.data.content != null && this.data.content != "") {
         let keywords = this.data.keywords.map(item => {
           return item.name
         })
@@ -232,7 +232,7 @@ Page({
     },
   
     updateschoolguide() {
-      if (this.data.title != null && this.data.title != "") {
+      if (this.data.title != null && this.data.title != "" && this.data.content != null && this.data.content != "") {
         let keywords = this.data.keywords.map(item => {
           return item.name
         })

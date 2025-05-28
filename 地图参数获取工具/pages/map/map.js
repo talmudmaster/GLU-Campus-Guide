@@ -101,7 +101,7 @@ Page({
 
     this.mapCtx = wx.createMapContext('map')
     
-    var boundary = this.data.boundary
+    // var boundary = this.data.boundary
     // this.mapCtx.setBoundary({
     //   southwest: { //西南角
     //     latitude: boundary.southwest_latitude,
@@ -149,7 +149,8 @@ Page({
       return;
     }
     scale += 0.1;
-    console.log("地图缩放级别放大了0.1，现在是", scale.toFixed(2))
+    scale = parseFloat(scale.toFixed(2))
+    console.log("地图缩放级别放大了0.1，现在是", scale)
     this.setData({
       scale: scale
     });
@@ -162,7 +163,8 @@ Page({
       return;
     }
     scale -= 0.1;
-    console.log("地图缩放级别减小了0.1，现在是", scale.toFixed(2))
+    scale = parseFloat(scale.toFixed(2))
+    console.log("地图缩放级别减小了0.1，现在是", scale)
     this.setData({
       scale: scale
     });
@@ -411,7 +413,7 @@ Page({
     // 获取当前地图的视野范围
     this.mapCtx.getRegion({
       success(res) {
-        var boundary_data = "//西南角" + '\n' + "southwest_latitude: " + res.southwest.latitude.toFixed(6) + "," + '\n' + "southwest_longitude: " + res.southwest.longitude.toFixed(6) + "," + '\n' + "//东北角" + '\n' + "northeast_latitude: " + res.northeast.latitude.toFixed(6) + "," + '\n' + "northeast_longitude: " + res.northeast.longitude.toFixed(6) + ","
+        var boundary_data = "// 西南角" + '\n' + "southwest_latitude: " + res.southwest.latitude.toFixed(6) + "," + '\n' + "southwest_longitude: " + res.southwest.longitude.toFixed(6) + "," + '\n' + "// 东北角" + '\n' + "northeast_latitude: " + res.northeast.latitude.toFixed(6) + "," + '\n' + "northeast_longitude: " + res.northeast.longitude.toFixed(6) + ","
 
         // console.log("当前地图的边界" + '\n' + boundary_data)
 
@@ -424,12 +426,12 @@ Page({
     // 获取当前地图的缩放级别
     this.mapCtx.getScale({
       success(res) {
-        var scale_data = "scale: " + res.scale + ","
+        var scale_data = "scale: " + res.scale.toFixed(1) + ","
         // console.log("当前地图的缩放级别" + '\n' + scale_data)
         // console.log("\n")
 
         that.setData({
-          scale: res.scale,
+          // scale: res.scale,
           scale_data: scale_data
         });
       }
