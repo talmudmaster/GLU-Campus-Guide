@@ -92,15 +92,10 @@ Page({
           })
           setTimeout(() => {
             wx.navigateTo({
-              url: '../admin/admin',
+              url: '../manage/manage',
             })
           }, 1500)
         } else {
-          // wx.showToast({
-          //   title: '抱歉，同志\n您还不是管理员哦',
-          //   icon: 'none',
-          //   duration: 1500
-          // })
           that.getopenid()
         }
       }

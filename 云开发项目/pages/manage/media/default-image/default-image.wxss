@@ -1,0 +1,82 @@
+/* pages/manage/media/default-image/default-image.wxss */
+page {
+  background: #f3f3f3;
+}
+
+.card {
+  margin: 15px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.card-container {
+  margin-bottom: 30px;
+  margin: 10px;
+}
+
+.card-container-title {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 10px;
+
+}
+
+.card-container-title-img {
+  height: 25px;
+  width: 25px;
+}
+
+.card-container-title-font {
+width: 100%;
+color: #73a5d6;
+margin: 15px 0;
+font-size: 30px;
+text-align: center;
+}
+
+.card-container-container {
+  border-bottom: 10px solid white;
+}
+
+.card-container-container-title {
+  margin: 10px 0 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: larger;
+}
+
+.red {
+  color: red;
+}
+
+.no {
+  justify-content: flex-start;
+}
+
+.title {
+  border-bottom: 1px solid grey;
+}
+
+.tip {
+  margin: 10px;
+}
+
+.card-container-form-list-img {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.yulan {
+  width: 240px;
+  height: 135px;
+  border: 1px solid grey;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 40px;
+}

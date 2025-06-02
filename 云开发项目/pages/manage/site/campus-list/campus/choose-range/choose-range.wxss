@@ -1,0 +1,23 @@
+/* pages/manage/campus-list/campus/choose-range/choose-range.wxss */
+map {
+  width: 100%;
+  height: calc(100% - 135px);
+}
+
+.title {
+  /* display: flex; */
+  text-align: left;
+  margin-top: 15px;
+}
+
+.title_text {
+  color: black;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.scroll {
+  height: 300px;
+  width: 100%;
+  margin-bottom: 15px;
+}

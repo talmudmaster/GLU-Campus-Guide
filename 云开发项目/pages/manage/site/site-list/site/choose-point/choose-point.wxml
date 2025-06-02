@@ -1,0 +1,6 @@
+<!--pages/manage/site/site-list/site/choose-point/choose-point.wxml-->
+<map id="map" latitude="{{location.latitude}}" longitude="{{location.longitude}}" scale="{{scale}}" enable-poi="{{enable_poi}}" bindregionchange="bindregionchange">
+    <image class="img" src="{{circle}}" mode="" />
+</map>
+
+<button class="button" type="primary" bindtap="getPoint">获取坐标</button>

@@ -1,0 +1,34 @@
+<!--pages/manage/category-list/category-list.wxml-->
+<view>
+  <view class="card">
+    <view class="card-container">
+      <view class="card-container-title">
+        <view class="card-container-title-font">
+          地点类型管理
+        </view>
+      </view>
+
+      <view class="card-container-container">
+        <button type="primary" size="mini" bindtap="addcategory">
+          新增地点类型
+        </button>
+        <view class="card-container-container-title title">
+          <view class="card-container-container-title-title">序号</view>
+          <view class="card-container-container-title-title">地点类型</view>
+          <view class="card-container-container-title-title">操作</view>
+        </view>
+
+        <view class="card-container-container-title" wx:for="{{category_list}}" wx:key="*this">
+          <view class="card-container-container-title-title">{{index+1}}</view>
+          <view class="card-container-container-site-title">{{item.name}}</view>
+          <view class="card-container-container-title-title">
+            <button type="primary" size="mini" bindtap="managecategory" data-_id="{{item._id}}" data-id="{{index}}" data-name="{{item.name}}">
+              管理
+            </button>
+          </view>
+        </view>
+
+      </view>
+    </view>
+  </view>
+</view>

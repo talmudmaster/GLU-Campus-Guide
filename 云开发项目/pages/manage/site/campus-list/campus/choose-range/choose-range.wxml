@@ -1,0 +1,12 @@
+<!--pages/manage/campus-list/campus/choose-range/choose-range.wxml-->
+<map id="map" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" markers='{{markers}}' polygons="{{polygons}}" bindtap="bindMap" />
+
+<view style="display: flex; margin: 10px 0;">
+  <button type="default" bindtap="clearPrevious">清除上一个点</button>
+  <button type="warn" bindtap="clearGon">清除全部点面</button>
+</view>
+
+<view style="display: flex; margin: 10px 0;">
+  <button type="{{!isShow ? 'default' : 'warn' }}" bindtap="show">{{!isShow ? '显示' : '隐藏' }} 标记点</button>
+  <button style="height: 45px;" type="primary" bindtap="generate">获取范围</button>
+</view>

@@ -1,0 +1,18 @@
+/* pages/manage/site/site-list/site/choose-point/choose-point.wxss */
+map {
+  width: 100%;
+  height: calc(100% - 80px);
+}
+
+.img {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.button {
+  margin-top: 10px;
+}
