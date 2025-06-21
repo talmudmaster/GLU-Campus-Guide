@@ -8,7 +8,7 @@
           <text class="text-grey">{{item.title}}</text>
         </view>
 
-        <image style="height:40rpx;width:40rpx;" src="{{green_arrow}}"></image>
+        <image style="height: 40rpx; width: 40rpx" src="{{green_arrow}}"></image>
       </view>
     </view>
   </view>

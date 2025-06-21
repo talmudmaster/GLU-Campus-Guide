@@ -1,11 +1,22 @@
 <!--pages/home/rank/rank.wxml-->
 <view>
   <view class="title">
-    <view class="title-1">
-      地点搜索浏览
-    </view>
-    <view class="title-2">
-      排行榜单
+    <view class="title-1"> 地点搜索浏览 </view>
+    <view class="title-2"> 排行榜单 </view>
+
+    <view
+      wx:if="{{campus_name_list.length > 1}}"
+      class="campus"
+      style="display: flex; justify-content: center; align-items: center"
+    >
+      <picker
+        style="width: max-content"
+        bindchange="changeCampus"
+        value="{{0}}"
+        range="{{campus_name_list}}"
+      >
+        <view class="picker"> {{campus_name_list[choose]}} </view>
+      </picker>
     </view>
   </view>
 
@@ -15,32 +26,65 @@
       <view class="list-title-middle">地点</view>
       <view class="list-title-right">浏览次数</view>
     </view>
-    <view class="list-result" wx:if="{{list.length != 0}}" wx:for="{{list}}" wx:key="*this" data-s_id="{{item.s_id}}">
-      <view class="list-result-left">
-        {{index+1+(pagination.current-1)*pagination.pageSize}}
-      </view>
+
+    <view class="list-result" wx:if="{{list.length != 0}}" wx:for="{{list}}" wx:key="index">
+      <view class="list-result-left"> {{index+1+(pagination.current-1)*pagination.pageSize}} </view>
       <view class="list-result-middle">
         <view>{{item.name}}</view>
         <view>{{item.aliases}}</view>
       </view>
-      <view class="list-result-right">
-        {{item.browse}}
-      </view>
+      <view class="list-result-right"> {{item.browse}} </view>
     </view>
-
-    <view></view>
   </view>
-  <view class="bottom">
-    <view class="bottom-text">依据用户搜索浏览行为统计，数据可能略有偏差</view>
+  <view class="bottom"> 依据用户搜索浏览行为统计，数据可能略有偏差 </view>
 
-    <view class="button">
-      <image class="button-img" bindtap="gooneside" data-index="-1" src="{{pagination.current>1?arrow_first:arrow_first_no}}" mode="" />
-      <image class="button-img" bindtap="go" data-index="-1" src="{{pagination.current>1?arrow_left:arrow_left_no}}" mode="" />
-      {{pagination.current}}
-
-      <image class="button-img" bindtap="go" data-index="1" src="{{pagination.current<pagination.totalPage?arrow_right:arrow_right_no}}" mode="" />
-      <image class="button-img" bindtap="gooneside" data-index="1" src="{{pagination.current<pagination.totalPage?arrow_last:arrow_last_no}}" mode="" />
+  <view class="interval">
+    <view style="display: flex; align-items: center">
+      <button
+        size="mini"
+        class="btn"
+        bindtap="page"
+        data-type="first"
+        disabled="{{pagination.current<=1}}"
+      >
+        ‹‹
+      </button>
+    </view>
+    <view style="display: flex; align-items: center">
+      <button
+        size="mini"
+        class="btn"
+        bindtap="page"
+        data-type="previous"
+        disabled="{{pagination.current<=1}}"
+      >
+        ‹
+      </button>
     </view>
 
+    <view style="font-size: 24px">{{pagination.current}}</view>
+
+    <view style="display: flex; align-items: center">
+      <button
+        size="mini"
+        class="btn"
+        bindtap="page"
+        data-type="next"
+        disabled="{{pagination.current>=pagination.totalPage}}"
+      >
+        ›
+      </button>
+    </view>
+    <view style="display: flex; align-items: center">
+      <button
+        size="mini"
+        class="btn"
+        bindtap="page"
+        data-type="last"
+        disabled="{{pagination.current>=pagination.totalPage}}"
+      >
+        ››
+      </button>
+    </view>
   </view>
 </view>

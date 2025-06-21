@@ -37,7 +37,7 @@ page {
   max-width: 100%;
 }
 
-.cu-bar .search-form+.action {
+.cu-bar .search-form + .action {
   margin-right: 30rpx;
 }
 
@@ -80,7 +80,7 @@ page {
   display: block;
 }
 
-.cu-card>.cu-item {
+.cu-card > .cu-item {
   display: block;
   background-color: white;
   overflow: hidden;
@@ -110,7 +110,7 @@ page {
   margin: 20rpx;
 }
 
-.cu-card.dynamic>.cu-item>.text-content {
+.cu-card.dynamic > .cu-item > .text-content {
   padding: 0 20rpx 0;
   max-height: 6.4em;
   overflow: hidden;

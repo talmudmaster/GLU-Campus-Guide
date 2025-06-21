@@ -1,6 +1,6 @@
 /* pages/school/school.wxss */
 page {
-  background-color: #56CCF2;
+  background-color: #56ccf2;
 }
 
 .cu-list {

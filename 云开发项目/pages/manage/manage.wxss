@@ -2,11 +2,12 @@
 page {
   display: flex;
   justify-content: center;
+  /* align-items: center; */
   background: #f5f5f5;
 }
 
 .all {
-  margin: 10px
+  margin: 10px;
 }
 
 .page-title {
@@ -20,6 +21,7 @@ page {
 .card {
   margin-bottom: 20px;
   padding: 5px;
+  /* border: 1px solid grey; */
   border-radius: 20px;
   display: flex;
   flex-direction: column;

@@ -1,0 +1,14 @@
+# 忽略压缩文件
+**/*.min.js
+
+# 忽略依赖目录
+node_modules/
+
+# 忽略云函数依赖
+cloudfunctions/**/node_modules/
+
+# 忽略图片资源
+images/
+
+# 忽略 Git 目录
+.git/

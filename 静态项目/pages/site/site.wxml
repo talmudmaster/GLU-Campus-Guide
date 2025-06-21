@@ -1,9 +1,15 @@
 <!--pages/site/site.wxml-->
 <view class="card">
   <view class="card-left">
-    <scroll-view scroll-y="true" style="height: 100vh;">
+    <scroll-view scroll-y="true" style="height: 100vh">
       <view class="card-left-scorll-view">
-        <view class="card-left-scorll-view-label  {{index == category ? 'choose' : ''}}" wx:for="{{site_data}}" wx:key="id" id="{{index}}" bindtap="changeCategory">
+        <view
+          class="card-left-scorll-view-label  {{index == category ? 'choose' : ''}}"
+          wx:for="{{site_data}}"
+          wx:key="id"
+          id="{{index}}"
+          bindtap="changeCategory"
+        >
           {{item.name}}
         </view>
       </view>
@@ -11,24 +17,54 @@
   </view>
 
   <view class="card-right">
-    <view class="card-right-title">
-      <image class="card-right-title-icon" src="{{tag}}" mode="" />
-      {{site_data[category].name}}
+    <view class="card-right-title" style="justify-content: space-between">
+      <view class="card-right-title">
+        <image class="card-right-title-icon" src="{{tag}}" mode="" />
+        {{site_data[category].name}}
+      </view>
+
+      <view
+        wx:if="{{campus_name_list.length > 1}}"
+        style="display: flex; justify-content: center; align-items: center"
+      >
+        <picker
+          style="width: max-content"
+          bindchange="changeCampus"
+          value="{{0}}"
+          range="{{campus_name_list}}"
+        >
+          <view class="picker"> {{campus_name_list[choose]}} </view>
+        </picker>
+      </view>
     </view>
 
-    <scroll-view scroll-y="true" style="height: calc(100vh - 50px);width: calc(100vw - 75px);">
+    <scroll-view scroll-y="true" style="height: calc(100vh - 50px); width: calc(100vw - 75px)">
       <view class="card-right-content">
-        <view class="card-right-content-card" wx:for="{{site_data[category].list}}" wx:key="id" bindtap="click" data-name="{{item.name}}" data-desc="{{item.desc}}" data-aliases="{{item.aliases}}" data-img="{{item.img}}" id="{{index}}">
+        <view
+          class="card-right-content-card"
+          wx:for="{{site_data[category].list}}"
+          wx:key="id"
+          bindtap="click"
+          data-name="{{item.name}}"
+          data-desc="{{item.desc}}"
+          data-aliases="{{item.aliases}}"
+          data-img="{{item.img}}"
+          id="{{index}}"
+        >
           <view>
             <image class="card-right-content-card-img" src="{{item.img}}" mode="aspectFill" />
           </view>
 
           <view class="card-right-content-card-context">
             <view>
-              <image class="card-right-content-card-context-icon" src="{{little_location}}" mode="" />
+              <image
+                class="card-right-content-card-context-icon"
+                src="{{little_location}}"
+                mode=""
+              />
             </view>
 
-            <text>{{item.name}}\n<text style="color:dimgray">{{item.aliases}}</text></text>
+            <text>{{item.name}}\n<text style="color: dimgray">{{item.aliases}}</text></text>
           </view>
         </view>
       </view>
@@ -36,12 +72,22 @@
   </view>
 </view>
 
-
-<mp-dialog title="{{card.name}}" show="{{dialogShow}}" bindbuttontap="mapmarker" buttons="{{buttons}}">
+<mp-dialog
+  title="{{card.name}}"
+  show="{{dialogShow}}"
+  bindbuttontap="mapmarker"
+  buttons="{{buttons}}"
+>
   <view>
-    <image bindtap="lookPhoto" mode="heightFix" style="height:270rpx;" src="{{card.img}}" data-src="{{card.img}}"></image>
+    <image
+      bindtap="lookPhoto"
+      mode="heightFix"
+      style="height: 270rpx"
+      src="{{card.img}}"
+      data-src="{{card.img}}"
+    ></image>
 
-    <view style="font-size:90%">{{card.aliases}}</view>
+    <view style="font-size: 90%">{{card.aliases}}</view>
 
     <view>{{card.desc}}</view>
   </view>

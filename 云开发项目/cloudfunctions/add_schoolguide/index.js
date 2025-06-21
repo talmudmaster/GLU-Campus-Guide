@@ -1,19 +1,21 @@
 // 云函数入口文件
-const cloud = require('wx-server-sdk')
+const cloud = require('wx-server-sdk');
 
 cloud.init({
-    env: cloud.DYNAMIC_CURRENT_ENV
-}) // 使用当前云环境
+  env: cloud.DYNAMIC_CURRENT_ENV,
+}); // 使用当前云环境
 
 // 云函数入口函数
 exports.main = async (event, context) => {
-    return cloud.database().collection('schoolguide')
-        .add({
-            data: {
-                title: event.title,
-                keywords: event.keywords,
-                content: event.content,
-                imageList: event.imageList,
-            }
-        })
-}
+  return cloud
+    .database()
+    .collection('schoolguide')
+    .add({
+      data: {
+        title: event.title,
+        keywords: event.keywords,
+        content: event.content,
+        imageList: event.imageList,
+      },
+    });
+};

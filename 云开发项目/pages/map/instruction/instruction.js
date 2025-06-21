@@ -1,10 +1,7 @@
 // pages/map/instruction/instruction.js
-import media from '@data/media'
-
-const db = wx.cloud.database()
+import media from '@data/media';
 
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -12,7 +9,7 @@ Page({
     map: media.map,
 
     // 默认地点
-    default_point: "",
+    default_point: '',
   },
 
   /**
@@ -20,21 +17,21 @@ Page({
    */
   onLoad(options) {
     this.setData({
-      default_point: options.name
-    })
+      default_point: options.name,
+    });
   },
 
   // 跳转至地点汇总页
   tosite() {
     wx.switchTab({
       url: '../../site/site',
-    })
+    });
   },
 
   // 跳转至地图页
   tomap() {
     wx.switchTab({
       url: '../../map/map',
-    })
-  }
-})
+    });
+  },
+});

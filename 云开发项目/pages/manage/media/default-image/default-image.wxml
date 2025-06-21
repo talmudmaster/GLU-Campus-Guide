@@ -1,50 +1,38 @@
 <!--pages/manage/media/default-image/default-image.wxml-->
 <view>
-    <view class="card">
-        <view class="card-container">
-            <view class="card-container-title">
-                <view class="card-container-title-font">
-                    地点默认图片管理
-                </view>
-            </view>
+  <view class="card">
+    <view class="card-container">
+      <view class="card-container-title">
+        <view class="card-container-title-font"> 地点默认图片管理 </view>
+      </view>
 
-            <view class="card-container-container">
-                <button type="primary" size="mini" bindtap="getDefault">
-                    选择图片
-                </button>
+      <view class="card-container-container">
+        <button type="primary" size="mini" bindtap="getDefault">选择图片</button>
 
-                <view class="card-container-container-title no">
-                    为确保图片观感，建议上传<text class="red">原图</text>
-                </view>
-
-                <view class="card-container-container-title title">
-                    预览效果
-                </view>
-
-                <view class="yulan" wx:if="{{defaulturl==null}}" bindtap="getDefault">
-                    选择图片后可以查看预览效果
-                </view>
-
-                <view class="card-container-form-list-img">
-                    <image style="width: 100%;height: auto;" src="{{defaulturl}}" mode="widthFix" />
-                </view>
-
-                <view class="tip">
-                    提示：上传新图片会覆盖旧图片
-                </view>
-
-                <button type="primary" size="mini" bindtap="updateDefault">
-                    确认上传
-                </button>
-
-                <view class="card-container-container-title title">
-                    实际效果
-                </view>
-
-                <view class="card-container-form-list-img">
-                    <image style="width: 240px;height: auto;" src="{{default}}" mode="widthFix" />
-                </view>
-            </view>
+        <view class="card-container-container-title no">
+          为确保图片观感，建议上传<text class="red">原图</text>
         </view>
+
+        <view class="card-container-container-title title"> 预览效果 </view>
+
+        <view class="yulan" wx:if="{{defaultImgPreview==null}}" bindtap="getDefault">
+          选择图片后可以查看预览效果
+        </view>
+
+        <view class="card-container-form-list-img">
+          <image style="width: 100%; height: auto" src="{{defaultImgPreview}}" mode="widthFix" />
+        </view>
+
+        <view class="tip"> 提示：上传新图片会覆盖旧图片 </view>
+
+        <button type="primary" size="mini" bindtap="updateDefault">确认上传</button>
+
+        <view class="card-container-container-title title"> 实际效果 </view>
+
+        <view class="card-container-form-list-img">
+          <image style="width: 240px; height: auto" src="{{defaultImg}}" mode="widthFix" />
+        </view>
+      </view>
     </view>
+  </view>
 </view>

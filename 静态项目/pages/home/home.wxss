@@ -93,7 +93,7 @@
 
   /* 一行两列，均匀分布（字少的话用这个） */
   justify-content: space-around;
-  
+
   /* 两行一列，居中分布（字多的话用这个） */
   /* flex-direction: column;
   align-items: center; */
@@ -180,7 +180,7 @@
 
 .list-list-right {
   width: 15px;
-  height: 15px
+  height: 15px;
 }
 
 .list-laba {
@@ -280,8 +280,8 @@
   padding-top: 15px;
   border-radius: 10px;
   height: 190px;
-  background-color: #64C8FA;
-  background: linear-gradient(to bottom, #56CCF2, #2F80ED);
+  background-color: #64c8fa;
+  background: linear-gradient(to bottom, #56ccf2, #2f80ed);
 }
 
 .card-container-weather-city {

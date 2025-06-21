@@ -6,21 +6,11 @@
     <view class="title">🏫 地点管理</view>
 
     <view class="content">
-      <view class="btn" bindtap="taptocategory">
-          地点类型
-      </view>
+      <view class="btn" bindtap="taptocampus"> 校区 </view>
 
-      <view class="btn" bindtap="taptosite">
-          地点
-      </view>
+      <view class="btn" bindtap="taptocategory"> 地点类型 </view>
 
-      <view class="btn" bindtap="taptodefaultsite">
-          默认地点
-      </view>
-
-      <view class="btn" bindtap="taptorange">
-          学校范围
-      </view>
+      <view class="btn" bindtap="taptosite"> 地点 </view>
     </view>
   </view>
 
@@ -28,21 +18,11 @@
     <view class="title">🖼️ 媒体管理</view>
 
     <view class="content">
-      <view class="btn" bindtap="taptomapimg">
-          校园地图图片
-      </view>
+      <view class="btn" bindtap="taptocarousel"> 轮播图 </view>
 
-      <view class="btn" bindtap="taptocarousel">
-          轮播图
-      </view>
+      <view class="btn" bindtap="taptovideo"> 视频 </view>
 
-      <view class="btn" bindtap="taptovideo">
-          视频
-      </view>
-
-      <view class="btn" bindtap="taptodefaultimg">
-          地点默认图片
-      </view>
+      <view class="btn" bindtap="taptodefaultimg"> 地点默认图片 </view>
     </view>
   </view>
 
@@ -50,9 +30,7 @@
     <view class="title">📖 信息管理</view>
 
     <view class="content">
-      <view class="btn" bindtap="taptoguide">
-          校园指南
-      </view>
+      <view class="btn" bindtap="taptoguide"> 校园指南 </view>
     </view>
   </view>
 
@@ -60,9 +38,7 @@
     <view class="title">👤 成员管理</view>
 
     <view class="content">
-      <view class="btn" bindtap="taptoadmin">
-          管理员
-      </view>
+      <view class="btn" bindtap="taptoadmin"> 管理员 </view>
     </view>
   </view>
 </view>

@@ -1,1 +1,32 @@
 /* pages/home/pano/pano.wxss */
+.btns-card-all {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  top: calc(100% - 100px);
+  color: white;
+}
+
+.btns {
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
+.btns-card {
+  height: 90px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.img {
+  height: 70px;
+  width: 70px;
+}

@@ -1,5 +1,5 @@
 // pages/polygons/range/range.js
-import map_data from '@data/map_data'
+import map_data from '@data/map_data';
 
 Page({
   /**
@@ -18,66 +18,70 @@ Page({
     // 经纬度数组
     points: [],
     // 是否在多边形内部
-    isAtPolygons: false
+    isAtPolygons: false,
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    let points = JSON.parse(options.points)
-    let polygons = [{
-      points,
-      fillColor: "#d5dff233", // 填充颜色：淡蓝色，7-8位为十六进制透明度00-FF
-      strokeColor: "#789cff", // 描边颜色：淡蓝色
-      strokeWidth: 2, // 描边宽度
-    }]
+    let points = JSON.parse(options.points);
+    let polygons = [
+      {
+        points,
+        fillColor: '#d5dff233', // 填充颜色：淡蓝色，7-8位为十六进制透明度00-FF
+        strokeColor: '#789cff', // 描边颜色：淡蓝色
+        strokeWidth: 2, // 描边宽度
+      },
+    ];
     this.setData({
       polygons,
       points,
-    })
-    this.includePoints()
+    });
+    this.includePoints();
   },
 
   /**
    * 缩放视野以包含所有给定的坐标点
    */
   includePoints() {
-    let points = this.data.points
-    this.mapCtx = wx.createMapContext('map')
+    let points = this.data.points;
+    this.mapCtx = wx.createMapContext('map');
     this.mapCtx.includePoints({
       padding: [10, 10, 10, 10],
       points,
-    })
+    });
   },
 
   /**
    * 绑定地图点击事件
    */
   bindMap(e) {
-    let latitude = e.detail.latitude.toFixed(6)
-    let longitude = e.detail.longitude.toFixed(6)
-    let markers= [{
-      id: 1,
-      latitude,
-      longitude,
-      width: 25, // 默认图标的宽度
-      height: 34 // 默认图标的高度
-    }]
+    let latitude = e.detail.latitude.toFixed(6);
+    let longitude = e.detail.longitude.toFixed(6);
+    let markers = [
+      {
+        id: 1,
+        latitude,
+        longitude,
+        width: 25, // 默认图标的宽度
+        height: 34, // 默认图标的高度
+      },
+    ];
     this.setData({
-      markers: markers,
-    })
+      markers,
+    });
 
     let testPoint = {
-      latitude: latitude,
-      longitude: longitude
-    }
-    let polygon = this.data.points
-    let bool = this.isPointInPolygon(testPoint, polygon)
+      latitude,
+      longitude,
+    };
+    let polygon = this.data.points;
+    let bool = this.isPointInPolygon(testPoint, polygon);
 
     this.setData({
-      isAtPolygons: bool
-    })
+      isAtPolygons: bool,
+    });
   },
 
   /**
@@ -89,15 +93,17 @@ Page({
     // 预处理：全部转为数值
     const toNum = ({ longitude, latitude }) => ({
       longitude: +longitude,
-      latitude: +latitude
+      latitude: +latitude,
     });
     point = toNum(point);
     polygon = polygon.map(v => toNum(v));
 
     // 检查顶点
     for (const v of polygon) {
-      if (Math.abs(v.longitude - point.longitude) < 1e-9 
-      && Math.abs(v.latitude - point.latitude) < 1e-9) {
+      if (
+        Math.abs(v.longitude - point.longitude) < 1e-9 &&
+        Math.abs(v.latitude - point.latitude) < 1e-9
+      ) {
         return true;
       }
     }
@@ -119,7 +125,7 @@ Page({
       const pLat = point.latitude;
 
       // 边跨越射线时才处理
-      if ((aLat >= pLat) === (bLat >= pLat)) continue;
+      if (aLat >= pLat === bLat >= pLat) continue;
 
       // 排除水平边
       if (aLat === bLat) continue;
@@ -147,15 +153,16 @@ Page({
     // 强制转换为数值
     const toNum = obj => ({
       longitude: +obj.longitude,
-      latitude: +obj.latitude
+      latitude: +obj.latitude,
     });
     p = toNum(p);
     a = toNum(a);
     b = toNum(b);
 
     // 叉积判共线
-    const cross = (p.longitude - a.longitude) * (b.latitude - a.latitude) 
-              - (p.latitude - a.latitude) * (b.longitude - a.longitude);
+    const cross =
+      (p.longitude - a.longitude) * (b.latitude - a.latitude) -
+      (p.latitude - a.latitude) * (b.longitude - a.longitude);
     if (Math.abs(cross) > 1e-9) return false;
 
     // 包围盒检查
@@ -164,9 +171,11 @@ Page({
     const minLat = Math.min(a.latitude, b.latitude);
     const maxLat = Math.max(a.latitude, b.latitude);
 
-    return p.longitude >= minLon - 1e-9 
-        && p.longitude <= maxLon + 1e-9 
-        && p.latitude >= minLat - 1e-9 
-        && p.latitude <= maxLat + 1e-9;
+    return (
+      p.longitude >= minLon - 1e-9 &&
+      p.longitude <= maxLon + 1e-9 &&
+      p.latitude >= minLat - 1e-9 &&
+      p.latitude <= maxLat + 1e-9
+    );
   },
-})
+});

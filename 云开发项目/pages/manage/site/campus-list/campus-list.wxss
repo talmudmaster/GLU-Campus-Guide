@@ -63,8 +63,3 @@ page {
   text-align: center;
   flex-direction: column;
 }
-
-.choose {
-  border-top: 10px solid #404481;
-  background-color: white;
-}

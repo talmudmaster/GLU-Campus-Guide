@@ -1,105 +1,157 @@
 /* pages/home/rank/rank.wxss */
 page {
-    background-color: #73a5d6;
-    height: auto;
+  /* background-color: #73a5d6; */
+  /* background-color: #F5F5FB; */
+  /* background-color: #56CCF2; */
+  /* background: linear-gradient(to bottom, #003cff9c, #80fcdd); */
+  /* background-color: #6fd5f7; */
+  /* background-color: #56CCF2; */
+  /* background-color: #72a8f8; */
+  background-color: #ddd;
+  height: auto;
 }
 
 .title {
-    text-align: center;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: white;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  /* color: white; */
 }
 
 .title-1 {
-    font-size: 22px;
+  font-size: 22px;
 }
 
 .title-2 {
-    font-size: 38px;
+  font-size: 38px;
 }
 
 .list {
-    margin: 10px 10px 0 10px;
-    border-radius: 20px;
-    background-color: white;
+  margin: 10px 10px 0 10px;
+  border-radius: 20px;
+  border: 1px solid lightgray;
+  background-color: white;
+  /* background-color: #f5f5f5; */
 }
 
 .list-title {
-    height: 50px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0 20px 0 20px;
-    font-size: 20px;
-    border-bottom: 2px solid #b95864;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 20px 0 20px;
+  font-size: 20px;
+  border-bottom: 2px solid #b95864;
 }
 
 .list-title-left {
-    text-align: center;
-    width: 50px;
+  text-align: center;
+  width: 50px;
 }
 
 .list-title-middle {
-    text-align: center;
-    width: 170px;
+  text-align: center;
+  width: 170px;
 }
 
 .list-title-right {
-    text-align: center;
-    width: 90px;
+  text-align: center;
+  width: 90px;
 }
 
 .list-result {
-    height: 50px;
-    margin: 5px 20px 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border-bottom: 1px solid gainsboro;
+  height: 50px;
+  margin: 5px 20px 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 1px solid gainsboro;
+}
+
+.list-result:last-child {
+  border-bottom: 0;
 }
 
 .list-result-left {
-    text-align: center;
-    width: 50px;
+  text-align: center;
+  width: 50px;
 }
 
 .list-result-middle {
-    display: flex;
-    flex-direction: column;
-    width: 170px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 170px;
+  text-align: center;
 }
 
 .list-result-right {
-    text-align: center;
-    width: 90px;
+  text-align: center;
+  width: 90px;
 }
 
 .bottom {
-    height: 60px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0px 15px 0 15px;
-    color: white;
-}
-
-.bottom-text {
-    height: 20px;
-    font-size: 12px;
-    font-weight: lighter;
+  /* height: 60px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 15px 0 15px;
+  /* color: white; */
+  /* height: 20px; */
+  /* font-size: 12px; */
+  font-size: small;
+  font-weight: lighter;
 }
 
 .button {
-    width: 300px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .button-img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.campus {
+  position: relative;
+  margin-left: 280px;
+  margin-top: -34px;
+  display: flex;
+  align-items: center;
+}
+
+.picker {
+  /* border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin: 0 5px;
+  padding: 2px 5px;
+  background: #f8f8f8; /* 头部背景色 */
+  border-radius: 8rpx; /* 圆角 */
+  border: 1rpx solid #ddd; /* 边框 */
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.btn {
+  border: 1px solid lightgray;
+  /* border-radius: 50%; */
+  border-radius: 30%;
+  height: 38px;
+  width: 38px !important;
+}
+
+.interval {
+  height: 60px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 20px;
 }

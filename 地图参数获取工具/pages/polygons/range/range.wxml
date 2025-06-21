@@ -1,5 +1,13 @@
 <!--pages/polygons/range/range.wxml-->
-<map id="map" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" markers='{{markers}}' polygons="{{polygons}}" bindtap="bindMap" />
+<map
+  id="map"
+  latitude="{{latitude}}"
+  longitude="{{longitude}}"
+  scale="{{scale}}"
+  markers="{{markers}}"
+  polygons="{{polygons}}"
+  bindtap="bindMap"
+/>
 
 <view class="text">
   点

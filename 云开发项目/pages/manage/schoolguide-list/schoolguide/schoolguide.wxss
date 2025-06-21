@@ -52,7 +52,6 @@ page {
   align-items: center;
   flex-direction: row;
   margin-bottom: 10px;
-
 }
 
 .card-container-title-img {
@@ -95,7 +94,7 @@ page {
   line-height: 1.5;
   overflow: auto;
   padding: 10px 10px 20px 10px;
-  border: 1px solid #ECECEC;
+  border: 1px solid #ececec;
 }
 
 .card-container-form-list-list-picker {

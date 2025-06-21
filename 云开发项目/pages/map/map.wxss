@@ -15,7 +15,7 @@
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
-  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2)
+  box-shadow: 1px 1px 5px 2px rgba(0, 0, 0, 0.2);
 }
 
 .card-top-left {
@@ -92,6 +92,7 @@
 }
 
 .relative {
+  width: 100%;
   position: relative;
   height: 40px;
   display: flex;
@@ -247,4 +248,20 @@
 
 .road_end {
   margin-top: 10px;
+}
+
+.picker {
+  /* border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin: 0 5px;
+  padding: 2px 5px;
+  background: #f8f8f8; /* 头部背景色 */
+  border-radius: 8rpx; /* 圆角 */
+  border: 1rpx solid #ddd; /* 边框 */
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
 }

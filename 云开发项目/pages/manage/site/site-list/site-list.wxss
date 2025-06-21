@@ -22,11 +22,11 @@ page {
 }
 
 .card-container-title-font {
-width: 100%;
-color: #73a5d6;
-margin: 15px 0;
-font-size: 30px;
-text-align: center;
+  width: 100%;
+  color: #73a5d6;
+  margin: 15px 0;
+  font-size: 30px;
+  text-align: center;
 }
 
 .card-container-container {
@@ -127,4 +127,20 @@ text-align: center;
   color: white;
   border-radius: 20px;
   font-weight: bold;
+}
+
+.picker {
+  /* border: 1px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+  margin: 0 5px;
+  padding: 2px 5px;
+  background: #f8f8f8; /* 头部背景色 */
+  border-radius: 8rpx; /* 圆角 */
+  border: 1rpx solid #ddd; /* 边框 */
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+  align-items: center;
 }

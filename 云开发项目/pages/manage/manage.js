@@ -1,62 +1,50 @@
 // pages/manage/manage.js
 Page({
-    taptocategory(e) {
-      wx.navigateTo({
-        url: './site/category-list/category-list',
-      })
-    },
-    
-    taptosite(e) {
-      wx.navigateTo({
-        url: './site/site-list/site-list',
-      })
-    },
+  taptocampus() {
+    wx.navigateTo({
+      url: './site/campus-list/campus-list',
+    });
+  },
 
-    taptodefaultsite() {
-        wx.navigateTo({
-            url: './site/default-site/default-site',
-        })
-    },
+  taptocategory(e) {
+    wx.navigateTo({
+      url: './site/category-list/category-list',
+    });
+  },
 
-    taptorange() {
-        wx.navigateTo({
-            url: './site/range/range',
-        })
-    },
+  taptosite(e) {
+    wx.navigateTo({
+      url: './site/site-list/site-list',
+    });
+  },
 
-    taptomapimg(e) {
-        wx.navigateTo({
-            url: './media/map-img/map-img',
-        })
-    },
+  taptocarousel(e) {
+    wx.navigateTo({
+      url: './media/carousel/carousel',
+    });
+  },
 
-    taptocarousel(e) {
-        wx.navigateTo({
-            url: './media/carousel/carousel',
-        })
-    },
+  taptovideo(e) {
+    wx.navigateTo({
+      url: './media/video/video',
+    });
+  },
 
-    taptovideo(e) {
-        wx.navigateTo({
-            url: './media/video/video',
-        })
-    },
+  taptodefaultimg(e) {
+    wx.navigateTo({
+      url: './media/default-image/default-image',
+    });
+  },
 
-    taptodefaultimg(e) {
-        wx.navigateTo({
-            url: './media/default-image/default-image',
-        })
-    },
+  taptoguide() {
+    wx.navigateTo({
+      url: './schoolguide-list/schoolguide-list',
+    });
+  },
 
-    taptoguide() {
-        wx.navigateTo({
-            url: './schoolguide-list/schoolguide-list',
-        })
-    },
-
-    taptoadmin() {
-        wx.navigateTo({
-            url: './admin-list/admin-list',
-        })
-    }
-})
+  taptoadmin() {
+    wx.navigateTo({
+      url: './admin-list/admin-list',
+    });
+  },
+});

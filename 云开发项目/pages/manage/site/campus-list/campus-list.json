@@ -1,4 +1,5 @@
 {
-    "usingComponents": {},
-    "navigationBarTitleText": "校区列表"
+  "usingComponents": {},
+  "backgroundTextStyle": "dark",
+  "navigationBarTitleText": "校区管理"
 }

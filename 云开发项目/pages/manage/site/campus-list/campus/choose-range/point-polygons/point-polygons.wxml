@@ -1,0 +1,18 @@
+<!--pages/manage/site/campus-list/campus/choose-range/point-polygons/point-polygons.wxml-->
+<map
+  id="map"
+  latitude="{{latitude}}"
+  longitude="{{longitude}}"
+  scale="{{scale}}"
+  markers="{{markers}}"
+  polygons="{{polygons}}"
+  bindtap="bindMap"
+/>
+
+<view class="text">
+  点
+  <span style="color: {{isAtPolygons ? 'black' : 'red'}}; margin: 0 5px;">
+    {{isAtPolygons ? '在' : '不在'}}
+  </span>
+  多边形内
+</view>

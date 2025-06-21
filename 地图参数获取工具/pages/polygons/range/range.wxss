@@ -1,5 +1,5 @@
 /* pages/polygons/range/range.wxss */
-page{
+page {
   height: 100%;
 }
 

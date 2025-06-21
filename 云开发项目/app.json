@@ -1,93 +1,88 @@
 {
-    "pages": [
-        "pages/home/home",
-        "pages/home/introduction/introduction",
-        "pages/home/rank/rank",
-        "pages/map/map",
-        "pages/map/instruction/instruction",
-        "pages/map/search/search",
-        "pages/site/site",
-        "pages/school/school",
-        "pages/school/guidance/guidance",
-        "pages/more/more",
-        "pages/more/statement/statement",
-        "pages/manage/manage",
-        "pages/manage/site/campus-list/campus-list",
-        "pages/manage/site/campus-list/campus/campus",
-        "pages/manage/site/campus-list/campus/choose-range/choose-range",
-        "pages/manage/site/category-list/category-list",
-        "pages/manage/site/category-list/category/category",
-        "pages/manage/site/site-list/site-list",
-        "pages/manage/site/site-list/site/site",
-        "pages/manage/site/site-list/site/choose-point/choose-point",
-        "pages/manage/site/default-site/default-site",
-        "pages/manage/site/range/range",
-        "pages/manage/site/range/polygons/polygons",
-        "pages/manage/media/map-img/map-img",
-        "pages/manage/media/carousel/carousel",
-        "pages/manage/media/video/video",
-        "pages/manage/media/default-image/default-image",
-        "pages/manage/schoolguide-list/schoolguide-list",
-        "pages/manage/schoolguide-list/schoolguide/schoolguide",
-        "pages/manage/admin-list/admin-list",
-        "pages/manage/admin-list/admin/admin"
-    ],
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#ffffff",
-        "navigationBarTitleText": "桂院校园导航",
-        "navigationBarTextStyle": "black"
-    },
-    "tabBar": {
-        "list": [
-            {
-                "selectedIconPath": "/images/tabbar/icon_map_HL.png",
-                "iconPath": "/images/tabbar/icon_map.png",
-                "pagePath": "pages/map/map",
-                "text": "地图"
-            },
-            {
-                "selectedIconPath": "/images/tabbar/icon_collection_HL.png",
-                "iconPath": "/images/tabbar/icon_collection.png",
-                "pagePath": "pages/site/site",
-                "text": "地点汇总"
-            },
-            {
-                "selectedIconPath": "/images/tabbar/icon_home_HL.png",
-                "iconPath": "/images/tabbar/icon_home.png",
-                "pagePath": "pages/home/home",
-                "text": "首页"
-            },
-            {
-                "selectedIconPath": "/images/tabbar/icon_school_HL.png",
-                "iconPath": "/images/tabbar/icon_school.png",
-                "pagePath": "pages/school/school",
-                "text": "校园指南"
-            },
-            {
-                "selectedIconPath": "/images/tabbar/icon_more_HL.png",
-                "iconPath": "/images/tabbar/icon_more.png",
-                "pagePath": "pages/more/more",
-                "text": "更多"
-            }
-        ]
-    },
-    "style": "v2",
-    "sitemapLocation": "sitemap.json",
-    "lazyCodeLoading": "requiredComponents",
-    "useExtendedLib": {
-        "weui": true
-    },
-    "requiredPrivateInfos": [
-        "getLocation"
-    ],
-    "permission": {
-        "scope.userLocation": {
-            "desc": "需要获取你当前位置信息"
-        }
-    },
-    "resolveAlias": {
-      "@data/*": "data/*",
-      "@libs/*": "libs/*"
+  "pages": [
+    "pages/home/home",
+    "pages/home/introduction/introduction",
+    "pages/home/rank/rank",
+    "pages/map/map",
+    "pages/map/instruction/instruction",
+    "pages/map/search/search",
+    "pages/site/site",
+    "pages/school/school",
+    "pages/school/guidance/guidance",
+    "pages/more/more",
+    "pages/more/statement/statement",
+    "pages/manage/manage",
+    "pages/manage/site/campus-list/campus-list",
+    "pages/manage/site/campus-list/campus/campus",
+    "pages/manage/site/campus-list/campus/choose-range/choose-range",
+    "pages/manage/site/campus-list/campus/choose-range/point-polygons/point-polygons",
+    "pages/manage/site/category-list/category-list",
+    "pages/manage/site/category-list/category/category",
+    "pages/manage/site/site-list/site-list",
+    "pages/manage/site/site-list/site/site",
+    "pages/manage/site/site-list/site/choose-point/choose-point",
+    "pages/manage/media/carousel/carousel",
+    "pages/manage/media/video/video",
+    "pages/manage/media/default-image/default-image",
+    "pages/manage/schoolguide-list/schoolguide-list",
+    "pages/manage/schoolguide-list/schoolguide/schoolguide",
+    "pages/manage/admin-list/admin-list",
+    "pages/manage/admin-list/admin/admin"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "桂院校园导航",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "selectedIconPath": "/images/tabbar/icon_map_HL.png",
+        "iconPath": "/images/tabbar/icon_map.png",
+        "pagePath": "pages/map/map",
+        "text": "地图"
+      },
+      {
+        "selectedIconPath": "/images/tabbar/icon_collection_HL.png",
+        "iconPath": "/images/tabbar/icon_collection.png",
+        "pagePath": "pages/site/site",
+        "text": "地点汇总"
+      },
+      {
+        "selectedIconPath": "/images/tabbar/icon_home_HL.png",
+        "iconPath": "/images/tabbar/icon_home.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "/images/tabbar/icon_school_HL.png",
+        "iconPath": "/images/tabbar/icon_school.png",
+        "pagePath": "pages/school/school",
+        "text": "校园指南"
+      },
+      {
+        "selectedIconPath": "/images/tabbar/icon_more_HL.png",
+        "iconPath": "/images/tabbar/icon_more.png",
+        "pagePath": "pages/more/more",
+        "text": "更多"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "useExtendedLib": {
+    "weui": true
+  },
+  "requiredPrivateInfos": ["getLocation"],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "需要获取你当前位置信息"
     }
+  },
+  "resolveAlias": {
+    "@data/*": "data/*",
+    "@libs/*": "libs/*"
+  }
 }

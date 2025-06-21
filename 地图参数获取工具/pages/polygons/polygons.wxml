@@ -1,22 +1,37 @@
 <!--pages/polygons/polygons.wxml-->
-<map id="map" latitude="{{latitude}}" longitude="{{longitude}}" scale="{{scale}}" markers='{{markers}}' polygons="{{polygons}}" bindtap="bindMap">
+<map
+  id="map"
+  latitude="{{latitude}}"
+  longitude="{{longitude}}"
+  scale="{{scale}}"
+  markers="{{markers}}"
+  polygons="{{polygons}}"
+  bindtap="bindMap"
+>
   <view class="control-btn" wx:if="{{points.length > 2}}">
     <image src="{{Marker2_Activated}}" class="img" bindtap="torange"></image>
     <view class="text">点与多边形</view>
   </view>
 </map>
 
-<view style="display: flex; margin: 10px 0;">
+<view style="display: flex; margin: 10px 0">
   <button type="default" bindtap="clearPrevious">清除上一个点</button>
   <button type="warn" bindtap="clearGon">清除全部点面</button>
 </view>
 
-<view style="display: flex; margin: 10px 0;">
-  <button type="{{!isShow ? 'default' : 'warn' }}" bindtap="show">{{!isShow ? '显示' : '隐藏' }} 标记点</button>
-  <button style="height: 45px;" type="primary" bindtap="generate">生成数据</button>
+<view style="display: flex; margin: 10px 0">
+  <button type="{{!isShow ? 'default' : 'warn' }}" bindtap="show">
+    {{!isShow ? '显示' : '隐藏' }} 标记点
+  </button>
+  <button style="height: 45px" type="primary" bindtap="generate">生成数据</button>
 </view>
 
-<mp-dialog title="经纬度数组" show="{{dialogShow}}" bindbuttontap="dialogButton" buttons="{{buttons}}">
+<mp-dialog
+  title="经纬度数组"
+  show="{{dialogShow}}"
+  bindbuttontap="dialogButton"
+  buttons="{{buttons}}"
+>
   <view class="title">
     <scroll-view scroll-y="true" class="scroll">
       <text user-select="true">{{points_data}}</text>

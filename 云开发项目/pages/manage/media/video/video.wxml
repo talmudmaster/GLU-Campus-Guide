@@ -1,50 +1,36 @@
 <!--pages/manage/media/video/video.wxml-->
 <view>
-    <view class="card">
-        <view class="card-container">
-            <view class="card-container-title">
-                <view class="card-container-title-font">
-                    视频管理
-                </view>
-            </view>
+  <view class="card">
+    <view class="card-container">
+      <view class="card-container-title">
+        <view class="card-container-title-font"> 视频管理 </view>
+      </view>
 
-            <view class="card-container-container">
-                <button type="primary" size="mini" bindtap="getVideo">
-                    选择视频
-                </button>
+      <view class="card-container-container">
+        <button type="primary" size="mini" bindtap="getVideo">选择视频</button>
 
-                <view class="card-container-container-title title">
-                    预览效果
-                </view>
+        <view class="card-container-container-title title"> 预览效果 </view>
 
-                <view class="yulan" wx:if="{{!videourl}}" bindtap="getVideo">
-                    选择视频后可以查看预览效果
-                </view>
-
-                <view wx:if="{{videourl}}" class="video">
-                    <video initial-time="1" src="{{videourl}}" />
-                </view>
-
-                <view class="tip">
-                    提示：上传新视频会覆盖旧视频
-                </view>
-
-                <view class="tip">
-                    请不要上传过大的视频
-                </view>
-
-                <button type="primary" size="mini" bindtap="updateVideo">
-                    确认上传
-                </button>
-
-                <view class="card-container-container-title title">
-                    实际效果
-                </view>
-
-                <view class="video">
-                    <video src="{{video}}" />
-                </view>
-            </view>
+        <view class="yulan" wx:if="{{!videoPreview}}" bindtap="getVideo">
+          选择视频后可以查看预览效果
         </view>
+
+        <view wx:if="{{videoPreview}}" class="video">
+          <video initial-time="1" src="{{videoPreview}}" />
+        </view>
+
+        <view class="tip"> 提示：上传新视频会覆盖旧视频 </view>
+
+        <view class="tip"> 请不要上传过大的视频 </view>
+
+        <button type="primary" size="mini" bindtap="updateVideo">确认上传</button>
+
+        <view class="card-container-container-title title"> 实际效果 </view>
+
+        <view class="video">
+          <video initial-time="1" src="{{video}}" />
+        </view>
+      </view>
     </view>
+  </view>
 </view>

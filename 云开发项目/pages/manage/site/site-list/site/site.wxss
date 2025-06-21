@@ -28,7 +28,6 @@ page {
   align-items: center;
   flex-direction: row;
   margin-bottom: 10px;
-
 }
 
 .card-container-title-font {
@@ -65,7 +64,7 @@ page {
 }
 
 .height_input {
-height: 75px;
+  height: 75px;
 }
 
 .card-container-form-list-list-picker {

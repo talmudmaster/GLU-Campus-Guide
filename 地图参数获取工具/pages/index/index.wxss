@@ -15,7 +15,7 @@
   font-size: larger;
 }
 
-.button-sp-area{
+.button-sp-area {
   margin: 0 auto;
   width: 60%;
 }

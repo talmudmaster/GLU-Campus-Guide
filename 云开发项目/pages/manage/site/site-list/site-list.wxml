@@ -3,29 +3,40 @@
   <view class="card">
     <view class="card-container">
       <view class="card-container-title">
-        <view class="card-container-title-font">
-          地点管理
-        </view>
+        <view class="card-container-title-font"> 地点管理 </view>
       </view>
 
       <view class="card-container-container">
-        <view style="display: flex; justify-content: space-between;">
-          <button style="margin: 0" type="primary" size="mini" bindtap="addsite">
-            新增地点
-          </button>
+        <view style="display: flex; justify-content: space-between">
+          <button style="margin: 0" type="primary" size="mini" bindtap="addsite">新增地点</button>
+
+          <view>
+            <picker
+              style="width: max-content"
+              bindchange="changeCampus"
+              value="{{0}}"
+              range="{{campus_name_list}}"
+            >
+              <view class="picker"> {{campus_name_list[choose]}} </view>
+            </picker>
+          </view>
         </view>
 
         <!-- 搜索栏 -->
         <view class="root">
           <input class="input" placeholder="请输入要搜索的地点" bindinput="getKey" type="text" />
-          <view class="input_search" type="primary" bindtap="goSearch">
-            搜索
-          </view>
+          <view class="input_search" type="primary" bindtap="goSearch"> 搜索 </view>
         </view>
         <!-- 地点类型栏 -->
-        <scroll-view scroll-x="true" scroll-left="10px" scroll-left="{{scrollLeft}}" scroll-with-animation="true">
+        <scroll-view scroll-x="true" scroll-left="10px" scroll-left="{{scrollLeft}}">
           <view class="card-bottom-category" style="width: {{site_data.length*75}}px;">
-            <view class="card-bottom-category-label {{index == category ? 'choose' : ''}}" wx:for="{{site_data}}" wx:key="id" id="{{index}}" bindtap="changeCategory">
+            <view
+              class="card-bottom-category-label {{index == category ? 'choose' : ''}}"
+              wx:for="{{site_data}}"
+              wx:key="id"
+              id="{{index}}"
+              bindtap="changeCategory"
+            >
               {{item.name}}
             </view>
           </view>
@@ -42,12 +53,18 @@
           <view class="card-container-container-site-title">
             <view>{{item.name}} </view>
 
-            <view class="card-container-container-site-title-desc">
-              {{item.aliases}}
-            </view>
+            <view class="card-container-container-site-title-desc"> {{item.aliases}} </view>
           </view>
           <view class="card-container-container-title-title">
-            <button type="primary" size="mini" bindtap="managesite" data-_id="{{item._id}}" data-id="{{index}}" data-c_id="{{item.c_id}}">
+            <button
+              type="primary"
+              size="mini"
+              bindtap="managesite"
+              data-_id="{{item._id}}"
+              data-id="{{index}}"
+              data-c_id="{{item.c_id}}"
+              data-campus_id="{{item.campus_id}}"
+            >
               管理
             </button>
           </view>

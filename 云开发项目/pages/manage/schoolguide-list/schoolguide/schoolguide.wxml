@@ -1,109 +1,132 @@
 <!--pages/manage/guide-list/guide/guide.wxml-->
 <view>
-    <view class="card">
-        <view class="card-top">
-            校园指南管理
+  <view class="card">
+    <view class="card-top"> 校园指南管理 </view>
+
+    <view class="card-container">
+      <view wx:if="{{sid == 1}}" class="card-container-title">
+        <view class="card-container-title-font"> 新增校园指南 </view>
+      </view>
+
+      <view wx:if="{{sid == 2}}" class="card-container-title">
+        <view class="card-container-title-font"> 管理校园指南 </view>
+      </view>
+
+      <view class="card-container-form">
+        <view class="card-container-form-list">
+          <view class="card-container-form-list-text"> 名称： </view>
+
+          <input
+            class="card-container-form-list-input"
+            type="text"
+            bindinput="getTitle"
+            value="{{title}}"
+          />
         </view>
 
-        <view class="card-container">
-            <view wx:if="{{sid == 1}}" class="card-container-title">
-                <view class="card-container-title-font">
-                    新增校园指南
-                </view>
+        <view class="card-container-form-list">
+          <view class="card-container-form-list-text"> 搜索关键词： </view>
+
+          <view style="width: min-content">
+            <view style="display: flex; align-items: center">
+              <input
+                class="card-container-form-list-input"
+                style="width: 120px"
+                type="text"
+                bindinput="getKeyword"
+                value="{{keyword}}"
+              />
+
+              <view
+                class="card-container-form-list-list-picker"
+                style="width: 50px; margin-left: 10px"
+                bindtap="addKeyword"
+              >
+                添加
+              </view>
             </view>
 
-            <view wx:if="{{sid == 2}}" class="card-container-title">
-                <view class="card-container-title-font">
-                    管理校园指南
-                </view>
+            <view class="tag-container" wx:if="{{keywords.length > 0}}">
+              <view
+                wx:for="{{keywords}}"
+                wx:key="id"
+                class="tag-item"
+                data-index="{{index}}"
+                animation="{{item.animation}}"
+              >
+                {{item.name}}
+                <view class="close-btn" bind:tap="handleClose" data-id="{{item.id}}">×</view>
+              </view>
             </view>
-
-
-            <view class="card-container-form">
-                <view class="card-container-form-list">
-                    <view class="card-container-form-list-text">
-                        名称：
-                    </view>
-
-                    <input class="card-container-form-list-input" type="text" bindinput="getTitle" value="{{title}}" />
-                </view>
-
-                <view class="card-container-form-list">
-                    <view class="card-container-form-list-text">
-                        搜索关键词：
-                    </view>
-
-                    <view style="width: min-content">
-                      <view style="display: flex; align-items: center;">
-                        <input class="card-container-form-list-input" style="width: 120px" type="text" bindinput="getKeyword" value="{{keyword}}"/>
-
-                        <view class="card-container-form-list-list-picker" style="width: 50px; margin-left: 10px;" bindtap="addKeyword">
-                            添加
-                        </view>
-                      </view>
-
-                      <view class="tag-container" wx:if="{{keywords.length > 0}}">
-                        <view 
-                          wx:for="{{keywords}}"
-                          wx:key="id"
-                          class="tag-item"
-                          data-index="{{index}}"
-                          animation="{{item.animation}}"
-                        >
-                          {{item.name}}
-                          <view 
-                            class="close-btn" 
-                            bind:tap="handleClose"
-                            data-id="{{item.id}}"
-                          >×</view>
-                        </view>
-                      </view>
-                    </view>
-                </view>
-
-                <view class="card-container-form-list">
-                    <view class="card-container-form-list-text">
-                        内容：
-                    </view>
-
-                    <!-- <input class="card-container-form-list-input" type="text" bindinput="getContent" value="{{content}}" /> -->
-
-                    <editor id="editor" showImgSize='true' class="ql-container" placeholder="{{placeholder}}" bindstatuschange="onStatusChange" bindready="onEditorReady" bindinput="onInput">
-                    </editor>
-                </view>
-
-                <view class="card-container-form-list">
-                    <view class="card-container-form-list-text">
-                        图片：
-                    </view>
-
-                    <view class="card-container-form-list-list-picker" bindtap="getImg">
-                        选择图片
-                    </view>
-                </view>
-
-                <swiper class="list-landscape-container-swiper" next-margin="20px" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" interval="{{interval}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{activeColor}}" wx:if="{{imageList.length}}">
-                    <block wx:for="{{imageList}}" wx:key="*this">
-                        <swiper-item>
-                            <view class="list-landscape-container-swiper-item">
-                                <image class="list-landscape-container-swiper-item-img" mode="aspectFit" src="{{item}}"></image>
-                            </view>
-                        </swiper-item>
-                    </block>
-                </swiper>
-
-                <view class="tip">
-                  <view>提示：上传新图片会覆盖所有旧图片。</view>
-                  <view>为确保观感，上传多张图片尽量宽高比一致。</view>
-                </view>
-
-                <button wx:if="{{sid == 1}}" type="primary" bindtap="addschoolguide">确认添加</button>
-
-                <button wx:if="{{sid == 2}}" type="primary" bindtap="updateschoolguide">确认修改</button>
-
-                <button wx:if="{{sid == 2}}" type="warn" bindtap="removeschoolguide" style="margin-top: 20px;">确认删除</button>
-            </view>
+          </view>
         </view>
 
+        <view class="card-container-form-list">
+          <view class="card-container-form-list-text"> 内容： </view>
+
+          <!-- <input class="card-container-form-list-input" type="text" bindinput="getContent" value="{{content}}" /> -->
+
+          <editor
+            id="editor"
+            showImgSize="true"
+            class="ql-container"
+            placeholder="{{placeholder}}"
+            bindstatuschange="onStatusChange"
+            bindready="onEditorReady"
+            bindinput="onInput"
+          >
+          </editor>
+        </view>
+
+        <view class="card-container-form-list">
+          <view class="card-container-form-list-text"> 图片： </view>
+
+          <view class="card-container-form-list-list-picker" bindtap="getImg"> 选择图片 </view>
+        </view>
+
+        <swiper
+          class="list-landscape-container-swiper"
+          next-margin="20px"
+          indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}"
+          circular="{{circular}}"
+          interval="{{interval}}"
+          duration="{{duration}}"
+          indicator-color="{{indicatorColor}}"
+          indicator-active-color="{{activeColor}}"
+          wx:if="{{imageList.length}}"
+        >
+          <block wx:for="{{imageList}}" wx:key="*this">
+            <swiper-item>
+              <view class="list-landscape-container-swiper-item">
+                <image
+                  class="list-landscape-container-swiper-item-img"
+                  mode="aspectFit"
+                  src="{{item}}"
+                ></image>
+              </view>
+            </swiper-item>
+          </block>
+        </swiper>
+
+        <view class="tip">
+          <view>提示：上传新图片会覆盖所有旧图片。</view>
+          <view>为确保观感，上传多张图片尽量宽高比一致。</view>
+        </view>
+
+        <button wx:if="{{sid == 1}}" type="primary" bindtap="addschoolguide">确认添加</button>
+
+        <button wx:if="{{sid == 2}}" type="primary" bindtap="updateschoolguide">确认修改</button>
+
+        <button
+          wx:if="{{sid == 2}}"
+          type="warn"
+          bindtap="removeschoolguide"
+          style="margin-top: 20px"
+        >
+          确认删除
+        </button>
+      </view>
     </view>
+  </view>
 </view>

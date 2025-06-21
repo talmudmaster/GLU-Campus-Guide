@@ -1,11 +1,11 @@
 {
-    "usingComponents": {
-      "mp-form": "weui-miniprogram/form/form",
-      "mp-form-page": "weui-miniprogram/form-page/form-page",
-      "mp-cell": "weui-miniprogram/cell/cell",
-      "mp-cells": "weui-miniprogram/cells/cells",
-      "mp-dialog": "weui-miniprogram/dialog/dialog"
-    },
-    "componentFramework": "glass-easel",
-    "navigationBarTitleText": "静态项目地点生成"
+  "usingComponents": {
+    "mp-form": "weui-miniprogram/form/form",
+    "mp-form-page": "weui-miniprogram/form-page/form-page",
+    "mp-cell": "weui-miniprogram/cell/cell",
+    "mp-cells": "weui-miniprogram/cells/cells",
+    "mp-dialog": "weui-miniprogram/dialog/dialog"
+  },
+  "componentFramework": "glass-easel",
+  "navigationBarTitleText": "静态项目地点生成"
 }

@@ -24,7 +24,7 @@ map {
   position: absolute;
   width: 45px;
   z-index: 99;
-  background: #FFF;
+  background: #fff;
   text-align: center;
   border-radius: 4px;
   right: 10px;

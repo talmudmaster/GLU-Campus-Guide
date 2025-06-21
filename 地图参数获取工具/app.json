@@ -15,7 +15,8 @@
     "navigationBarTextStyle": "black"
   },
   "tabBar": {
-    "list": [{
+    "list": [
+      {
         "selectedIconPath": "/images/tabbar/icon_home_HL.png",
         "iconPath": "/images/tabbar/icon_home.png",
         "pagePath": "pages/index/index",

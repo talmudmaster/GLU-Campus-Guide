@@ -8,7 +8,7 @@
   <img src="https://gitee.com/talmudmaster/GLU-Campus-Guide/badge/star.svg?theme=dark" />
   <img src="https://img.shields.io/github/stars/talmudmaster/GLU-Campus-Guide" />
   <img src="https://img.shields.io/badge/platform-微信小程序-teal?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/version-2.2-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/version-2.3.0-blue?style=for-the-badge" />
   <img src="https://img.shields.io/badge/license-MulanPSL-forestgreen?style=for-the-badge" />
 </p>
 
@@ -24,9 +24,7 @@
 
 仅需修改地图配置文件和云端数据，即可 **适配任意校园**
 
-**📢 多校区切换已经大致实现，需要的可以联系**
-
-☑️ 地图选点与搜索 ☑️ 地图路线规划 ☑️ 校园信息展示 ☑️ 在线管理数据
+☑️ 多校区切换 ☑️ 地图选点与搜索 ☑️ 地图路线规划 ☑️ 校园信息展示 ☑️ 在线管理数据
 
 原生微信小程序 + weui组件库 + 腾讯位置服务 API + 和风天气 API + 云开发
 
@@ -36,7 +34,7 @@
 
 # 📢 写在前面
 
-> **① 多校区切换已经大致实现，需要的可以联系**  
+> **① 单校区也可以使用多校区的所在版本，不必使用以前的**  
 > <br>
 > **② 实在不会搞的，可以通过下面的联系方式私聊**  
 > <br>
@@ -67,6 +65,7 @@
 
 ## ① 地图相关
 
+- ✅ 多校区切换 | **2.3.0 版本已上线**
 - ✅ 校园地点分类动态展示
 - ✅ 地点选择与搜索
 - ✅ 地点信息展示
@@ -84,7 +83,7 @@
 
 ## ③ 在线管理
 
-- ✅ 管理校区 | **多校区功能已实现，可私聊**
+- ✅ 管理校区 | **2.3.0 版本已上线**
 - ✅ 管理地点数据（地点类型、地点） | **2.0 版本起，新增 默认地点**
 - ✅ 地点坐标获取（地图选点）
 - ✅ 管理媒体文件（轮播图、视频及地点默认图片） | **2.0 版本起，删去封面，新增 地点默认图片**
@@ -207,7 +206,7 @@
 - 提取所有云端调用接口、通用方法逻辑到外部js文件
 - 使用 async/await 优化云函数接口调用后页面的 js 逻辑
 - 实现 精准的地理位置判断，检测当前位置是否处于学校区域内（射线法思想） ✔️
-- 实现 多校区切换（**已经大致实现，需要的可以联系**） ✔️
+- 实现 多校区切换 ✔️
 - 实现 全景图 动态管理
 - 实现 校车路线、浏览路线展示
 - 引入 AI大语言模型对话

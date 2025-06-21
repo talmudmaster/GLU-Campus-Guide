@@ -52,7 +52,6 @@ page {
   align-items: center;
   flex-direction: row;
   margin-bottom: 10px;
-
 }
 
 .card-container-title-img {
@@ -83,20 +82,20 @@ page {
 }
 
 .card-container-form-list-list-picker {
-width: 100px;
-border: 1px solid grey;
-border-radius: 8px;
-padding: 2px;
-text-align: center;
-color: white;
-background-color: #07c160;
-margin-right: 10px;
+  width: 100px;
+  border: 1px solid grey;
+  border-radius: 8px;
+  padding: 2px;
+  text-align: center;
+  color: white;
+  background-color: #07c160;
+  margin-right: 10px;
 }
 
 .card-container-form-list-img {
-width: 100%;
-display: flex;
-justify-content: center;
-align-items: center;
-margin: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
 }

@@ -1,0 +1,15 @@
+# 依赖目录
+node_modules/
+
+# 开发者工具生成文件
+project.private.config.json
+
+# 操作系统文件
+.DS_Store
+Thumbs.db
+
+# 日志文件
+*.log
+
+# 忽略所有云函数的依赖
+cloudfunctions/**/node_modules/

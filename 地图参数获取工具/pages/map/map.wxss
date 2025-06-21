@@ -9,7 +9,7 @@ map {
   height: 40px;
   width: 40px;
   z-index: 99;
-  background: #FFF;
+  background: #fff;
   line-height: 35px;
   font-size: 30px;
   text-align: center;

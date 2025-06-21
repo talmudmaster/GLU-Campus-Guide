@@ -19,7 +19,6 @@ page {
   align-items: center;
   flex-direction: row;
   margin-bottom: 10px;
-
 }
 
 .card-container-title-img {
@@ -28,11 +27,11 @@ page {
 }
 
 .card-container-title-font {
-width: 100%;
-color: #73a5d6;
-margin: 15px 0;
-font-size: 30px;
-text-align: center;
+  width: 100%;
+  color: #73a5d6;
+  margin: 15px 0;
+  font-size: 30px;
+  text-align: center;
 }
 
 .card-container-container {

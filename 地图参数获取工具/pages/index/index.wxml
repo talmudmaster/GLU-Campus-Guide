@@ -1,17 +1,31 @@
 <!--pages/index/index.wxml-->
 <view class="btn-area">
-  <button class="button-index" type="primary" style="width: 70%;" bind:tap="map">地图参数获取与设置</button>
-  <button class="button-index" type="default" style="width: 70%;" bind:tap="polygons">地图多边形绘制</button>
-  <button class="button-index" type="default" style="width: 70%;" bind:tap="range">点与多边形</button>
-  <button class="button-index" type="default" style="width: 70%;" bind:tap="location">定位接口申请极速版</button>
-  <button class="button-index" type="default" style="width: 70%;" bind:tap="site">静态项目地点数据生成 </button>
-  <button class="button-index" type="warn" style="width: 70%;" bind:tap="study">学习、交流 与 讨论</button>
+  <button class="button-index" type="primary" style="width: 70%" bind:tap="map">
+    地图参数获取与设置
+  </button>
+  <button class="button-index" type="default" style="width: 70%" bind:tap="polygons">
+    地图多边形绘制
+  </button>
+  <button class="button-index" type="default" style="width: 70%" bind:tap="range">
+    点与多边形
+  </button>
+  <button class="button-index" type="default" style="width: 70%" bind:tap="location">
+    定位接口申请极速版
+  </button>
+  <button class="button-index" type="default" style="width: 70%" bind:tap="site">
+    静态项目地点数据生成
+  </button>
+  <button class="button-index" type="warn" style="width: 70%" bind:tap="study">
+    学习、交流 与 讨论
+  </button>
 </view>
 
 <mp-dialog title="相关信息" show="{{dialogShow}}" bindbuttontap="dialogButton" buttons="{{button}}">
   <view class="title" wx:for="{{info}}" wx:key="index">
     <view class="title_text">{{item.name}}</view>
-    <textarea style="width: 100%;" auto-height value="{{item.content}}" />
-    <button class="button-dialog" type="primary" bind:tap="getInfo" data-content="{{item.content}}">复制</button>
+    <textarea style="width: 100%" auto-height value="{{item.content}}" />
+    <button class="button-dialog" type="primary" bind:tap="getInfo" data-content="{{item.content}}">
+      复制
+    </button>
   </view>
 </mp-dialog>

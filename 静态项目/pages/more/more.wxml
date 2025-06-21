@@ -1,5 +1,5 @@
 <!--pages/more/more.wxml-->
-<view style="height: 100%;">
+<view style="height: 100%">
   <view class="my">
     <view class="center">
       <view class="center_top">
@@ -8,23 +8,21 @@
             <image src="{{avatarUrl}}" class="user_head" mode="" />
           </view>
           <view class="center_info">
-            <view class="center_name">
-              {{miniprogram_name}}
-            </view>
+            <view class="center_name"> {{miniprogram_name}} </view>
 
-            <view class="center_welcome">
-              欢迎使用校园导航小程序
-            </view>
+            <view class="center_welcome"> 欢迎使用校园导航小程序 </view>
           </view>
         </view>
       </view>
     </view>
     <view class="menu">
       <view bindtap="tostatement" class="menu_row">
-        <image style="height:60rpx;width:60rpx;margin-left:30rpx;" src="{{statement}}">
-        </image>
-        <view style="margin-left:10rpx;">软件声明</view>
-        <image style="height:40rpx;width:40rpx;margin-left:auto;margin-right:10px" src="{{green_arrow}}">
+        <image style="height: 60rpx; width: 60rpx; margin-left: 30rpx" src="{{statement}}"> </image>
+        <view style="margin-left: 10rpx">软件声明</view>
+        <image
+          style="height: 40rpx; width: 40rpx; margin-left: auto; margin-right: 10px"
+          src="{{green_arrow}}"
+        >
         </image>
       </view>
 
@@ -37,40 +35,48 @@
       </view> -->
 
       <view bindtap="contact" class="menu_row">
-        <image style="height:60rpx;width:60rpx;margin-left:30rpx;" src="{{users}}">
-        </image>
-        <view style="margin-left:10rpx;">联系作者</view>
-        <image style="height:40rpx;width:40rpx;margin-left:auto;margin-right:10px" src="{{green_arrow}}">
+        <image style="height: 60rpx; width: 60rpx; margin-left: 30rpx" src="{{users}}"> </image>
+        <view style="margin-left: 10rpx">联系作者</view>
+        <image
+          style="height: 40rpx; width: 40rpx; margin-left: auto; margin-right: 10px"
+          src="{{green_arrow}}"
+        >
         </image>
       </view>
 
-      <button class="menu_row open_type" style="width: 95%;" open-type="contact">
-        <image style="height:60rpx;width:60rpx;margin-left:30rpx;" src="{{chat}}">
-        </image>
-        <view style="margin-left:10rpx;">客服对话</view>
-        <image style="height:40rpx;width:40rpx;margin-left:auto;margin-right:10px" src="{{green_arrow}}">
+      <button class="menu_row open_type" style="width: 95%" open-type="contact">
+        <image style="height: 60rpx; width: 60rpx; margin-left: 30rpx" src="{{chat}}"> </image>
+        <view style="margin-left: 10rpx">客服对话</view>
+        <image
+          style="height: 40rpx; width: 40rpx; margin-left: auto; margin-right: 10px"
+          src="{{green_arrow}}"
+        >
         </image>
       </button>
 
-      <button class="menu_row open_type" style="width: 95%;" open-type="feedback">
-        <image style="height:60rpx;width:60rpx;margin-left:30rpx;" src="{{feedback}}">
-        </image>
-        <view style="margin-left:10rpx;">意见反馈</view>
-        <image style="height:40rpx;width:40rpx;margin-left:auto;margin-right:10px" src="{{green_arrow}}">
+      <button class="menu_row open_type" style="width: 95%" open-type="feedback">
+        <image style="height: 60rpx; width: 60rpx; margin-left: 30rpx" src="{{feedback}}"> </image>
+        <view style="margin-left: 10rpx">意见反馈</view>
+        <image
+          style="height: 40rpx; width: 40rpx; margin-left: auto; margin-right: 10px"
+          src="{{green_arrow}}"
+        >
         </image>
       </button>
 
       <!-- <button class="menu_row open_type" style="width: 95%;" open-type="share"> -->
-      <button class="menu_row open_type" style="width: 95%;" bindtap="share">
-        <image style="height:60rpx;width:60rpx;margin-left:30rpx;" src="{{share}}">
-        </image>
-        <view style="margin-left:10rpx;">推荐给好友</view>
-        <image style="height:40rpx;width:40rpx;margin-left:auto;margin-right:10px" src="{{green_arrow}}">
+      <button class="menu_row open_type" style="width: 95%" bindtap="share">
+        <image style="height: 60rpx; width: 60rpx; margin-left: 30rpx" src="{{share}}"> </image>
+        <view style="margin-left: 10rpx">推荐给好友</view>
+        <image
+          style="height: 40rpx; width: 40rpx; margin-left: auto; margin-right: 10px"
+          src="{{green_arrow}}"
+        >
         </image>
       </button>
     </view>
 
-    <view style="font-size:30rpx;color:#717776; text-align: center;">
+    <view style="font-size: 30rpx; color: #717776; text-align: center">
       <text decode="{{true}}">{{miniprogram_name}}&ensp;|&ensp;版权归开发者所有</text>
     </view>
   </view>
