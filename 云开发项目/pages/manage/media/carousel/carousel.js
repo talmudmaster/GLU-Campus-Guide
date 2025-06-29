@@ -28,7 +28,7 @@ Page({
   },
 
   get() {
-    var that = this;
+    var _this = this;
     db.collection('media')
       .get()
       .then(res => {
@@ -43,7 +43,7 @@ Page({
             defaultImg: data[0].defaultImg,
           });
         } else {
-          that.addMedia();
+          _this.addMedia();
         }
       })
       .catch(err => {
@@ -65,8 +65,8 @@ Page({
   },
 
   getImg() {
-    var that = this;
-    var list = that.data.carouselPreview;
+    var list = this.data.carouselPreview;
+    var _this = this;
     wx.chooseMedia({
       count: 6,
       success(res) {
@@ -78,7 +78,7 @@ Page({
             filePath: res.tempFiles[i].tempFilePath,
             success(res) {
               list.push(res.fileID);
-              that.setData({
+              _this.setData({
                 carouselPreview: list,
               });
             },

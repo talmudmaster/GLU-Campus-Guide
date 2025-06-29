@@ -1,7 +1,7 @@
 /**
  * 当前时间格式化
  */
-export function formatDate() {
+export const formatDate = () => {
   const pad = num => String(num).padStart(2, '0'); // 封装一个通用的补零函数
 
   const date = new Date();
@@ -19,7 +19,7 @@ export function formatDate() {
  * 计算图片容器高度，保持图片原始比例
  * @param {Object} e 事件对象
  */
-export function handleImageLoad(e) {
+export const handleImageLoad = (e) => {
   const { windowWidth } = wx.getWindowInfo(); // 获取屏幕宽度
   const { height: imgHeight, width: imgWidth } = e.detail; // 解构图片宽高
 
@@ -36,7 +36,7 @@ export function handleImageLoad(e) {
  * @param {{longitude: number, latitude: number}} point - 待检测点
  * @param {{longitude: number, latitude: number}[]} polygon - 多边形顶点数组
  */
-export function isPointInPolygon(point, polygon) {
+export const isPointInPolygon = (point, polygon) => {
   // 预处理：全部转为数值
   const toNum = ({ longitude, latitude }) => ({
     longitude: +longitude,
@@ -96,7 +96,7 @@ export function isPointInPolygon(point, polygon) {
  * @param {{longitude: number, latitude: number}} a - 线段起点
  * @param {{longitude: number, latitude: number}} b - 线段终点
  */
-export function isPointOnSegment(p, a, b) {
+export const isPointOnSegment = (p, a, b) => {
   // 强制转换为数值
   const toNum = obj => ({
     longitude: +obj.longitude,

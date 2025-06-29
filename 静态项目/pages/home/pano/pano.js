@@ -58,7 +58,7 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady() {
-    wxPano.onReady = function () {
+    wxPano.onReady = () => {
       // wxPano初始化完成后会触发此事件
     };
     wxPano.config({

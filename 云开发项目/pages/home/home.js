@@ -125,6 +125,7 @@ Page({
 
   // 获取天气
   getWeather() {
+    var _this = this;
     wx.request({
       url: 'https://devapi.qweather.com/v7/weather/now',
       data: {
@@ -132,7 +133,7 @@ Page({
         key: this.data.APIKEY,
       },
       success(res) {
-        that.setData({
+        _this.setData({
           now: res.data.now,
         });
       },

@@ -28,14 +28,14 @@ Page({
   },
 
   getRect() {
-    var that = this;
+    var _this = this;
     wx.createSelectorQuery()
       .select('#search')
-      .boundingClientRect(function (rect) {
+      .boundingClientRect((rect) => {
         rect.height; // 节点的高度
       })
       .exec(res => {
-        that.setData({
+        _this.setData({
           top: res[0].height,
         });
       });

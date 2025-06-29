@@ -59,17 +59,17 @@ Page({
   },
 
   getList() {
-    var that = this;
+    var _this = this;
     wx.cloud
       .callFunction({
         name: 'rank',
         data: {
-          current: that.data.current,
-          campus_id: that.data.campus_id,
+          current: _this.data.current,
+          campus_id: _this.data.campus_id,
         },
       })
       .then(res => {
-        that.setData({
+        _this.setData({
           list: res.result.data.data,
           pagination: res.result.pagination,
         });

@@ -21,7 +21,7 @@ Page({
   },
 
   get() {
-    var that = this;
+    var _this = this;
     db.collection('media')
       .get()
       .then(res => {
@@ -36,7 +36,7 @@ Page({
             defaultImg: data[0].defaultImg,
           });
         } else {
-          that.addMedia();
+          _this.addMedia();
         }
       })
       .catch(err => {
@@ -58,7 +58,7 @@ Page({
   },
 
   getVideo() {
-    var that = this;
+    var _this = this;
     wx.chooseMedia({
       count: 1,
       success(res) {
@@ -68,7 +68,7 @@ Page({
           cloudPath: new Date().getTime() + ext,
           filePath: res.tempFiles[0].tempFilePath,
           success(res) {
-            that.setData({
+            _this.setData({
               videoPreview: res.fileID,
             });
           },

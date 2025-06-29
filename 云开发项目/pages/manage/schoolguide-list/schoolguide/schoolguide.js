@@ -141,13 +141,13 @@ Page({
   },
 
   onEditorReady() {
-    const that = this;
-    let content = that.data.content;
+    const _this = this;
+    let content = _this.data.content;
     wx.createSelectorQuery()
       .select('#editor')
-      .context(function (res) {
-        that.editorCtx = res.context;
-        that.editorCtx.setContents({
+      .context((rect) => {
+        _this.editorCtx = res.context;
+        _this.editorCtx.setContents({
           html: content,
         });
       })
@@ -161,8 +161,8 @@ Page({
   },
 
   getImg() {
-    var that = this;
-    var list = that.data.imageList;
+    var list = this.data.imageList;
+    var _this = this;
     wx.chooseMedia({
       count: 6,
       success(res) {
@@ -174,7 +174,7 @@ Page({
             filePath: res.tempFiles[i].tempFilePath,
             success(res) {
               list.push(res.fileID);
-              that.setData({
+              _this.setData({
                 imageList: list,
               });
             },
@@ -270,7 +270,7 @@ Page({
   },
 
   removeschoolguide() {
-    var that = this;
+    var _this = this;
     wx.showModal({
       title: '提示',
       content: '删除操作不可逆\n请谨慎操作！',
@@ -280,7 +280,7 @@ Page({
             .callFunction({
               name: 'remove_schoolguide',
               data: {
-                _id: that.data._id,
+                _id: _this.data._id,
               },
             })
             .then(res => {
@@ -290,7 +290,7 @@ Page({
                 duration: 2000,
               });
               setTimeout(() => {
-                that.back();
+                _this.back();
               }, 1000);
             })
             .catch(err => {

@@ -43,12 +43,12 @@ Page({
       search_id: options.id,
     });
     // 历史搜索
-    let that = this;
-    //that.searchtype = options.searchtype;
+    let _this = this;
+    //_this.searchtype = options.searchtype;
     wx.getStorage({
       key: 'historyStorage',
       success(res) {
-        that.setData({
+        _this.setData({
           historyStorageShow: true,
           historyStorage: res.data,
         });
@@ -149,19 +149,19 @@ Page({
 
   // 热门搜索
   gethotSearch() {
-    var that = this;
+    var _this = this;
     wx.cloud
       .callFunction({
         name: 'rank',
         data: {
-          current: that.data.current,
-          campus_id: that.data.campus_id,
+          current: _this.data.current,
+          campus_id: _this.data.campus_id,
         },
       })
       .then(res => {
         let data = res.result.data.data;
         data.splice(10, 10); // 删除后10个元素s
-        that.setData({
+        _this.setData({
           hotSearch: data,
         });
       })
@@ -181,11 +181,11 @@ Page({
     }
 
     // 加载搜索历史
-    let that = this;
+    let _this = this;
     wx.getStorage({
       key: 'historyStorage',
       success(res) {
-        that.setData({
+        _this.setData({
           historyStorageShow: true,
           historyStorage: res.data,
         });

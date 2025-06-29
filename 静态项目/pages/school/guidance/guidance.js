@@ -1,13 +1,3 @@
-/*
- * @Author: 奇妙方程式 229600398@qq.com
- * @Date: 2024-12-28 02:45:21
- * @LastEditors: 奇妙方程式 229600398@qq.com
- * @LastEditTime: 2025-06-21 21:44:10
- * @FilePath: \校园导航小程序\静态项目\pages\school\guidance\guidance.js
- * @Description:
- *
- * Copyright (c) 2025 by ${git_name_email}, All Rights Reserved.
- */
 // pages/school/guidance/guidance.js
 import school from '@data/school';
 
@@ -28,14 +18,14 @@ Page({
   },
 
   getRect() {
-    var that = this;
+    var _this = this;
     wx.createSelectorQuery()
       .select('#search')
-      .boundingClientRect(function (rect) {
+      .boundingClientRect((rect) => {
         rect.height; // 节点的高度
       })
       .exec(res => {
-        that.setData({
+        _this.setData({
           top: res[0].height,
         });
       });

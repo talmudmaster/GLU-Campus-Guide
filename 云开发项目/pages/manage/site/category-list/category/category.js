@@ -109,7 +109,7 @@ Page({
   },
 
   removecategory() {
-    var that = this;
+    var _this = this;
     wx.showModal({
       title: '提示',
       content: '删除操作不可逆\n请谨慎操作！',
@@ -121,13 +121,13 @@ Page({
               name: 'lianbiao_query',
             })
             .then(res => {
-              let list = res.result.list[that.data.category].list.length;
+              let list = res.result.list[_this.data.category].list.length;
               if (list == 0) {
                 wx.cloud
                   .callFunction({
                     name: 'remove_category',
                     data: {
-                      _id: that.data._id,
+                      _id: _this.data._id,
                     },
                   })
                   .then(res => {
@@ -137,7 +137,7 @@ Page({
                       duration: 2000,
                     });
                     setTimeout(() => {
-                      that.back();
+                      _this.back();
                     }, 1000);
                   })
                   .catch(err => {

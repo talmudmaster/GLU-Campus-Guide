@@ -401,7 +401,7 @@ Page({
 
   // 设置当前地图各项参数
   map() {
-    var that = this;
+    var _this = this;
 
     // 获取当前地图中心的经纬度
     this.mapCtx.getCenterLocation({
@@ -412,7 +412,7 @@ Page({
         var centerLocation_data =
           'longitude: ' + longitude + ',' + '\n' + 'latitude: ' + latitude + ',';
 
-        that.setData({
+        _this.setData({
           centerLocation_data: centerLocation_data,
         });
       },
@@ -446,7 +446,7 @@ Page({
           res.northeast.longitude.toFixed(6) +
           ',';
 
-        that.setData({
+        _this.setData({
           boundary_data: boundary_data,
         });
       },
@@ -457,7 +457,7 @@ Page({
       success(res) {
         var scale_data = 'scale: ' + res.scale.toFixed(1) + ',';
 
-        that.setData({
+        _this.setData({
           scale_data,
         });
       },

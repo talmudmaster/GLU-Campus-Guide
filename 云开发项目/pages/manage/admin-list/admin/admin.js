@@ -127,7 +127,7 @@ Page({
   },
 
   removeAdmin() {
-    var that = this;
+    var _this = this;
     wx.showModal({
       title: '提示',
       content: '删除操作不可逆\n请谨慎操作！',
@@ -137,7 +137,7 @@ Page({
             .callFunction({
               name: 'remove_admin',
               data: {
-                _id: that.data._id,
+                _id: _this.data._id,
               },
             })
             .then(res => {

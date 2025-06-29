@@ -79,7 +79,7 @@ Page({
 
   // 管理界面
   toadmin() {
-    var that = this;
+    var _this = this;
     wx.cloud.callFunction({
       name: 'login',
       complete: res => {
@@ -96,7 +96,7 @@ Page({
             });
           }, 1000);
         } else {
-          that.getopenid();
+          _this.getopenid();
         }
       },
     });

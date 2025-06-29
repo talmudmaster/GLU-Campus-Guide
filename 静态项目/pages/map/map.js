@@ -223,14 +223,14 @@ Page({
       opacity: groundoverlay.opacity, // 图层透明度
     });
     // this.mapCtx.setBoundary({
-    //     southwest: { // 西南角
-    //         latitude: that.data.boundary.southwest_latitude,
-    //         longitude: that.data.boundary.southwest_longitude,
-    //     },
-    //     northeast: { // 东北角
-    //         latitude: that.data.boundary.northeast_latitude,
-    //         longitude: that.data.boundary.northeast_longitude,
-    //     }
+    //   southwest: { // 西南角
+    //     latitude: _this.data.boundary.southwest_latitude,
+    //     longitude: _this.data.boundary.southwest_longitude,
+    //   },
+    //   northeast: { // 东北角
+    //     latitude: _this.data.boundary.northeast_latitude,
+    //     longitude: _this.data.boundary.northeast_longitude,
+    //   }
     // })
     this.mapCtx.initMarkerCluster({
       enableDefaultStyle: true, // 启用默认的聚合样式
@@ -255,8 +255,8 @@ Page({
 
   // 定位
   location() {
-    var that = this;
-    var default_point = that.data.default_point;
+    var _this = this;
+    var default_point = _this.data.default_point;
     var static_category = this.data.static;
     wx.getLocation({
       type: 'gcj02',
@@ -268,10 +268,10 @@ Page({
           latitude: nowlatitude,
           longitude: nowlongitude,
         };
-        let polygon = that.data.points;
-        let result = that.isPointInPolygon(testPoint, polygon);
+        let polygon = _this.data.points;
+        let result = _this.isPointInPolygon(testPoint, polygon);
         if (result) {
-          that.setData({
+          _this.setData({
             isAtSchool: true,
           });
 
@@ -280,26 +280,26 @@ Page({
             latitude: nowlatitude,
             longitude: nowlongitude,
           };
-          that.set_default_point(point);
+          _this.set_default_point(point);
         } else {
-          that.setData({
+          _this.setData({
             isAtSchool: false,
           });
 
-          that.set_default_point(default_point);
+          _this.set_default_point(default_point);
           wx.showToast({
-            title: '当前位置不在校区内\n默认位置设为' + that.data.default_point.name,
+            title: '当前位置不在校区内\n默认位置设为' + _this.data.default_point.name,
             icon: 'none',
             duration: 2000,
           });
         }
       },
       fail(err) {
-        that.setData({
+        _this.setData({
           isAtSchool: false,
         });
 
-        that.set_default_point(default_point);
+        _this.set_default_point(default_point);
         wx.showToast({
           title: '请不要频繁定位\n5秒后再试试吧',
           icon: 'none',
@@ -307,7 +307,7 @@ Page({
         });
       },
       complete(err) {
-        that.changeCategory(static_category);
+        _this.changeCategory(static_category);
       },
     });
   },
@@ -767,7 +767,7 @@ Page({
 
   // 轨迹回放
   moveAlong() {
-    var that = this;
+    var _this = this;
     var markers = this.data.markers;
     var points = this.data.polyline[0].points;
     this.mapCtx = wx.createMapContext('map');
@@ -778,7 +778,7 @@ Page({
       autoRotate: true,
       success(res) {
         markers.pop();
-        that.setData({
+        _this.setData({
           markers: markers,
         });
       },

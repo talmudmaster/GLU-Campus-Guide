@@ -142,11 +142,11 @@ Page({
   },
 
   addsite() {
-    var that = this;
+    var _this = this;
     // 如果不上传图片就上传默认图片
     if (this.data.img == null || this.data.img == '') {
       this.setData({
-        img: that.data.defaultImg,
+        img: _this.data.defaultImg,
       });
     }
 
@@ -195,11 +195,11 @@ Page({
   },
 
   updatesite() {
-    var that = this;
+    var _this = this;
     // 如果不上传图片就上传默认图片
     if (this.data.img == null || this.data.img == '') {
       this.setData({
-        img: that.data.defaultImg,
+        img: _this.data.defaultImg,
       });
     }
 
@@ -250,7 +250,7 @@ Page({
 
   removesite() {
     var _id = this.data._id;
-    var that = this;
+    var _this = this;
     wx.showModal({
       title: '提示',
       content: '删除操作不可逆\n请谨慎操作！',
@@ -276,7 +276,7 @@ Page({
                       duration: 2000,
                     });
                     setTimeout(() => {
-                      that.back();
+                      _this.back();
                     }, 1000);
                   })
                   .catch(err => {
@@ -377,17 +377,17 @@ Page({
   },
 
   getImg() {
-    var that = this;
+    var _this = this;
     wx.chooseMedia({
       count: 1,
       success(res) {
         var po = res.tempFiles[0].tempFilePath.lastIndexOf('.');
         var ext = res.tempFiles[0].tempFilePath.slice(po);
         wx.cloud.uploadFile({
-          cloudPath: that.data.name + ext,
+          cloudPath: _this.data.name + ext,
           filePath: res.tempFiles[0].tempFilePath,
           success(res) {
-            that.setData({
+            _this.setData({
               img: res.fileID,
             });
           },

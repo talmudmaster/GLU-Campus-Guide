@@ -13,9 +13,9 @@
 </p>
 
 <p align="center">
-🔥 <a href="https://blog.csdn.net/weixin_45940369/article/details/130613289" target="_blank">开发文档（CSDN）</a>
+🔥 <a href="https://blog.csdn.net/weixin_45940369/article/details/130613289" target="_blank">配置和修改教程（CSDN）</a>
 &nbsp;
-🚀 <a href="" target="_blank">视频介绍（bilibili）</a>
+🚀 <a href="https://space.bilibili.com/384844986/lists/1197124" target="_blank">视频介绍（bilibili）</a>
 </p>
 
 <div align="center">
@@ -113,7 +113,7 @@
 
 教程较长，故放在 CSDN 平台 ，敬请谅解
 
-`CSDN 文章`：[**校园导航小程序 开发全流程教程**](https://blog.csdn.net/weixin_45940369/article/details/130613289)
+`CSDN 文章`：[**校园导航小程序 配置和修改教程**](https://blog.csdn.net/weixin_45940369/article/details/130613289)
 
 **`请严格按照其中的步骤，一步一步来。若缺失步骤，可能会导致意想不到的问题。`**
 
@@ -122,6 +122,8 @@
 > ② 若上传了校园地图，则需要在手机端预览，因为电脑端无法预览自定义图层  
 > <br>
 > ③ 若设置了标记点图标，电脑端可能无法预览点聚合效果，在手机端预览
+
+[切片图案](图片源文件)：首页按钮的切片素材，可导入 即时设计 进行编辑
 
 # 📢 关于小程序发行
 
@@ -139,7 +141,7 @@
 
 - [部分参考文章](https://pan.baidu.com/s/178lwGP1KIwtJekt55Fv2FA?pwd=f6gg)
 - [**答辩演示PPT、文章报告**](https://docs.qq.com/s/wyOX55WZyaFPwHSTTWsD2q)，可直接导出 或 转存后在线编辑
-- [相关设计图文件](写作指南)（示意图、ER 图、流程图、系统结构图），可导入 processon 进行编辑
+- [相关设计图文件](图片源文件)（示意图、ER 图、流程图、系统结构图），可导入 processon 进行编辑
 - 大计赛参赛作品——[云上高校导航](https://gitee.com/talmudmaster/Cloud-based_University_Navigation)
 
 除此之外，还可以去知网或其他平台，以 小程序、云开发、校园导航 等词作为关键词进行搜索，查阅相关资料
@@ -180,8 +182,8 @@
 感谢以下小伙伴们为 本项目 发展做出的贡献：
 
 - **bilibili @ [宙克儿](https://space.bilibili.com/506034009)** 测试 云开发项目运行 和 找bug
-- **bilibili @ [WhaleFallStudio](https://space.bilibili.com/34506136)** 提供 校园信息页 的 图片切片素材
-- **bilibili @ [白艺中葡萄](https://space.bilibili.com/689315633)** 提供 地点搜索页 的 历史记录和热门地点 新功能的 idea 和 code
+- **bilibili @ [WhaleFallStudio](https://space.bilibili.com/34506136)** 提供 校园信息页 按钮图片 的 切片素材
+- **bilibili @ [白艺中葡萄](https://space.bilibili.com/689315633)** 提供 地点搜索页 的 历史记录和热门地点 功能的 idea 和 code
 
 # ❤ 致谢
 
@@ -197,7 +199,7 @@
 
 2023 年初，为了应付毕设，只是草草学了下相关知识就上手做了这个项目。不可避免地会出现代码冗余混乱、界面设计奇奇怪怪等诸多问题
 
-之后打算重新写，做得更加美观，并降低项目理解和修改的难度
+之后也许会重新写，页面做得更加美观，项目修改难度更小，相关逻辑更家简洁易懂
 
 - 采用 腾讯位置服务 WebService API、vant weapp 等主流技术和 UI 组件库
 - 实现 路线规划时，自由切换 驾车、步行、骑行 模式 ✔️
@@ -211,8 +213,6 @@
 - 实现 校车路线、浏览路线展示
 - 引入 AI大语言模型对话
 - 完善 相关文档及设计图（PPT、文章报告、UML 图、原型设计图、UI 设计图）
-
-不过因为工作繁忙，这个版本（暂定为 3.0）做出来可能得等到 26 年了（也许）
 
 # 🧮 寻路算法思路
 

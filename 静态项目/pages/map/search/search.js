@@ -35,11 +35,11 @@ Page({
     });
 
     // 历史搜索
-    let that = this;
+    let _this = this;
     wx.getStorage({
       key: 'historyStorage',
       success(res) {
-        that.setData({
+        _this.setData({
           historyStorageShow: true,
           historyStorage: res.data,
         });
@@ -136,11 +136,11 @@ Page({
     }
 
     // 加载搜索历史
-    let that = this;
+    let _this = this;
     wx.getStorage({
       key: 'historyStorage',
       success(res) {
-        that.setData({
+        _this.setData({
           historyStorageShow: true,
           historyStorage: res.data,
         });

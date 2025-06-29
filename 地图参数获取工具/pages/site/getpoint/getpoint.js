@@ -75,11 +75,11 @@ Page({
 
   // 获取中心点坐标
   getCenterLocation() {
-    var that = this;
+    var _this = this;
     this.mapCtx = wx.createMapContext('map');
     this.mapCtx.getCenterLocation({
       success(res) {
-        that.changeCenterLocation(res.latitude, res.longitude);
+        _this.changeCenterLocation(res.latitude, res.longitude);
       },
     });
   },

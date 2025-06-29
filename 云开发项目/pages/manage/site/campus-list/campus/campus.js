@@ -239,7 +239,7 @@ Page({
   },
 
   removecampus() {
-    var that = this;
+    var _this = this;
     wx.showModal({
       title: '提示',
       content: '删除操作不可逆\n请谨慎操作！',
@@ -252,7 +252,7 @@ Page({
             })
             .then(res => {
               let list = res.result.list;
-              let campus_id = that.data._id;
+              let campus_id = _this.data._id;
               let site_data = list
                 .map(category => ({
                   ...category,
@@ -275,7 +275,7 @@ Page({
                       duration: 2000,
                     });
                     setTimeout(() => {
-                      that.back();
+                      _this.back();
                     }, 1000);
                   })
                   .catch(err => {
@@ -331,7 +331,7 @@ Page({
   },
 
   getImg() {
-    var that = this;
+    var _this = this;
     wx.chooseMedia({
       count: 1,
       success(res) {
@@ -341,7 +341,7 @@ Page({
           cloudPath: new Date().getTime() + ext,
           filePath: res.tempFiles[0].tempFilePath,
           success(res) {
-            that.getImagePath(res.fileID);
+            _this.getImagePath(res.fileID);
           },
         });
       },
@@ -350,12 +350,12 @@ Page({
 
   // 获取图片上传后的https的url路径地址  参数是上传图片的 fileId
   getImagePath(fileId) {
-    var that = this;
+    var _this = this;
     wx.cloud.getTempFileURL({
       fileList: [fileId],
       success(res) {
         let img = res.fileList[0].tempFileURL;
-        that.setData({
+        _this.setData({
           img: img,
         });
       },
