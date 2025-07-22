@@ -206,7 +206,15 @@ Page({
           this.map();
         }
 
-        this.getDefaultSite();
+        if (this.data.s_id) {
+          this.getDefaultSite();
+        } else {
+          wx.showModal({
+            title: '警告',
+            content: '请在管理处配置并保存当前校区的默认地点！',
+            showCancel: false,
+          });
+        }
       })
       .catch(err => {
         console.log('fail', err);

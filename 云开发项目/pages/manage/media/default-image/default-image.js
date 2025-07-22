@@ -51,6 +51,7 @@ Page({
       })
       .then(res => {
         console.log('success', res);
+        this.get();
       })
       .catch(err => {
         console.log('fail', err);

@@ -29,7 +29,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-    if (options.range != 'undefined') {
+    if (options.range != '[]') {
       let points = JSON.parse(options.range);
       points.map(item => {
         item.latitude = Number(item.latitude);
