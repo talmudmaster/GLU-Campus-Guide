@@ -75,7 +75,7 @@
 
       <view bindtap="toadmin" class="menu_row">
         <image style="height: 60rpx; width: 60rpx; margin-left: 30rpx" src="{{admin}}"> </image>
-        <view style="margin-left: 10rpx">管理界面</view>
+        <view style="margin-left: 10rpx">数据管理</view>
         <image
           style="height: 40rpx; width: 40rpx; margin-left: auto; margin-right: 10px"
           src="{{green_arrow}}"
